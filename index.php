@@ -30,7 +30,7 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation" class="active"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="services.php">Service</a></li>
+					<li role="presentation"><a href="buy.php">Buy</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
@@ -57,7 +57,7 @@
 					<p align="justify"> Welcome to TickUP Official Web Application.
 						Book a  ticket with us or create a account</p>
 						<p>
-							<a class= 'btn btn-primary' href="book_ticket.php">Book Ticket</a>
+							<a class= 'btn btn-primary' href="buy.php">Buy Now!</a>
 							<a class= 'btn btn-success' href="sign_up.php">Sign Up</a>
 						</p>
 					</div>

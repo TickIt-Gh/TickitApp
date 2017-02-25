@@ -18,7 +18,7 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="services.php">Service</a></li>
+					<li role="presentation"><a href="buy.php">Buy</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>

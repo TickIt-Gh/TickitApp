@@ -28,13 +28,13 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
-					<li role="presentation" class="active"><a href="#">Home</a></li>
-					<li role="presentation"><a href="#">Service</a></li>
-					<li role="presentation"><a href="#">Team</a></li>
-					<li role="presentation"><a href="#">About Us</a></li>
+					<li role="presentation" class="active"><a href="index.php">Home</a></li>
+					<li role="presentation"><a href="services.php">Service</a></li>
+					<li role="presentation"><a href="team.php">Team</a></li>
+					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				</ul>
 			</div>
 
@@ -56,8 +56,8 @@
 					<p align="justify"> Welcome to TickUP Official Web Application.
 						Book a  ticket with us or create a account</p>
 						<p>
-							<a class= 'btn btn-primary' href="#">Book Ticket</a>
-							<a class= 'btn btn-success' href="#">Sign In</a>
+							<a class= 'btn btn-primary' href="book_ticket.php">Book Ticket</a>
+							<a class= 'btn btn-success' href="sign_up.php">Sign Up</a>
 						</p>
 					</div>
 
@@ -77,7 +77,8 @@
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">read more</a>
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<a href="about.php">read more</a>
 						</p>
 						<hr>
 					</div>
@@ -93,7 +94,7 @@
 					<h4>We are here to serve!</h4>
 				</div>
 				<div class="col-lg-4 col-md-4">
-					<a class="btn btn-lg btn-primary pull-right" href="/about">Contact Us!</a>
+					<a class="btn btn-lg btn-primary pull-right" href="about.php">Contact Us!</a>
 				</div>
 			</div>
 			<!-- /.row -->
@@ -107,7 +108,7 @@
 				<div class="custom"  >
 					<p>©TickIT Company Ltd. All rights reserved.</p>
 					<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
-					<p><a href="#" rel="alternate">TickIT Company Ltd</a> | <a href="#" rel="alternate">Ticket Booking</a></p>
+					<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
 				</div>
 			</div>
 

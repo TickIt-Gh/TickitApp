@@ -9,8 +9,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--adding the css file for this contact page-->
-	<link rel="stylesheet" href="contact.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 <script href="js/bootstrap.min.js"></script>
 <style type="text/css">
@@ -47,53 +48,18 @@ div{
 		</div>
 	</nav>
 
-	
+	<script type="text/javascript" src="contact.js"></script>
 
-<!--adding my php code to validate user input-->
-<?php
-//declaring my variables
-$nam="";
-$mail="";
-$message="";
-//checking if the user has filled the fields oc clicking the button
-if(isset($_POST['submit'])){
-	if(!empty($_POST['name'])){
-		$nam=$_POST['name'];
-	}
-	else{
-		echo "kindly type your name";
-		echo "<br>";
-	}
-	if(!empty($_POST['email'])){
-		$mail=$_POST['email'];
-	}
-	else{
-		echo 'kindly type your email address';
-		echo "<br>";
-	}
-	if(!empty($_POST['message'])){
-		$message=$_POST['message'];
-
-	}
-	else{
-		echo 'kindly type your message';
-		echo "<br>";
-	}
-	
-}
-
-?>
-
-<div >
-	<form method="post" action="">
+<div class="container" >
+	<form method="post" action="" >
 	<br><br>
 		  <br><br>
-		 <input type="text" name="name" size="50" placeholder="your name" value="<?php echo $nam?>" <br> <br>
+		 <input type="text"  size="50"  id="name" placeholder="your name" > <br> <br>
 		 <br><br>
-		<input type="text" name="email" size="50" placeholder="your email" value="<?php echo $mail?>"><br> <br>
+		<input type="text" id= "email" size="50" placeholder="your email" ><br> <br>
 		 <br><br>
-		<textarea  rows="10" cols="50" name="message" placeholder="your message here" value="<?php echo $message?>"></textarea><br><br>
-		<input type="submit" class="btn btn-success" name="submit" value="SUBMIT">
+		<textarea  rows="10" cols="50" id="message" placeholder="your message here" value="<?php echo $message?>"></textarea><br><br>
+		<input type="submit" class="btn btn-success" name="submit" value="SUBMIT" onclick="validate()" >
 
 	</form>
 	</div>
@@ -107,6 +73,8 @@ if(isset($_POST['submit'])){
 		</div>
 
 	</footer>
+	<!--including the javascript-->
+	<script type="text/javascript" src="contact.js"></script>
 </body>
 	
 </html>

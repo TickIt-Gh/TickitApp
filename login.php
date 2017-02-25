@@ -52,6 +52,9 @@
 					<label>
 						<input type="checkbox" value="remember_me"> Remember me
 					</label>
+					<label style="padding-left: 70%">
+					<a href= "">forgot password?</a>
+					</label>
 				</div>
 				<div class="error">
 					<!--
@@ -70,7 +73,7 @@
 
 
 
-	<footer style="text-align: center;" id="footer">
+	<footer style="text-align: center; padding-top: 10%" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>

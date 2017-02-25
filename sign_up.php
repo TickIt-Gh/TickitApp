@@ -38,7 +38,7 @@
 		</div>
 		<div class="col-md-4" ">
 			<form class="form-signin" method="POST" action="#">
-				<h2 class="form-signin-heading">Proivde Details</h2>
+				<h2 class="form-signin-heading">Provide Details</h2>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
@@ -64,8 +64,8 @@
 
 
 
-
-	<footer style="text-align: center;" id="footer">
+       <div style=" padding-top:100% ">
+	<footer style="text-align: center; padding-top: 50%" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>
@@ -75,6 +75,7 @@
 		</div>
 
 	</footer>
+	</div>
 
 
 </body>

@@ -95,7 +95,7 @@
 					<h4>We are here to serve!</h4>
 				</div>
 				<div class="col-lg-4 col-md-4">
-					<a class="btn btn-lg btn-primary pull-right" href="about.php">Contact Us!</a>
+					<a class="btn btn-lg btn-primary pull-right" href="contact.php">Contact Us!</a>
 				</div>
 			</div>
 			<!-- /.row -->

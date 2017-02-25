@@ -18,7 +18,7 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="services.php">Service</a></li>
+					<li role="presentation"><a href="buy.php">Buy</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
@@ -36,24 +36,33 @@
 		<div class="col-md-4">
 			&nbsp
 		</div>
-		<div class="col-md-4" ">
+		<div class="col-md-6" ">
 			<form class="form-signin" method="POST" action="#">
-				<h2 class="form-signin-heading">Provide Details</h2>
-				<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
-					name="username">
-				</div>
+
+				<h2 class="form-signin-heading">Travel Details</h2>
+
+					<select class="form-control">
+					    <option value="one">From</option>
+					    <option value="two">Accra</option>
+					    <option value="three">Kumasi</option>
+					    <option value="four">Tamale</option>
+					    <option value="five">Togo</option>
+					</select><br>
+
+					<select class="form-control">
+					    <option value="one">To</option>
+					    <option value="two">Accra</option>
+					    <option value="three">Kumasi</option>
+					    <option value="four">Tamale</option>
+					    <option value="five">Togo</option>
+					</select>
+
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span> 
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
-				<div class="error">
-					<!--
-						PHP CODE FOR ERROR HERE
-					-->	
-				</div>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+
+				<button class="btn btn-lg btn-primary btn-block" type="submit" href="index.php">Buy</button>
 			</form>
 		</div>
 		<div class="col-md-4">

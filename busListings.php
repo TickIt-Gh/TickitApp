@@ -53,28 +53,10 @@
 					</div>
 
 					<div class='col-md-6 col-md-pull-3 get-it'>
+						<h1>Bus listings here</h1>
 						
-						
-
-						  <div id=LogForm style="text-align: center; padding-top: 20%; padding-left: 50%;" >
-	                        
-	                         <h2>Log in to update bus listings</h2>
-	                         <br><br><br>
-	                        <form  method="post" action="busListings.php"> 
-	                          <div class ='container'>
-			 
-	                         User name <br>
-	                          <input type="text" name="name" <?php if(isset($_POST['name'])){echo ("value='".$_POST['name']."'");}?>
-	                           <br><br>
-
-	                          Password <br>
-	                          <input type="password" name="password" <?php if(isset($_POST['password'])){echo ("value='".$_POST['password']."'");}?> <br><br>
-
-	                         <input type="submit" name="submit" value="Login" style="color: black" >
-	                         </div>
-	                         </form>
-	                         </fieldset>
-	                     </div>
+ 
+				
 						
 						</div>
 

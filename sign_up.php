@@ -39,30 +39,42 @@
 		<div class="col-md-4" ">
 			<form class="form-signin" method="POST" action="#">
 				<h2 class="form-signin-heading">Provide Details</h2>
+				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="Last Name" required autofocus
 					name="lastname">
 				</div>
-
+				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="First Name" required autofocus
 					name="firstname">
 				</div>
-
+				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
 					name="dateofbirth">
 				</div>
-
+				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span> 
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
-
-					
+				<br>
+				<div class="btn-group">
+				<div> Gender
+				<button class="btn btn-default" type="button">
+						<em class="fa fa-male"></em> Male
+					</button> 
+					<button class="btn btn-default" type="button">
+						<em class="fa fa-female"></em> Female
+					</button> 
+				</div>
+				<br>
+				</div> 
+				<br>
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
@@ -79,7 +91,7 @@
 
 
 
-       
+	
 	<footer style="text-align: center; padding-top: 50%" id="footer">
 		<div class="container">
 			<div class="custom"  >
@@ -90,7 +102,7 @@
 		</div>
 
 	</footer>
-	</div>
+</div>
 
 
 </body>

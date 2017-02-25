@@ -41,13 +41,28 @@
 				<h2 class="form-signin-heading">Provide Details</h2>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
-					name="username">
+					<input type="username" id="inputEmail" class="form-control" placeholder="Last Name" required autofocus
+					name="lastname">
 				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+					<input type="username" id="inputEmail" class="form-control" placeholder="First Name" required autofocus
+					name="firstname">
+				</div>
+
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+					<input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
+					name="dateofbirth">
+				</div>
+
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
+
+					
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
@@ -64,7 +79,7 @@
 
 
 
-       <div style=" padding-top:100% ">
+       
 	<footer style="text-align: center; padding-top: 50%" id="footer">
 		<div class="container">
 			<div class="custom"  >

@@ -15,7 +15,7 @@
 <script href="js/bootstrap.min.js"></script>
 <style type="text/css">
 	body{
-	background-color:#5858da;
+	background-color:white;
 }
 h1{
 	text-align: center;
@@ -83,19 +83,30 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-<h1 >Contact us</h1>
+
 <div >
 	<form method="post" action="">
-		 YOUR NAME <br><br>
+	<br><br>
+		  <br><br>
 		 <input type="text" name="name" size="50" placeholder="your name" value="<?php echo $nam?>" <br> <br>
-		YOUR EMAIL <br><br>
+		 <br><br>
 		<input type="text" name="email" size="50" placeholder="your email" value="<?php echo $mail?>"><br> <br>
-		YOUR MESSAGE <br><br>
+		 <br><br>
 		<textarea  rows="10" cols="50" name="message" placeholder="your message here" value="<?php echo $message?>"></textarea><br><br>
 		<input type="submit" class="btn btn-success" name="submit" value="SUBMIT">
 
 	</form>
-	</div>>
+	</div>
+	<footer style="text-align: center; padding-top: 50%" id="footer">
+		<div class="container">
+			<div class="custom"  >
+				<p>©TickIT Company Ltd. All rights reserved.</p>
+				<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
+				<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
+			</div>
+		</div>
+
+	</footer>
 </body>
 	
 </html>

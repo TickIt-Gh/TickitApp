@@ -53,7 +53,7 @@
 					</div>
 
 					<div class='col-md-6 col-md-pull-3 get-it'>
-						<h1>Bus listings here</h1>
+						<h1 style ="color: red; text-decoration: blink;">Add Bus listings form here</h1>
 						
  
 				

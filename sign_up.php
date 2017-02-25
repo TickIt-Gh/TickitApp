@@ -38,7 +38,7 @@
 		</div>
 		<div class="col-md-4" ">
 			<form class="form-signin" method="POST" action="#">
-				<h2 class="form-signin-heading">Please sign in</h2>
+				<h2 class="form-signin-heading">Proivde Details</h2>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
@@ -48,17 +48,12 @@
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" value="remember_me"> Remember me
-					</label>
-				</div>
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
 					-->	
 				</div>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 			</form>
 		</div>
 		<div class="col-md-4">

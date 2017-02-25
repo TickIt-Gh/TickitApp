@@ -55,14 +55,28 @@
 					    <option value="three">Kumasi</option>
 					    <option value="four">Tamale</option>
 					    <option value="five">Togo</option>
-					</select>
+					</select> <br>
 
-				<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span> 
-					<input class="form-control" type="password" placeholder="Password" required name="password">
-				</div>
+					<select class="form-control">
+					    <option value="one">Depature Time</option>
+					    <option value="two">6am</option>
+					    <option value="three">10am</option>
+					    <option value="four">2pm</option>
+					    <option value="five">6pm</option>
+					</select><br>
 
-				<button class="btn btn-lg btn-primary btn-block" type="submit" href="index.php">Buy</button>
+					<!-- Large modal -->
+					<button type="button" class="btn btn-primary btn-block " data-toggle="modal" data-target=".bs-example-modal-lg" >Buy</button>
+
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <h1 class="text-center">Thank You For Using <br> <br> TickIT</h1>
+					      <h3 class="text-center"><em>Your Tocken is <strong>4wwesw4</strong></em></h3>
+					    </div>
+					  </div>
+					</div>
+
 			</form>
 		</div>
 		<div class="col-md-4">

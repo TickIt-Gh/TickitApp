@@ -23,7 +23,7 @@
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				</ul>
 			</div>
 
@@ -38,7 +38,7 @@
 		</div>
 		<div class="col-md-4" ">
 			<form class="form-signin" method="POST" action="#">
-				<h2 class="form-signin-heading">Provide Details</h2>
+				<h2 class="form-signin-heading" style="text-align: center;">Provide Details</h2>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
@@ -63,11 +63,16 @@
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
 				<br>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+					<input type="email" id="inputEmail" class="form-control" placeholder="Email " required name="email">
+				</div>
+				<br>
 				<div class="btn-group">
-				<div> Gender
+				<div> Gender : 
 				<button class="btn btn-default" type="button">
 						<em class="fa fa-male"></em> Male
-					</button> 
+					</button> &nbsp
 					<button class="btn btn-default" type="button">
 						<em class="fa fa-female"></em> Female
 					</button> 
@@ -75,6 +80,9 @@
 				<br>
 				</div> 
 				<br>
+
+				
+
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE

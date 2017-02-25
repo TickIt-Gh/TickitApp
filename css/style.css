@@ -1,31 +1,27 @@
-
-#logo a:hover{
-  text-decoration: none
+  
+p{
+  font-style: justify;
 }
 
-nav .container-fluid{
-  background-color: #1976D2;
-  width: 100%;
+.hero {
+  background: url("../img/city.jpg");
+  border:none;
+  color: white;
+  background-size: cover;
 }
 
-#logo{
-  display: inline-block;
-  font-size: 25px;
-  color: #fff;
-  margin-top: 10px;
+.form-signin{
+  max-width:480px;
+  margin-top:50px;
 }
 
-.navbar{
-  margin-bottom: 0px;
-  padding: 0px;
+#footer {
+  margin-top: -2px;
+  position:relative;
+  left:0px;
+  bottom:0px;
+  height:100px;
+  width:100%;
 }
 
-ul.nav{
-  float: right;
-}
 
-#floating-img{
-  display: inline-block;
-  width: 100%;
-  height: 90vh;
-}

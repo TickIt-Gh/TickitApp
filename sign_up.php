@@ -24,6 +24,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li>class="active"><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
@@ -105,7 +106,7 @@
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>
 				<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
-				<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
+				<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="buy.php" rel="alternate">Buy Ticket Instantly</a></p>
 			</div>
 		</div>
 

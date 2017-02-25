@@ -23,7 +23,8 @@
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
@@ -39,7 +40,7 @@
 		<div class="col-md-6" ">
 			<form class="form-signin" method="POST" action="#">
 
-				<h2 class="form-signin-heading">Travel Details</h2>
+				<h2 class="form-signin-heading text-center">Travel Details</h2>
 
 					<select class="form-control">
 					    <option value="one">From</option>
@@ -65,14 +66,17 @@
 					    <option value="five">6pm</option>
 					</select><br>
 
+					<input type="date" name="trave_date" class="form-control"><br>
+
 					<!-- Large modal -->
-					<button type="button" class="btn btn-primary btn-block " data-toggle="modal" data-target=".bs-example-modal-lg" >Buy</button>
+					<button type="button" class="btn btn-primary center-block btn-lg btn-block" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy</button>
 
 					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 					  <div class="modal-dialog modal-lg" role="document">
 					    <div class="modal-content">
 					      <h1 class="text-center">Thank You For Using <br> <br> TickIT</h1>
-					      <h3 class="text-center"><em>Your Tocken is <strong>4wwesw4</strong></em></h3>
+					      <h3 class="text-center"><em>Your Tocken is <strong>4wwesw4</strong></em></h3><br>
+					      <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
 					    </div>
 					  </div>
 					</div>
@@ -87,8 +91,8 @@
 
 
 
-       <div style=" padding-top:100% ">
-	<footer style="text-align: center; padding-top: 50%" id="footer">
+       <div style=" padding-top:1% ">
+	<footer style="text-align: center; padding-top: 1%" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>

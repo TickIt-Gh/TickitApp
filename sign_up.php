@@ -40,7 +40,7 @@
 			<form class="form-signin" method="POST" action="#">
 				<h2 class="form-signin-heading">Proivde Details</h2>
 				<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
 					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
 					name="username">
 				</div>

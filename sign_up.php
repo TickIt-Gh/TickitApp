@@ -69,12 +69,12 @@
 					<input type="email" id="email" class="form-control" placeholder="Email " required name="email">
 				</div>
 				<br>
-				<div class="btn-group">
+				<div class="btn-group" id="gender">
 					<div> Gender :
-						<button class="btn btn-default" type="button">
+						<button class="btn btn-default" type="button" id="male">
 							<em class="fa fa-male"></em> Male
 						</button> &nbsp
-						<button class="btn btn-default" type="button">
+						<button class="btn btn-default" type="button" id="female">
 							<em class="fa fa-female"></em> Female
 						</button>
 					</div>
@@ -82,14 +82,12 @@
 				</div>
 				<br>
 
-
-
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
 					-->
 				</div>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_sign_up()">Sign Up</button>
 			</form>
 		</div>
 		<div class="col-md-4">

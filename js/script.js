@@ -9,6 +9,10 @@ function validate_password(password) {
 }
 
 
+function validate_name(name){
+	return /^[A-Za-z\s-]+$/.test(name.value)
+}
+
 function validate_login(){
 	var email = document.getElementById('email');
 	var password = document.getElementById('password');
@@ -28,6 +32,3 @@ function validate_login(){
 }
 
 
-function validate_sign_up(){
-	
-}

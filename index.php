@@ -7,19 +7,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--style type="text/css">
-		
-		p{
-			font-style: justify;
-		}
+		<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-		.hero {
-			background: url("img/city.jpg");
-			border:none;
-			color: white;
-			background-size: cover;
-		}
-	</style-->
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
@@ -37,7 +26,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a href="sign_up.php"><span class="fa fa-user-plus"></span> Sign Up</a></li>
 				</ul>
 			</div>
 

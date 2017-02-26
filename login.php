@@ -8,6 +8,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
@@ -39,18 +40,18 @@
 			&nbsp
 		</div>
 		<div class="col-md-4" ">
-			<form class="form-signin" method="POST" action="#">
+			<form class="form-signin" method="POST" action="#" >
 				<h2 class="form-signin-heading" style="text-align: center;">Please sign in</h2>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus
-					name="username">
+					<input type="email" id="email" class="form-control" placeholder="Email" required autofocus
+					name="email">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-					<input class="form-control" type="password" placeholder="Password" required name="password">
+					<input class="form-control" id="password" type="password" placeholder="Password" required name="password">
 				</div>
 				<br>
 				<div class="checkbox">
@@ -58,7 +59,7 @@
 						<input type="checkbox" value="remember_me"> Remember me
 					</label>
 					<label style="padding-left: 70%">
-					<a href= "">forgot password?</a>
+						<a href= "">forgot password?</a>
 					</label>
 				</div>
 				<br>
@@ -67,7 +68,7 @@
 						PHP CODE FOR ERROR HERE
 					-->	
 				</div>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_login()">Sign in</button>
 			</form>
 		</div>
 		<div class="col-md-4">
@@ -89,6 +90,40 @@
 		</div>
 
 	</footer>
+
+
+	<script type="text/javascript">
+		
+		function validate_email(email) {
+			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(email.value);
+		}
+
+		function validate_password(password) {
+			var re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+			return re.test(password.value);
+		}
+
+
+		function validate_login(){
+			var email = document.getElementById('email');
+			var password = document.getElementById('password');
+			if (email != null && password != null){
+				if (validate_email(email)){
+					if (validate_password(password))
+						alert('Successful Login in');
+					else
+						alert('Password must be aleast 8 character, one symbol, atleast an upper case, a lower case and a number');
+				}else{
+					alert('Please provide all details');
+				}
+			}else{
+				alert('Provide email and password')
+			}
+			
+		}
+
+	</script>
 
 
 </body>

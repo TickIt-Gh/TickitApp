@@ -9,22 +9,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 <script href="js/bootstrap.min.js"></script>
-<style type="text/css">
-	body{
-	background-color:white;
-}
-h1{
-	text-align: center;
-}
-div{
-	text-align: center;
-}
-</style>
 
 </head>
 <body>
@@ -48,21 +35,31 @@ div{
 		</div>
 	</nav>
 
-	<script type="text/javascript" src="contact.js"></script>
+	
 
-<div class="container" >
-	<form method="post" action="" >
-	<br><br>
-		  <br><br>
-		 <input type="text"  size="50"  id="name" placeholder="your name" > <br> <br>
+<div class="row" style="margin:50px; margin-bottom: 100px;">
+		<div class="col-md-4">
+			&nbsp
+		</div>
+<div class="col-md-6" >
+	<form class="form-signin" method="post" action="#" >
+
+		 <input type="text" id="name" class="form-control" placeholder="Your name" required autofocus name="firstname">
+							 <br><br>
+
+		<input type="username" class="form-control" id= "email" size="50" placeholder="your email" required autofocus>
 		 <br><br>
-		<input type="text" id= "email" size="50" placeholder="your email" ><br> <br>
-		 <br><br>
-		<textarea  rows="10" cols="50" id="message" placeholder="your message here" value="<?php echo $message?>"></textarea><br><br>
-		<input type="submit" class="btn btn-success" name="submit" value="SUBMIT" onclick="validate()" >
+
+		<textarea  rows="10" class="form-control" cols="50" id="comment" placeholder="your message here"></textarea>
+		<br><br>
+
+		<input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT" onclick="validate()" >
 
 	</form>
 	</div>
+	</div>
+
+	<script type="text/javascript" src="contact.js"></script>
 	<footer style="text-align: center; padding-top: 50%" id="footer">
 		<div class="container">
 			<div class="custom"  >

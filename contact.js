@@ -1,6 +1,6 @@
 var nam = document.getElementById("name");
 var mail = document.getElementById("email");
-var message = document.getElementById("message");
+var message = document.getElementById("comment");
 
 
 function validate ()

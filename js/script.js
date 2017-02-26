@@ -10,6 +10,18 @@ function validate_password(password) {
 
 }
 
+//Function to provide a tocken number
+function tocken()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
 
 //function to validate the name 
 function validate_name(name){
@@ -95,6 +107,29 @@ function validate_sign_up(){
 				alert('Enter your message');
 			}else
 			alert('Provide a value email');
+		}else
+		alert('Provide a valid name');
+
+	}
+
+//function to validate the Buy form 
+    function validate_buy_form(){
+    	var nam = document.getElementById("name");
+    	var mail = document.getElementById("email");
+    	var num = document.getElementById("tel");
+
+    	if (validate_name(nam)){
+    		if (validate_email(mail)){
+    			if (validate_phone_num(num)){
+
+					//if all the details are valid, the details are sent
+					//notify the user that the details have been sent
+					document.getElementById('pop').innerHTML ='<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
+					document.getElementById("tocken").innerHTML = tocken();
+				}else
+				alert('Enter a valid phone number');
+			}else
+			alert('Provide a valid email');
 		}else
 		alert('Provide a valid name');
 

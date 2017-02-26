@@ -70,7 +70,7 @@
 				</div><br>
 
 				<!-- Large modal -->
-				<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_contact_buy()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
+				<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_buy_form()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
 				</button>
 
 				<!--Dive to have the modal information-->
@@ -91,20 +91,19 @@
 
 	</div>
 
-
 		<!--The Footer of every page-->
        <div style=" padding-top:1% ">
-	<footer style="text-align: center; padding-top: 1%" id="footer">
-		<div class="container">
-			<div class="custom"  >
-				<p>©TickIT Company Ltd. All rights reserved.</p>
-				<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
-				<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
-			</div>
-		</div>
+			<footer style="text-align: center; padding-top: 1%" id="footer">
+				<div class="container">
+					<div class="custom"  >
+						<p>©TickIT Company Ltd. All rights reserved.</p>
+						<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
+						<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
+					</div>
+				</div>
 
-	</footer>
-	</div>
+			</footer>
+		</div>
 
 
 </body>

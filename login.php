@@ -18,12 +18,12 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="services.php">Service</a></li>
+					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
-					<li role="presentation"><a href="about.php">About Us</a></li>
+					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li> class="active"><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
@@ -38,7 +38,7 @@
 			&nbsp
 		</div>
 		<div class="col-md-4" ">
-			<form class="form-signin" method="POST" action="#">
+			<form class="form-signin" method="POST" action="admin.php">
 				<h2 class="form-signin-heading" style="text-align: center;">Please sign in</h2>
 				<br>
 				<div class="input-group">
@@ -64,7 +64,7 @@
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
-					-->	
+					-->
 				</div>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 			</form>

@@ -18,9 +18,9 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="buy.php">Buy</a></li>
+					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
-					<li role="presentation"><a href="about.php">About Us</a></li>
+					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -30,7 +30,7 @@
 
 		</div>
 	</nav>
-  <div class="row dashboard" style="margin:50px; margin-bottom: 100px;">
+  <div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
     <div class="col-md-2">
       &nbsp
     </div>
@@ -48,7 +48,8 @@
           <th>Departure Date</th>
           <th>Departure Point</th>
           <th>Destination Point</th>
-          <th>Action</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
         <tr>
             <td>1</td>
@@ -57,7 +58,8 @@
             <td>26/02/2017</td>
             <td>Accra</td>
             <td>Kumasi</td>
-            <td><button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false">BUY</button></td>
+            <td><button type="button" class="btn btn-default btn-primary" aria-haspopup="true" aria-expanded="false">Edit</button></td>
+            <td><button type="button" class="btn btn-default btn-primary" aria-haspopup="true" aria-expanded="false">Delete</button></td>
         </tr>
         <tr>
             <td>2</td>
@@ -66,7 +68,8 @@
             <td>27/02/2017</td>
             <td>Tamale</td>
             <td>Kumasi</td>
-            <td><button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false">BUY</button></td>
+            <td><button type="button" class="btn btn-default btn-primary" aria-haspopup="true" aria-expanded="false">Edit</button></td>
+            <td><button type="button" class="btn btn-default btn-primary" aria-haspopup="true" aria-expanded="false">Delete</button></td>
         </tr>
       </table>
     </div>
@@ -74,8 +77,8 @@
     <div class="col-md-2">
       &nbsp
     </div>
-
   </div>
+  <button type="button" class="btn btn-default add-btn btn-primary" aria-haspopup="true" aria-expanded="false">Add</button>
 
   <footer id="footer" style="text-align: center;">
     <div class="container">

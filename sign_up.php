@@ -18,13 +18,13 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="buy.php">Buy</a></li>
+					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
-					<li role="presentation"><a href="about.php">About Us</a></li>
+					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li>class="active"><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
@@ -60,7 +60,7 @@
 				</div>
 				<br>
 				<div class="input-group">
-					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span> 
+					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
 					<input class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
 				<br>
@@ -70,24 +70,24 @@
 				</div>
 				<br>
 				<div class="btn-group">
-				<div> Gender : 
+				<div> Gender :
 				<button class="btn btn-default" type="button">
 						<em class="fa fa-male"></em> Male
 					</button> &nbsp
 					<button class="btn btn-default" type="button">
 						<em class="fa fa-female"></em> Female
-					</button> 
+					</button>
 				</div>
 				<br>
-				</div> 
+				</div>
 				<br>
 
-				
+
 
 				<div class="error">
 					<!--
 						PHP CODE FOR ERROR HERE
-					-->	
+					-->
 				</div>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 			</form>
@@ -100,7 +100,7 @@
 
 
 
-	
+
 	<footer style="text-align: center; padding-top: 50%" id="footer">
 		<div class="container">
 			<div class="custom"  >

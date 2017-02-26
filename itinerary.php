@@ -18,9 +18,9 @@
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
-					<li role="presentation"><a href="buy.php">Buy</a></li>
+					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
-					<li role="presentation"><a href="about.php">About Us</a></li>
+					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -57,7 +57,7 @@
             <td>26/02/2017</td>
             <td>Accra</td>
             <td>Kumasi</td>
-            <td><button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false">BUY</button></td>
+            <td><a class="btn btn-primary" href="buy.php" >BUY</a></td>
         </tr>
         <tr>
             <td>2</td>
@@ -66,7 +66,7 @@
             <td>27/02/2017</td>
             <td>Tamale</td>
             <td>Kumasi</td>
-            <td><button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false">BUY</button></td>
+            <td><a class="btn btn-primary" href="buy.php" >BUY</a></td>
         </tr>
       </table>
     </div>

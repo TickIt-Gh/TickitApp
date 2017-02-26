@@ -11,15 +11,9 @@
 
 		p{
 			font-style: justify;
-		}
+		} -->
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-		.hero {
-			background: url("img/city.jpg");
-			border:none;
-			color: white;
-			background-size: cover;
-		}
-	</style-->
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
@@ -36,7 +30,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a href="sign_up.php"><span class="fa fa-user-plus"></span> Sign Up</a></li>
 				</ul>
 			</div>
 

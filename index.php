@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome to TickIT</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--style type="text/css">
-
-		p{
-			font-style: justify;
-		} -->
-	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<?php
+require_once 'require/header.php';
+?>
+<title>Welcome to TickIT</title>
+<?php
+require_once 'require/nav_bar.php';
+?>
 
 </head>
 <body>
@@ -94,17 +86,6 @@
 			&nbsp
 		</div>
 
-		<footer id="footer" style="text-align: center;">
-			<div class="container">
-				<div class="custom"  >
-					<p>©TickIT Company Ltd. All rights reserved.</p>
-					<p>1 University Avenue, PMB CT3321 | Cantonments, Accra, Ghana | Phone: +233.000.000.00</p>
-					<p><a href="index.php" rel="alternate">TickIT Company Ltd</a> | <a href="book_ticket" rel="alternate">Ticket Booking</a></p>
-				</div>
-			</div>
-
-		</footer>
-
-
-	</body>
-	</html>
+		<?php
+		require_once 'require/footer.php';
+		?>

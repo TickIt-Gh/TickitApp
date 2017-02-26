@@ -43,27 +43,25 @@
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Last Name" required autofocus
+					<input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
 					name="lastname">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="First Name" required autofocus
+					<input type="username" id="first_name" class="form-control" placeholder="First Name" required autofocus
 					name="firstname">
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-					<!--input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
-					name="dateofbirth"-->
 					<label><small>Date of Birth</small></label>
-					<input type="date" name="date_of_birth" class="form-control" id="date"><br>
+					<input type="date" name="date_of_birth" class="form-control" id="date_of_birth"><br>
 				</div>
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-					<input class="form-control" type="password" placeholder="Password" required name="password">
+					<input id= 'password' class="form-control" type="password" placeholder="Password" required name="password">
 				</div>
 				<br>
 				<div class="input-group">
@@ -72,15 +70,15 @@
 				</div>
 				<br>
 				<div class="btn-group">
-				<div> Gender :
-				<button class="btn btn-default" type="button">
-						<em class="fa fa-male"></em> Male
-					</button> &nbsp
-					<button class="btn btn-default" type="button">
-						<em class="fa fa-female"></em> Female
-					</button>
-				</div>
-				<br>
+					<div> Gender :
+						<button class="btn btn-default" type="button">
+							<em class="fa fa-male"></em> Male
+						</button> &nbsp
+						<button class="btn btn-default" type="button">
+							<em class="fa fa-female"></em> Female
+						</button>
+					</div>
+					<br>
 				</div>
 				<br>
 
@@ -115,6 +113,6 @@
 	</footer>
 </div>
 
-
+<script src="js/script.js"></script>
 </body>
 </html>

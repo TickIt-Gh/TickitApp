@@ -26,3 +26,8 @@ function validate_login(){
 	}
 
 }
+
+
+function validate_sign_up(){
+	
+}

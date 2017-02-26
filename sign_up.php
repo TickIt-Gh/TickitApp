@@ -24,7 +24,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li><a class="active" href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a class="active" href="sign_up.php"><span class="fa fa-user-plus"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
@@ -66,7 +66,7 @@
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-					<input type="email" id="inputEmail" class="form-control" placeholder="Email " required name="email">
+					<input type="email" id="email" class="form-control" placeholder="Email " required name="email">
 				</div>
 				<br>
 				<div class="btn-group">
@@ -101,7 +101,7 @@
 
 
 
-	<footer style="text-align: center; padding-top: 50%" id="footer">
+	<footer style="text-align: center; /*padding-top: 50%*/" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>

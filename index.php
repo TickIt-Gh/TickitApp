@@ -68,12 +68,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<h2>TickIT Ticketing System: Your most reliable ticketing company</h2>
-						<p style="text-align=justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<p style="text-align=justify"> An easy to use ticketing system that enables you to book a ticket with VIP coaches to any destination . You can book a ticket, make your payments from wherever you are and just show up for your journey. Travelling has been made easy and its getting better...
 							<a href="about.php">read more</a>
 						</p>
 						<hr>

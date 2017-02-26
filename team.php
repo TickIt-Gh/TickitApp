@@ -40,7 +40,7 @@
 		    			<h3 class="panel-title">Brenda</h3>
 		  			</div>
 		  			<div class="panel-body">
-		   				<img class="img-responsive" src="brenda.jpg" alt="brenda Mboya" width="304" height="236">
+		   				<img class="img-responsive" src="brenda.jpg" alt="brenda Mboya" width="250" height="236">
 				                
 				                <p>Brenda is a design enthusiast.she designed the <a href="https://teamtickit.wordpress.com/">tickit website</a> and worked on the team and contact pages</p>
 		  			</div>
@@ -50,7 +50,7 @@
 		    			<h3 class="panel-title">Vladmir Fomene
 		  			</div>
 		  			<div class="panel-body">
-		   				<img class="img-responsive" src="vlad.jpg " width="304 height="236">
+		   				<img class="img-responsive" src="vlad.jpg " width="200" height="200">
 				                
 				                <p>Lead back-end engineer and database designer.He also worked on the page templates for the application</p>
 		  			</div>
@@ -77,7 +77,7 @@
 		    			<h3 class="panel-title">Abdul Razak
 		  			</div>
 		  			<div class="panel-body">
-		   				<img class="img-responsive" src="razak.jpg " width="300" height="150">
+		   				<img class="img-responsive" src="razak.jpg " width="200" height="150">
 				                
 				                <p>Front end designer for the home page</p>
 		  			</div>
@@ -90,7 +90,7 @@
 		    			<h3 class="panel-title">Job Mwesigwa
 		  			</div>
 		  			<div class="panel-body">
-		   				<img class="img-responsive" src="Job.jpg " width="304" height="236">
+		   				<img class="img-responsive" src="Job.jpg " width="200" height="236">
 				                
 				                <p>Job worked on the bus listing page.</p>
 		  			</div>
@@ -119,5 +119,8 @@
 						</div>
 
 					</footer>
-					</body>
+
+				</body>
+				
+					
 				</html>

@@ -2,28 +2,13 @@
 <html>
 <!--@uthor Brenda Mboya.This is the code for the contact page our the TICKIT application-->
 <head>
-	<title>Contact Us</title>
+	<title>Contact Us | TickIT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--adding the css file for this contact page-->
-	<link rel="stylesheet" href="contact.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-<script href="js/bootstrap.min.js"></script>
-<style type="text/css">
-	body{
-	background-color:white;
-}
-h1{
-	text-align: center;
-}
-div{
-	text-align: center;
-}
-</style>
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -37,16 +22,18 @@ div{
 					<li role="presentation"><a href="index.php">Home</a></li>
 					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
-					<li role="presentation"><a href="contact.php">Contact Us</a></li>
+					<li role="presentation"><a class="active" href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
 		</div>
 	</nav>
 
+<<<<<<< HEAD
 
 
 <!--adding my php code to validate user input-->
@@ -81,23 +68,36 @@ if(isset($_POST['submit'])){
 	}
 
 }
+=======
+>>>>>>> 5ec2f3d1e7df125ac14e6fd1e638ac5b7ccdbd6f
 
-?>
 
-<div >
-	<form method="post" action="">
-	<br><br>
-		  <br><br>
-		 <input type="text" name="name" size="50" placeholder="your name" value="<?php echo $nam?>" <br> <br>
-		 <br><br>
-		<input type="text" name="email" size="50" placeholder="your email" value="<?php echo $mail?>"><br> <br>
-		 <br><br>
-		<textarea  rows="10" cols="50" name="message" placeholder="your message here" value="<?php echo $message?>"></textarea><br><br>
-		<input type="submit" class="btn btn-success" name="submit" value="SUBMIT">
+	<div class="row" style="margin:50px; margin-bottom: 100px;">
+		<div class="col-md-4">
+			&nbsp
+		</div>
+		<div class="col-md-6" >
+			<form class="form-signin" method="post" action="#" >
+				<div>
+					<input type="text" id="name" class="form-control" placeholder="Your name" required autofocus name="name">
+				</div>
+				<br>
+				<div>
+					<input type="email" class="form-control" id= "email" size="50" placeholder="Your email" required autofocus>
+				</div>
+				<br>
+				<div>
+					<textarea  rows="10" class="form-control" cols="50" id="comment" placeholder="Your message here"></textarea>
+				</div>
+				<br>
+				<input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT" onclick="validate()" >
 
-	</form>
+			</form>
+		</div>
 	</div>
-	<footer style="text-align: center; padding-top: 50%" id="footer">
+
+	<script type="text/javascript" src="contact.js"></script>
+	<footer style="text-align: center; /*padding-top: 50%*/" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>
@@ -107,6 +107,12 @@ if(isset($_POST['submit'])){
 		</div>
 
 	</footer>
+	<!--including the javascript-->
+	<script type="text/javascript" src="js/contact.js"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 5ec2f3d1e7df125ac14e6fd1e638ac5b7ccdbd6f

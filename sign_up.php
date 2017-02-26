@@ -24,7 +24,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a class="active" href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 
@@ -55,8 +55,10 @@
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
-					name="dateofbirth">
+					<!--input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
+					name="dateofbirth"-->
+					<label><small>Date of Birth</small></label>
+					<input type="date" name="date_of_birth" class="form-control" id="date"><br>
 				</div>
 				<br>
 				<div class="input-group">

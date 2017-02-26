@@ -25,7 +25,7 @@
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation" class="active"><a href="index.php">Home</a></li>
 					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
-					<li role="presentation"><a href="https://teamtickit.wordpress.com/">Team</a></li>
+					<li role="presentation"><a href="team.php">Team</a></li>
 					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

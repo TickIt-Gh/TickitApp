@@ -69,17 +69,13 @@
 					<input type="email" id="email" class="form-control" placeholder="Email " required name="email">
 				</div>
 				<br>
-				<div class="btn-group" id="gender">
-					<div> Gender :
-						<button class="btn btn-default" type="button" id="male">
-							<em class="fa fa-male"></em> Male
-						</button> &nbsp
-						<button class="btn btn-default" type="button" id="female">
-							<em class="fa fa-female"></em> Female
-						</button>
-					</div>
-					<br>
-				</div>
+				<select class="form-control" id="gender">
+					<option value="gender">Gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+				
+				
 				<br>
 
 				<div class="error">

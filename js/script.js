@@ -39,8 +39,9 @@ function validate_sign_up(){
 	var date_of_birth = document.getElementById('date_of_birth');
 	var password = document.getElementById('password');
 	var email = document.getElementById('email');
-	var male = document.getElementById('male');
-	var female = document.getElementById('female');
+	var gender = document.getElementById('gender');
+
+	//alert(gender.value);
 
 /*
 	if (date_of_birth.value == ""){
@@ -62,7 +63,10 @@ function validate_sign_up(){
 				if (date_of_birth.value != ""){
 					if(validate_password(password)){
 						if (validate_email(email)){
-							alert('working');
+							if (gender.value != 'gender'){
+								alert('working');
+							}else
+							alert('Select your gender');
 						}else
 						alert('Provide valid email');
 					}else

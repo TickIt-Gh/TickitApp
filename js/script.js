@@ -95,7 +95,7 @@ function validate_sign_up(){
 				}else
 				alert('Enter your message');
 			}else
-			alert('Provide a value email');
+			alert('Provide a valid email');
 		}else
 		alert('Provide a valid name');
 

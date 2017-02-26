@@ -54,14 +54,13 @@
 					<textarea  rows="10" class="form-control" cols="50" id="comment" placeholder="Your message here"></textarea>
 				</div>
 				<br>
-				<input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT" onclick="validate()" >
+				<input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT" onclick="validate_contact_form()">
 
 			</form>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="contact.js"></script>
-	<footer style="text-align: center; /*padding-top: 50%*/" id="footer">
+	<footer style="text-align: center;" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>
@@ -72,7 +71,7 @@
 
 	</footer>
 	<!--including the javascript-->
-	<script type="text/javascript" src="js/contact.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
 

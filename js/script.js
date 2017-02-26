@@ -10,7 +10,8 @@ function validate_password(password) {
 
 
 function validate_name(name){
-	return /^[A-Za-z\s-]+$/.test(name.value)
+	return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test( name.value);
+
 }
 
 
@@ -43,7 +44,7 @@ function validate_sign_up(){
 
 	//alert(gender.value);
 
-/*
+	/*
 	if (date_of_birth.value == ""){
 		alert('No date selected');
 	}else
@@ -82,6 +83,20 @@ function validate_sign_up(){
 	}
 
 
+	function validate_contact_form(){
+		var nam = document.getElementById("name");
+		var mail = document.getElementById("email");
+		var message = document.getElementById("comment");
 
+		if (validate_name(nam)){
+			if (validate_email(mail)){
+				if (message.value != ""){
+					alert("your message has been sent to the tickit it team.We will respond as soon as possible");	
+				}else
+				alert('Enter your message');
+			}else
+			alert('Provide a value email');
+		}else
+		alert('Provide a valid name');
 
-
+	}

@@ -70,7 +70,7 @@
 				</div><br>
 
 				<!-- Large modal -->
-				<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_contact_form()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
+				<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_contact_buy()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
 				</button>
 
 				<!--Dive to have the modal information-->

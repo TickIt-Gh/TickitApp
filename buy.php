@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign Up | TickIT</title>
+	<title>Buy | TickIT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -68,24 +68,19 @@
 
 					<input type="date" name="trave_date" class="form-control" id="date"><br>
 
-					<script type ="text/javascript" src="buyscript.js"></script>
-
 					<!-- Large modal -->
 					<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
 					</button>
 
-					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-					  <div class="modal-dialog modal-lg" role="document">
-					    <div class="modal-content">
-					      <h1 class="text-center">Thank You For Using <br> <br> TickIT</h1>
-					      <h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br>
-					      <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
-					    </div>
-					  </div>
+					<script type ="text/javascript" src="buyscript.js"></script>
+					<div id="pop">
+						
 					</div>
 
-			</form>
+					
 
+			</form>
+			<script type ="text/javascript" src="buyscript.js"></script>
 		</div>
 		<div class="col-md-4">
 			&nbsp

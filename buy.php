@@ -43,42 +43,29 @@
 
 				<h2 class="form-signin-heading text-center">Travel Details</h2>
 
-					<select class="form-control" id="from">
-					    <option value="from">From</option>
-					    <option value="accra">Accra</option>
-					    <option value="kumasi">Kumasi</option>
-					    <option value="tamale">Tamale</option>
-					    <option value="togo">Togo</option>
-					</select><br>
+				<div>
+					<input type="text" id="name" class="form-control" placeholder="Your name" required autofocus name="name">
+				</div><br>
 
-					<select class="form-control" id="destination">
-					    <option value="to">To</option>
-					    <option value="accra">Accra</option>
-					    <option value="kumasi">Kumasi</option>
-					    <option value="tamale">Tamale</option>
-					    <option value="togo">Togo</option>
-					</select> <br>
+				<div>
+					<input type="email" class="form-control" id= "email" size="50" placeholder="Your email" required autofocus>
+				</div><br>
 
-					<select class="form-control required" id="time" name="time">
-					    <option value="Depature_Time" selected="selected">Depature Time</option>
-					    <option value="sixam">6am</option>
-					    <option value="ten">10am</option>
-					    <option value="two">2pm</option>
-					    <option value="sixpm">6pm</option>
-					</select><br>
+				<div>
+					<input type="text" id="num" class="form-control" placeholder="Your name" required autofocus name="name">
+				</div><br>
 
-					<input type="date" name="trave_date" class="form-control" id="date"><br>
+				<!-- Large modal -->
+				<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_contact_form()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
+				</button>
 
-					<!-- Large modal -->
-					<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
-					</button>
-
-					<script type ="text/javascript" src="buyscript.js"></script>
-					<div id="pop">
-						
-					</div>
-
+				<script type ="text/javascript" src="buyscript.js"></script>
+				<div id="pop">
 					
+				</div>
+
+				<!--including the javascript-->
+	<script type="text/javascript" src="js/script.js"></script>	
 
 			</form>
 		</div>
@@ -103,6 +90,8 @@
 	</footer>
 	</div>
 
+	<!--including the javascript-->
+	<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>

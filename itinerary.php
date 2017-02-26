@@ -69,6 +69,7 @@
             <td><a class="btn btn-primary" href="buy.php" >BUY</a></td>
         </tr>
       </table>
+
     </div>
     </div>
     <div class="col-md-2">

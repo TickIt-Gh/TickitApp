@@ -1,40 +1,45 @@
 
 //function to validate the email address
 function validate_email(email) {
-	 return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value);
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email.value);
 }
 
 //function to validate the password 
 function validate_password(password) {
-	 return /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/.test(password.value);
-
+	var re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+	return re.test(password.value);
 }
 
 
 //function to validate the name 
 function validate_name(name){
 	return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test( name.value);
-}
 
-
-//function to validate phone number
-function validate_phone_num(phone){
-	return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$/.test(phone.value);
 }
 
 //function to validate the form for log in 
 function validate_login(){
 	var email = document.getElementById('email');
 	var password = document.getElementById('password');
+
+	//check if the password and email is not empty
 	if (email != null && password != null){
+
+		//validate the email
 		if (validate_email(email)){
 			
-			alert('Successful Login in');
+			    //if all is valid , the user successfully logs in  
+				alert('Successful Login in');
 			
 		}else{
-			alert('Please a valid email');
+
+			//prompt user to enter a valid email
+			alert('Please enter a valid email');
 		}
 	}else{
+
+		//prompt user to enter the password and email
 		alert('Provide an email and password')
 	}
 
@@ -44,6 +49,8 @@ function validate_login(){
 
 //function to validate the form for sign up
 function validate_sign_up(){
+
+	//get the values entered by the user for validation 
 	var last_name = document.getElementById('last_name');
 	var first_name = document.getElementById('first_name');
 	var date_of_birth = document.getElementById('date_of_birth');
@@ -51,13 +58,13 @@ function validate_sign_up(){
 	var email = document.getElementById('email');
 	var gender = document.getElementById('gender');
 
-
-	if (validate_name(last_name)){
-		if (validate_name(first_name)){
-			if (date_of_birth.value != ""){
-				if(validate_password(password)){
-					if (validate_email(email)){
-						if (gender.value != 'gender'){
+       //check if the values entered are valid
+		if (validate_name(last_name)){
+			if (validate_name(first_name)){
+				if (date_of_birth.value != ""){
+					if(validate_password(password)){
+						if (validate_email(email)){
+							if (gender.value != 'gender'){
 
 								//if all the details are valid, the user account is created 
 								alert('You have created an account with TickIt');
@@ -79,14 +86,18 @@ function validate_sign_up(){
 
 
     //function to validate the contact form 
-    function validate_contact_form(){
-    	var nam = document.getElementById("name");
-    	var mail = document.getElementById("email");
-    	var message = document.getElementById("comment");
+	function validate_contact_form(){
 
-    	if (validate_name(nam)){
-    		if (validate_email(mail)){
-    			if (message.value != ""){
+		//get the values from the contact us form for validation
+		var nam = document.getElementById("name");
+		var mail = document.getElementById("email");
+		var message = document.getElementById("comment");
+
+
+        //validate the values 
+		if (validate_name(nam)){
+			if (validate_email(mail)){
+				if (message.value != ""){
 
 					//if all the details are valid, the details are sent
 					//notify the user that the details have been sent

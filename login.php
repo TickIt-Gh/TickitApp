@@ -12,12 +12,16 @@
 
 </head>
 <body>
+    
+    <!--the navigation bar-->
 	<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
 		<div class="container">
 			<div class="navbar-header"><a href="index.php" class="navbar-brand navbar-link"><i class="glyphicon glyphicon-phone"></i>TickIT</a>
 				<button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 			</div>
 			<div class="collapse navbar-collapse" id="navcol-1">
+
+			    <!--links to other pages-->
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation"><a href="index.php">Home</a></li>
 					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
@@ -25,7 +29,10 @@
 					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+				    <!--link to login page-->
 					<li><a class="active" href="login.php"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+
+					<!--link to the sign up-->
 					<li><a href="sign_up.php"><span class="fa fa-user-plus"></span> Sign Up</a></li>
 				</ul>
 			</div>
@@ -40,15 +47,21 @@
 			&nbsp
 		</div>
 		<div class="col-md-4" ">
+
+		    <!---form for login details-->
 			<form class="form-signin" method="POST" action="admin.php">
 				<h2 class="form-signin-heading" style="text-align: center;">Please sign in</h2>
 				<br>
+
+				<!--get the user email-->
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
 					<input type="email" id="email" class="form-control" placeholder="Email" required autofocus
 					name="email">
 				</div>
 				<br>
+
+				<!--get the user password-->
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
 					<input class="form-control" id="password" type="password" placeholder="Password" required name="password">
@@ -58,16 +71,15 @@
 					<label>
 						<input type="checkbox" value="remember_me"> Remember me
 					</label>
+
+					<!--link for password recovery-->
 					<label style="padding-left: 70%">
 						<a href= "">forgot password?</a>
 					</label>
 				</div>
 				<br>
-				<div class="error">
-					<!--
-						PHP CODE FOR ERROR HERE
-					-->
-				</div>
+				
+				<!---call the validate_login function whensubmit is clicked-->
 				<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_login()">Sign in</button>
 			</form>
 		</div>
@@ -79,7 +91,7 @@
 
 
 
-
+    <!--the footer-->
 	<footer style="text-align: center; padding-top: 10%" id="footer">
 		<div class="container">
 			<div class="custom"  >

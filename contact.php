@@ -60,7 +60,7 @@
 		</div>
 	</div>
 
-	<footer style="text-align: center;" id="footer">
+	<footer style="text-align: center; padding-top: 00.1%" id="footer">
 		<div class="container">
 			<div class="custom"  >
 				<p>©TickIT Company Ltd. All rights reserved.</p>

@@ -42,34 +42,40 @@
 
 				<h2 class="form-signin-heading text-center">Travel Details</h2>
 
-					<select class="form-control">
-					    <option value="one">From</option>
-					    <option value="two">Accra</option>
-					    <option value="three">Kumasi</option>
-					    <option value="four">Tamale</option>
-					    <option value="five">Togo</option>
+					<select class="form-control" id="from">
+					    <option value="from">From</option>
+					    <option value="accra">Accra</option>
+					    <option value="kumasi">Kumasi</option>
+					    <option value="tamale">Tamale</option>
+					    <option value="togo">Togo</option>
 					</select><br>
 
-					<select class="form-control">
-					    <option value="one">To</option>
-					    <option value="two">Accra</option>
-					    <option value="three">Kumasi</option>
-					    <option value="four">Tamale</option>
-					    <option value="five">Togo</option>
+					<select class="form-control" id="destination">
+					    <option value="to">To</option>
+					    <option value="accra">Accra</option>
+					    <option value="kumasi">Kumasi</option>
+					    <option value="tamale">Tamale</option>
+					    <option value="togo">Togo</option>
 					</select> <br>
 
-					<select class="form-control">
-					    <option value="one">Depature Time</option>
-					    <option value="two">6am</option>
-					    <option value="three">10am</option>
-					    <option value="four">2pm</option>
-					    <option value="five">6pm</option>
+					<select class="form-control required" id="time" name="time">
+					    <option value="Depature_Time" selected="selected">Depature Time</option>
+					    <option value="sixam">6am</option>
+					    <option value="ten">10am</option>
+					    <option value="two">2pm</option>
+					    <option value="sixpm">6pm</option>
 					</select><br>
 
-					<input type="date" name="trave_date" class="form-control"><br>
+					<input type="date" name="trave_date" class="form-control" id="date"><br>
+
+					<script type ="text/javascript" src="myscript.js"></script>
 
 					<!-- Large modal -->
-					<button type="button" class="btn btn-primary center-block btn-lg btn-block" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy</button>
+					<button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate()" data-toggle="modal" data-target=".bs-example-modal-lg" >Buy
+					</button>
+
+
+					<script type ="text/javascript" src="myscript.js"></script>
 
 					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 					  <div class="modal-dialog modal-lg" role="document">

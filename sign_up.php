@@ -24,7 +24,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li>class="active"><a href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+					<li><a class="active" href="sign_up.php"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
 				</ul>
 			</div>
 

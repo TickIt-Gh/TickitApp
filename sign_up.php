@@ -56,8 +56,10 @@
 				<br>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-					<input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
-					name="dateofbirth">
+					<!--input type="username" id="inputEmail" class="form-control" placeholder="Date of Birth (DD/MM/YYYY)" required autofocus
+					name="dateofbirth"-->
+					<label><small>Date of Birth</small></label>
+					<input type="date" name="date_of_birth" class="form-control" id="date"><br>
 				</div>
 				<br>
 				<div class="input-group">

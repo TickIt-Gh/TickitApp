@@ -2,12 +2,13 @@
 <html>
 <!--@uthor Brenda Mboya.This is the code for the contact page our the TICKIT application-->
 <head>
-	<title>Contact US | TickIT</title>
+	<title>Contact Us | TickIT</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -18,9 +19,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navcol-1">
 				<ul class="nav navbar-nav navbar-left">
-					<li role="presentation" ><a href="index.php">Home</a></li>
+					<li role="presentation"><a href="index.php">Home</a></li>
 					<li role="presentation"><a href="buy.php">Buy</a></li>
-					<li role="presentation" class="active" ><a href="contact.php">Contact Us</a></li>
+					<li role="presentation" class="active"><a href="contact.php" class="active">Contact Us</a></li>
 					<li role="presentation"><a href="team.php">Team</a></li>
 					<li role="presentation"><a href="about.php">About Us</a></li>
 				</ul>
@@ -41,16 +42,18 @@
 		</div>
 		<div class="col-md-6" >
 			<form class="form-signin" method="post" action="#" >
-
-				<input type="text" id="name" class="form-control" placeholder="Your name" required autofocus name="firstname">
+				<div>
+					<input type="text" id="name" class="form-control" placeholder="Your name" required autofocus name="name">
+				</div>
 				<br>
-
-				<input type="username" class="form-control" id= "email" size="50" placeholder="your email" required autofocus>
+				<div>
+					<input type="email" class="form-control" id= "email" size="50" placeholder="Your email" required autofocus>
+				</div>
 				<br>
-
-				<textarea  rows="10" class="form-control" cols="50" id="comment" placeholder="your message here"></textarea>
+				<div>
+					<textarea  rows="10" class="form-control" cols="50" id="comment" placeholder="Your message here"></textarea>
+				</div>
 				<br>
-
 				<input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT" onclick="validate()" >
 
 			</form>

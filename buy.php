@@ -80,7 +80,6 @@
 					
 
 			</form>
-			<script type ="text/javascript" src="buyscript.js"></script>
 		</div>
 		<div class="col-md-4">
 			&nbsp

@@ -33,43 +33,7 @@
 		</div>
 	</nav>
 
-<<<<<<< HEAD
 
-
-<!--adding my php code to validate user input-->
-<?php
-//declaring my variables
-$nam="";
-$mail="";
-$message="";
-//checking if the user has filled the fields oc clicking the button
-if(isset($_POST['submit'])){
-	if(!empty($_POST['name'])){
-		$nam=$_POST['name'];
-	}
-	else{
-		echo "kindly type your name";
-		echo "<br>";
-	}
-	if(!empty($_POST['email'])){
-		$mail=$_POST['email'];
-	}
-	else{
-		echo 'kindly type your email address';
-		echo "<br>";
-	}
-	if(!empty($_POST['message'])){
-		$message=$_POST['message'];
-
-	}
-	else{
-		echo 'kindly type your message';
-		echo "<br>";
-	}
-
-}
-=======
->>>>>>> 5ec2f3d1e7df125ac14e6fd1e638ac5b7ccdbd6f
 
 
 	<div class="row" style="margin:50px; margin-bottom: 100px;">
@@ -110,9 +74,5 @@ if(isset($_POST['submit'])){
 	<!--including the javascript-->
 	<script type="text/javascript" src="js/contact.js"></script>
 </body>
+</html>
 
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 5ec2f3d1e7df125ac14e6fd1e638ac5b7ccdbd6f

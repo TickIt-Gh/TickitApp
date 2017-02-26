@@ -13,6 +13,7 @@ function validate_name(name){
 	return /^[A-Za-z\s-]+$/.test(name.value)
 }
 
+
 function validate_login(){
 	var email = document.getElementById('email');
 	var password = document.getElementById('password');
@@ -21,14 +22,62 @@ function validate_login(){
 			if (validate_password(password))
 				alert('Successful Login in');
 			else
-				alert('Password must be aleast 8 character, one symbol, atleast an upper case, a lower case and a number');
+				alert('Password must be aleast 8 character \n one symbol \natleast an upper case \na lower case \na number');
 		}else{
-			alert('Please provide all details');
+			alert('Please a valid email');
 		}
 	}else{
-		alert('Provide email and password')
+		alert('Provide an email and password')
 	}
 
+
 }
+
+function validate_sign_up(){
+	var last_name = document.getElementById('last_name');
+	var first_name = document.getElementById('first_name');
+	var date_of_birth = document.getElementById('date_of_birth');
+	var password = document.getElementById('password');
+	var email = document.getElementById('email');
+	var male = document.getElementById('male');
+	var female = document.getElementById('female');
+
+/*
+	if (date_of_birth.value == ""){
+		alert('No date selected');
+	}else
+		alert(date_of_birth.value);
+	alert( last_name.value +'<br>'+
+		first_name.value + '<br>'+
+		date_of_birth.value + '<br>'+
+		password.value +'<br>'+
+		email.value + '<br>'+
+		male.value + '<br>'+
+		female.value + '<br>'+
+		'<br>');
+		
+		*/
+		if (validate_name(last_name)){
+			if (validate_name(first_name)){
+				if (date_of_birth.value != ""){
+					if(validate_password(password)){
+						if (validate_email(email)){
+							alert('working');
+						}else
+						alert('Provide valid email');
+					}else
+					alert('Password must be aleast 8 character \n \tone symbol \n \tatleast an upper case \n \ta lower case \n \ta number');
+				}else
+				alert('Select date of birth');
+			}else
+			alert('Provide valid first name');
+
+		}else
+		alert('Provide valid last name');
+		
+	}
+
+
+
 
 

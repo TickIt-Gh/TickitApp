@@ -25,7 +25,7 @@
 				<ul class="nav navbar-nav navbar-left">
 					<li role="presentation" class="active"><a href="index.php">Home</a></li>
 					<li role="presentation"><a href="itinerary.php">Bus Listing</a></li>
-					<li role="presentation"><a href="team.php">Team</a></li>
+					<li role="presentation"><a href="https://teamtickit.wordpress.com/">Team</a></li>
 					<li role="presentation"><a href="contact.php">Contact Us</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -69,7 +69,7 @@
 					<div class="col-lg-12">
 						<h2>TickIT Ticketing System: Your most reliable ticketing company</h2>
 						<p style="text-align=justify"> An easy to use ticketing system that enables you to book a ticket with VIP coaches to any destination . You can book a ticket, make your payments from wherever you are and just show up for your journey. Travelling has been made easy and its getting better...
-							<a href="about.php">read more</a>
+							<a href="https://teamtickit.wordpress.com/about/">read more</a>
 						</p>
 						<hr>
 					</div>

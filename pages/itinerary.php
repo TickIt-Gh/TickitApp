@@ -1,10 +1,10 @@
 <?php
-  require_once 'require/header.php';
+  require_once '../require/header.php';
 ?>
   <title>Listing</title>
 
 <?php
-  require_once 'require/nav_bar.php';
+  require_once '../require/nav_bar.php';
 ?>
 
   <div class="row dashboard" style="margin:50px; margin-bottom: 100px;">
@@ -56,5 +56,5 @@
   </div>
 
   <?php
-    require_once 'require/footer.php';
+    require_once '../require/footer.php';
   ?>

@@ -1,10 +1,11 @@
 <?php
-require_once '../require/header.php';
+require_once '../setting/init.php';
+include_once REQUIRES . 'header.php';
 ?>
     <title>Team</title>
 
 <?php
-require_once '../require/nav_bar.php';
+include_once REQUIRES . 'nav_bar.php';
 ?>
     <div class="row">
         <div class="col-sm-3">
@@ -86,5 +87,5 @@ require_once '../require/nav_bar.php';
 
 
 <?php
-require_once '../require/footer.php';
+include_once REQUIRES . 'footer.php';
 ?>

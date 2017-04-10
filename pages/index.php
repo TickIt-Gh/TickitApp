@@ -1,10 +1,11 @@
 <?php
-require_once '../require/header.php';
+require_once '../setting/init.php';
+include_once REQUIRES . 'header.php';
 ?>
     <title>Welcome to TickIT</title>
 
 <?php
-require_once '../require/nav_bar.php';
+require_once REQUIRES . 'nav_bar.php';
 ?>
 
     <div class="jumbotron hero">
@@ -22,7 +23,7 @@ require_once '../require/nav_bar.php';
                         Book a ticket with us or create a account</p>
                     <p>
                         <a class='btn btn-primary' href="buy.php">Buy Now!</a>
-                        <a class='btn btn-success' href="sign_up.php">Sign Up</a>
+                        <a class='btn btn-success' href="../public/sign_up.php">Sign Up</a>
                     </p>
                 </div>
 
@@ -67,5 +68,5 @@ require_once '../require/nav_bar.php';
     </div>
 
 <?php
-require_once '../require/footer.php';
+require_once REQUIRES . 'footer.php';
 ?>

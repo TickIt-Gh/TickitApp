@@ -1,10 +1,11 @@
 <?php
-require_once '../require/header.php';
+require_once '../setting/init.php';
+include_once REQUIRES . 'header.php';
 ?>
 <title>Buy</title>
 
 <?php
-require_once '../require/nav_bar.php';
+include_once REQUIRES . 'nav_bar.php';
 ?>
 
 
@@ -64,5 +65,5 @@ require_once '../require/nav_bar.php';
 
 <!--The Footer of every page-->
 <?php
-require_once '../require/footer.php';
+include_once REQUIRES . 'footer.php';
 ?>

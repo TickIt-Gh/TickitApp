@@ -6,4 +6,11 @@
  * Time: 9:53 PM
  */
 
+/*
+if (isset($_SESSION)){
+
+}else{
+
+}
+*/
 header('Location: pages/');

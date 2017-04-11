@@ -14,3 +14,5 @@ include_once DATABASES . 'Database.php';
 $db = new Database();
 $db->query('SELECT * FROM 	admin');
 echo $db->count_rows();
+
+echo $yesy;

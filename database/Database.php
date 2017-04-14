@@ -57,6 +57,19 @@ class Database
     }
 
     /**
+     * this method fetches all records from a database table
+     * @return array|bool|null result form database
+     */
+    public function fetchAll()
+    {
+        if ($this->result == false) {
+            return false;
+        }
+        return mysqli_fetch_all($this->result, MYSQLI_ASSOC);
+    }
+
+
+    /**
      * this return result in json format
      * @return bool|string result in json format from query
      */

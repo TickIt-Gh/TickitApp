@@ -18,6 +18,10 @@ if (isset($_POST['login'])) {
     login();
 }
 
+/**
+ * This methods validate the email and password user provides
+ * @return bool true if user provides correct information
+ */
 function validate_login()
 {
     global $error, $email;
@@ -43,6 +47,10 @@ function validate_login()
     return false;
 }
 
+/**
+ * Login an administrator into the admin dashboard
+ * Provides an error message if user provides wrong information or if user is not active in the system
+ */
 function login()
 {
 
@@ -59,8 +67,8 @@ function login()
         $db->query($sql);
         $result = $db->fetch();
         if ($result) {
-            if (password_verify($_POST['password'], $result['password'])) {
-                header('Location: ../pages/');
+            if (password_verify($_POST['password'], $result['password']) and $result['status'] === 'active') {
+                header('Location: ../pages/adminDashBoard.php');
             } else {
                 $error = 'Wrong login credentials';
             }

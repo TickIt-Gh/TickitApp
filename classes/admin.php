@@ -12,7 +12,7 @@ require_once("../database/Database.php");
 //Require bus listing class
 require_once("listing.php");
 
-public class Admin{
+class Admin{
   private $email;
 
   private $adminID;
@@ -21,7 +21,7 @@ public class Admin{
 
   private $session;
 
-  private $status = "inactive"
+  private $status = "inactive";
 
   private $role;
 
@@ -76,7 +76,7 @@ public class Admin{
   }
 
   public function getListings(){
-    $db = new Datbase;
+    $db = new Database;
     $sql = "SELECT listing_id, bus_number, available_seats, depature_time,
     departure_date, departure_point, destination_point, listing_status, price, managed_by
     FROM bus_listing";

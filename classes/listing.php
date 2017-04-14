@@ -94,9 +94,18 @@ public class Listing{
     return $managed_by;
   }
 
-  public function getManagedBy($newManager)
+  public function setManagedBy($newManager)
     $managed_by = $newManager;
   }
+
+  public function getPrice()
+    return $price;
+  }
+
+  public function setPrice($newPrice)
+    $price = $newPrice;
+  }
+
 
 }
 

@@ -5,7 +5,7 @@
 * bus listing.
 *
 **/
-public class Listing{
+class Listing{
   private $listing_id;
 
   private $bus_number;
@@ -90,19 +90,19 @@ public class Listing{
     $listing_status = $newStatus;
   }
 
-  public function getManagedBy()
+  public function getManagedBy(){
     return $managed_by;
   }
 
-  public function setManagedBy($newManager)
+  public function setManagedBy($newManager){
     $managed_by = $newManager;
   }
 
-  public function getPrice()
+  public function getPrice(){
     return $price;
   }
 
-  public function setPrice($newPrice)
+  public function setPrice($newPrice){
     $price = $newPrice;
   }
 

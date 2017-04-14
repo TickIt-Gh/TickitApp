@@ -25,7 +25,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
-                   name="lastname">
+                   name="lastname" value="">
         </div>
         <br>
 

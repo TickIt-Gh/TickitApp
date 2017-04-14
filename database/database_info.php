@@ -8,7 +8,7 @@
 
 define('SERVER', 'localhost');
 define('USERNAME', 'root');
-define('PASSWORD', 'kovich2002');
+define('PASSWORD', '');
 define('DATABASE', 'tti2018');
 
 ?>

@@ -1,12 +1,23 @@
 <?php
 /**
-*@author VladimirFomen
+*@author VladimirFomene
 *Admin class with all attributes and functionalities of an
 * admin class.
 *
 **/
+
+//Require our database connection class.
+require_once("../database/Database.php");
 public class Admin{
   private $email;
+
+  private $adminID;
+
+  private $password;
+
+  private $session;
+
+  private $status = "inactive"
 
   private $role;
 
@@ -14,6 +25,26 @@ public class Admin{
 
   public function __constructor(){
 
+  }
+
+  public function getAdminID(){
+    return $adminID;
+  }
+
+  public function getSession(){
+    return $session;
+  }
+
+  public function setSession($newSession){
+    $session = $newSession;
+  }
+
+  public function getPassword(){
+    return $password;
+  }
+
+  public function setPassword($newPass){
+    $password = $newPass;
   }
 
   public function getEmail(){

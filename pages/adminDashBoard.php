@@ -5,7 +5,7 @@ include_once REQUIRES . 'header.php';
 <title>Admin Page</title>
 
 <?php
-require_once REQUIRES . 'nav_bar.php';
+  require_once REQUIRES . 'nav_bar.php';
 ?>
 
 <div class="row dashboard" style="margin:50px; margin-bottom: 10px;">

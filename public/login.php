@@ -1,11 +1,11 @@
 <?php
-require_once '../setting/init.php';
-include_once REQUIRES . 'header.php';
+  require_once '../setting/init.php';
+  include_once REQUIRES . 'header.php';
 ?>
 <title>Log In</title>
 
 <?php
-include_once REQUIRES . 'nav_bar.php';
+  include_once REQUIRES . 'nav_bar.php';
 ?>
 
 
@@ -17,7 +17,7 @@ include_once REQUIRES . 'nav_bar.php';
     ">
 
     <!---form for login details-->
-    <form class="form-signin" method="POST" action="admin.php">
+    <form class="form-signin" method="POST" action="adminDashBoard.php">
         <h2 class="form-signin-heading" style="text-align: center;">Please sign in</h2>
         <br>
 

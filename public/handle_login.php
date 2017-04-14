@@ -29,7 +29,7 @@ function validate_login()
         $is_ok = false;
     }
 
-    if (isset($_POST['password']) and validate_password($_POST['password'])) {
+    if (isset($_POST['password'])) {
 
     } else {
         $error = 'Wrong login credentials';
@@ -45,15 +45,29 @@ function validate_login()
 
 function login()
 {
-    global $email;
+
+    global $error;
     if (validate_login()) {
         /*
          *Check user credentials
          */
+        $email = format_data($_POST['email']);
 
-        header('Location: sign_up.php');
+        require_once DATABASES . 'Database.php';
+        $db = new Database();
+        $sql = "SELECT * FROM user WHERE (email = '$email')";
+        $db->query($sql);
+        $result = $db->fetch();
+        if ($result) {
+            if (password_verify($_POST['password'], $result['password'])) {
+                header('Location: ../pages/');
+            } else {
+                $error = 'Wrong login credentials';
+            }
+        } else {
+            $error = 'Wrong login credentials';
+        }
     }
-
 }
 
 ?>

@@ -1,14 +1,15 @@
 <?php
-require_once '../setting/init.php';
+require_once('../controller/dashboardController.php');
+require_once('../setting/init.php');
 include_once REQUIRES . 'header.php';
-?>
-<title>Admin Page</title>
 
-<?php
-  require_once REQUIRES . 'nav_bar.php';
-?>
+  echo '<title>Admin Dashboard</title>';
 
-<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
+
+ require_once REQUIRES . 'nav_bar.php';
+
+
+echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
     <div class="col-md-2">
         &nbsp
     </div>
@@ -21,61 +22,27 @@ include_once REQUIRES . 'header.php';
         <!-- Table -->
         <table class="table">
             <tr>
-                <th>#</th>
                 <th>Bus Number</th>
                 <th>Departure Time</th>
                 <th>Departure Date</th>
+                <th>Available Seats</th>
                 <th>Departure Point</th>
                 <th>Destination Point</th>
                 <th>Edit</th>
                 <th>Delete</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>GT 74 B</td>
-                <td>11:45am</td>
-                <td>26/02/2017</td>
-                <td>Accra</td>
-                <td>Kumasi</td>
-                <td>
-                    <button type="button" class="btn btn-default btn-primary" aria-haspopup="true"
-                            aria-expanded="false">Edit
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-default btn-primary" aria-haspopup="true"
-                            aria-expanded="false">Delete
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>GT 547 C</td>
-                <td>11:45pm</td>
-                <td>27/02/2017</td>
-                <td>Tamale</td>
-                <td>Kumasi</td>
-                <td>
-                    <button type="button" class="btn btn-default btn-primary" aria-haspopup="true"
-                            aria-expanded="false">Edit
-                    </button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-default btn-primary" aria-haspopup="true"
-                            aria-expanded="false">Delete
-                    </button>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
-<div class="col-md-2">
-    &nbsp
-</div>
-</div>
-<button type="button" class="btn btn-default add-btn btn-primary" aria-haspopup="true" aria-expanded="false">Add
-</button>
+            </tr>';
+     $dashController = new dashController;
+     $dashController->displaydashboard();
 
-<?php
-include_once REQUIRES . 'footer.php';
+      echo '</table>
+            </div>
+            </div>
+            <div class="col-md-2">
+                &nbsp
+            </div>
+            </div>
+            <button type="button" class="btn btn-default add-btn btn-primary" aria-haspopup="true" aria-expanded="false">Add
+            </button>';
+
+  include_once REQUIRES . 'footer.php';
 ?>

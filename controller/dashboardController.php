@@ -30,13 +30,13 @@ class dashController{
           <td>'.
               '<form>
                 <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-                <input type="submit" name="edit" class="btn btn-default btn-primary">
+                <input type="submit" name="edit" value="Edit" class="btn btn-default btn-primary">
               </form>
           </td>
           <td>'.
           '<form>
             <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-            <input type="submit" name="delete" class="btn btn-default btn-primary">
+            <input type="submit" name="delete" value="Delete" class="btn btn-default btn-primary">
           </form>
           </td>
       </tr>';

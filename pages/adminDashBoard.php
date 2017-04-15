@@ -41,22 +41,48 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
                 &nbsp
             </div>
             </div>
-            <button type="button" class="btn btn-default add-btn btn-primary" aria-haspopup="true" aria-expanded="false">Add Listing
+            <button type="button" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#myModal">Add Listing
             </button>
-            <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Modal title</h4>
+                  <h4 class="modal-title">Add Listing</h4>
                 </div>
-                <div class="modal-body">
-                  <p>One fine body&hellip;</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <form method="post">
+                  <div class="modal-body">
+                      <div class="form-group">
+                        <label for="bus_number">Bus Number</label>
+                        <input placeholder="CE 000 B" type="text" class="form-control" name="bus_number" id="bus_number" tabindex="1" autofocus><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="depature_time">Departure Time</label>
+                        <input type="time" name="departure_time" class="form-control" id="departure_time" ><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="depature_date">Departure Date</label>
+                        <input type="date" name="departure_date" class="form-control" id="departure_date" ><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="available_seats">Available Seats</label>
+                        <input placeholder="Available Seats" class="form-control" type="text" name="available_seats" id="available_seats"><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="departure_point">Departure Point</label>
+                        <input placeholder="Departure Point" class="form-control" type="text" name="departure_point" id="departure_point"><br>
+                      </div>
+                      <div class="form-group">
+                        <label for="destination_point">Destination Point</label>
+                        <input placeholder="Destination Point" class="form-control" type="text" name="destination_point" id="destination_point"><br>
+                     </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add Listing</button>
+                  </div>
+              </form>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->';

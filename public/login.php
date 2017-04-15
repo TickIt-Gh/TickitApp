@@ -5,7 +5,7 @@ include_once REQUIRES . 'header.php';
 <title>Log In</title>
 
 <?php
-#include_once REQUIRES . 'nav_bar.php';
+include_once REQUIRES . 'nav_bar.php';
 require_once PUBLICS . 'handle_login.php';
 ?>
 

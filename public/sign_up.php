@@ -49,6 +49,14 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+        <!---get user's email-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <input type="email" id="email" class="form-control" placeholder="Email " required name="email">
+        </div>
+        <br>
+
+
         <!---get user's password-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
@@ -56,12 +64,6 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
-        <!---get user's email-->
-        <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <input type="email" id="email" class="form-control" placeholder="Email " required name="email">
-        </div>
-        <br>
 
         <!---get user's gender-->
         <select class="form-control" id="gender" name="gender">

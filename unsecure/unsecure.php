@@ -120,17 +120,27 @@ function registernewuser()
 
 	$pwdhash = password_hash($pw, PASSWORD_DEFAULT);
 
-	$sql = "INSERT INTO admin (firstname, lastname, email, pwd, DOB, gender)
-	VALUES ('$fname','$lname','$email','$pwdhash', $dob, '$gender') ";
-
 	//create instance of database class
 	$reguser = new Database;
 
-	//execute querry
+	$sql = "INSERT INTO user (email, password)
+	VALUES ('$email','$pwdhash') ";
+
 	$dbexec = $reguser->query($sql);
+	$ID = $reguser->query("SELECT userID FROM user WHERE email = $email");
+
+	if ($dbexec && $reguser->query("SELECT userID FROM user WHERE email = $email"))
+	{
+	$sql2 = "INSERT INTO client (userID,firstname, lastname, email, pwd, DOB, gender)
+	VALUES ('$ID','$fname','$lname', $dob, '$gender')";
+
+	//execute querry
+	$dbexec = $reguser->query($sql2);
 
 	if($dbexec)
 		header("Location: ../public/login.php");
 	else
 		echo "User could not be registered";
+}
+
 }

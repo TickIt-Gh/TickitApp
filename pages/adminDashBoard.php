@@ -23,7 +23,7 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
         <table class="table" id="dashboard">';
      $dashController = new dashController;
      $admin = $dashController->adminSetup();
-     print($dashController->displaydashboard($admin));
+     $dashController->displaydashboard($admin);
 
       echo '</table>
             </div>

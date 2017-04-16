@@ -20,19 +20,10 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
         <div class="panel-heading">Bus Listing</div>
 
         <!-- Table -->
-        <table class="table">
-            <tr>
-                <th>Bus Number</th>
-                <th>Departure Time</th>
-                <th>Departure Date</th>
-                <th>Available Seats</th>
-                <th>Departure Point</th>
-                <th>Destination Point</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>';
+        <table class="table" id="dashboard">';
      $dashController = new dashController;
-     $dashController->displaydashboard();
+     $admin = $dashController->adminSetup();
+     print($dashController->displaydashboard($admin));
 
       echo '</table>
             </div>
@@ -50,7 +41,7 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title">Add Listing</h4>
                 </div>
-                <form method="post">
+                <form method="get" onsubmit="addListing();">
                   <div class="modal-body">
                       <div class="form-group">
                         <label for="bus_number">Bus Number</label>
@@ -76,16 +67,23 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
                         <label for="destination_point">Destination Point</label>
                         <input placeholder="Destination Point" class="form-control" type="text" name="destination_point" id="destination_point"><br>
                      </div>
-
+                     <div class="form-group">
+                       <label for="price">Price</label>
+                       <input placeholder="Unit Price" class="form-control" type="text" name="listing_price" id="listing_price"><br>
+                    </div>
+                     <select name="listing_status" id="availability">
+            					<option value="Select Availability" selected="selected">Choose Availability</option>
+            					<option name="listing_status" value="available">Available</option>
+            					<option name="listing_status" value="unavailable">Unavailable</option>
+            				</select>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add Listing</button>
+                    <input type="submit" name="add" value="Add Listing" class="btn btn-default btn-primary">
                   </div>
               </form>
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->';
-
   include_once REQUIRES . 'footer.php';
 ?>

@@ -76,10 +76,9 @@ class dashController{
     }
   }
 
-  public function handlelistingDelete(){
+  public function handlelistingDelete($admin){
     if(isset($_GET['delete'])){
-      deleteListing($_GET['listingID']);
-      displaydashboard();
+      $admin->deleteListing($_GET['listingID']);
     }
   }
 
@@ -102,7 +101,7 @@ class dashController{
       $listing->setListingStatus($_GET['listing_status']);
       $listing->setPrice((float) $_GET['listing_price']);
       $listing->setManagedBy($admin->getAdminID());
-      echo $admin->addListing($listing);
+      $admin->addListing($listing);
     }
   }
 
@@ -113,7 +112,7 @@ class dashController{
   $admin = $dashController->adminSetup();
   $dashController->handlelistingEdit();
   $dashController->handlelistingUpdate();
-  $dashController->handlelistingDelete();
+  $dashController->handlelistingDelete($admin);
   $dashController->handlelistingAdds($admin);
 
 

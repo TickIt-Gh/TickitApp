@@ -30,7 +30,18 @@ function onDeleteListing(){
 }
 
 function deleteListing() {
-    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+  var listingID = document.getElementById("listingID").value;
+  var xhttp = new ajaxRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //Parse json from server into an array of js objects
+      document.getElementById("dashboard").innerHTML = this.responseText;
+
+    }
+  };
+
+  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
+  xhttp.send();
 }
 
 

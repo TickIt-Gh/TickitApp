@@ -31,79 +31,79 @@ class Listing{
   }
 
   public function getListingId(){
-    return $listing_id;
+    return $this->listing_id;
   }
 
   public function getBusNumber(){
-    return $bus_number;
+    return $this->bus_number;
   }
 
   public function setBusNumber($newBusNumber){
-    $bus_number = $newBusNumber;
+    $this->bus_number = $newBusNumber;
   }
 
   public function getAvailableSeats(){
-    return $available_seats;
+    return $this->available_seats;
   }
 
   public function setAvailableSeats($NoSeats){
-    $available_seats = $NoSeats;
+    $this->available_seats = $NoSeats;
   }
 
   public function getDepartureTime(){
-    return $departure_time;
+    return $this->departure_time;
   }
 
   public function setDepartureTime($newTime){
-    $departure_time = $newTime;
+    $this->departure_time = $newTime;
   }
 
   public function getDepartureDate(){
-    return $departure_date;
+    return $this->departure_date;
   }
 
   public function setDepartureDate($newDate){
-    $departure_date = $newDate;
+    $this->departure_date = $newDate;
   }
 
   public function getDeparturePoint(){
-    return $departure_point;
+    return $this->departure_point;
   }
 
   public function setDeparturePoint($newDeparturePoint){
-    $departure_point = $newDeparturePoint;
+    $this->departure_point = $newDeparturePoint;
   }
 
   public function getDestinationPoint(){
-    return $destination_point;
+    return $this->destination_point;
   }
 
   public function setDestinationPoint($newDestinationPoint){
-    $destination_point = $newDestinationPoint;
+    $this->destination_point = $newDestinationPoint;
   }
 
   public function getListingStatus(){
-    return $listing_status;
+    return $this->listing_status;
   }
 
   public function setListingStatus($newStatus){
-    $listing_status = $newStatus;
+    $this->listing_status = $newStatus;
   }
 
   public function getManagedBy(){
-    return $managed_by;
+    return $this->managed_by;
   }
 
   public function setManagedBy($newManager){
-    $managed_by = $newManager;
+    $this->managed_by = $newManager;
   }
 
   public function getPrice(){
-    return $price;
+    return $this->price;
   }
 
   public function setPrice($newPrice){
-    $price = $newPrice;
+    $this->price = $newPrice;
   }
 
 

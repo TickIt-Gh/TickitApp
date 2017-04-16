@@ -21,19 +21,21 @@ include_once REQUIRES . 'nav_bar.php';
         <h2 class="form-signin-heading" style="text-align: center;">Provide Details</h2>
         <br>
 
-        <!---get user's lastname-->
-        <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-            <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
-                   name="lastname">
-        </div>
-        <br>
 
         <!---get user's firstname-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="first_name" class="form-control" placeholder="First Name" required autofocus
                    name="firstname">
+        </div>
+        <br>
+
+
+        <!---get user's lastname-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
+            <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
+                   name="lastname" value="">
         </div>
         <br>
 
@@ -47,13 +49,6 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
-        <!---get user's password-->
-        <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-            <input id='password' class="form-control" type="password" placeholder="Password" name="password">
-        </div>
-        <br>
-
         <!---get user's email-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
@@ -61,11 +56,20 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+
+        <!---get user's password-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+            <input id='password' class="form-control" type="password" placeholder="Password" name="password">
+        </div>
+        <br>
+
+
         <!---get user's gender-->
-        <select class="form-control" id="gender">
+        <select class="form-control" id="gender" name="gender">
             <option value="gender">Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
         </select>
 
         <br>

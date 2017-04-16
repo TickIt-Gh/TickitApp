@@ -1,35 +1,40 @@
 
-p{
-  font-style: justify;
+p {
+    font-style: justify;
 }
 
 .hero {
-  background: url("../img/city.jpg");
-  border:none;
-  color: white;
-  background-size: cover;
+    background: url("../img/city.jpg");
+    border: none;
+    color: white;
+    background-size: cover;
 }
 
-.form-signin{
-  max-width:480px;
-  margin-top:50px;
+.form-signin {
+    max-width: 480px;
+    margin-top: 50px;
 }
 
 #footer {
-  margin-top: -2px;
-  position:relative;
-  left:0px;
-  bottom:0px;
-  height:100px;
-  width:100%;
+    margin-top: -2px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
 }
 
-div.panel.panel-default{
-  margin-top: 100px;
+div.panel.panel-default {
+    margin-top: 100px;
 }
 
-button.add-btn{
-  position: relative;
-  display: inline-block;
-  left: 50%;
+button.add-btn {
+    position: relative;
+    display: inline-block;
+    left: 50%;
 }
+
+#error {
+    color: red;
+}
+

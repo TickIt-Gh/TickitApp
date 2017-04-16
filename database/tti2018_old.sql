@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2017 at 03:13 PM
+-- Generation Time: Apr 10, 2017 at 10:04 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -96,29 +96,6 @@ CREATE TABLE `contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `errors`
---
-
-CREATE TABLE `errors` (
-  `error_id` int(6) NOT NULL,
-  `error_time` datetime NOT NULL,
-  `error_type` int(4) NOT NULL,
-  `error_string` text NOT NULL,
-  `error_file` varchar(225) NOT NULL,
-  `error_line` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `errors`
---
-
-INSERT INTO `errors` (`error_id`, `error_time`, `error_type`, `error_string`, `error_file`, `error_line`) VALUES
-(5, '2017-04-11 23:12:12', 8, 'Undefined variable: yesy', 'C:\\xampp\\htdocs\\TickitApp\\setting\\Test.php', 18),
-(6, '2017-04-11 23:12:14', 8, 'Undefined variable: yesy', 'C:\\xampp\\htdocs\\TickitApp\\setting\\Test.php', 18);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `logs`
 --
 
@@ -154,16 +131,8 @@ CREATE TABLE `user` (
   `email` varchar(40) NOT NULL,
   `password` varchar(255) NOT NULL,
   `session` enum('on','off') NOT NULL,
-  `status` enum('active','inactive') NOT NULL,
-  `is_admin` enum('yes','no') NOT NULL
+  `status` enum('active','inactive') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userID`, `email`, `password`, `session`, `status`, `is_admin`) VALUES
-(1, 'admin@admin.com', '$2y$10$6wmvVQQAcvtn9tG4yK4mhOIu1iMp33BbGrLfDuT74IBO5pmcdBfoW', 'on', 'active', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -203,12 +172,6 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`contact_id`);
 
 --
--- Indexes for table `errors`
---
-ALTER TABLE `errors`
-  ADD PRIMARY KEY (`error_id`);
-
---
 -- Indexes for table `logs`
 --
 ALTER TABLE `logs`
@@ -244,11 +207,6 @@ ALTER TABLE `bus_listing`
 ALTER TABLE `contact`
   MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `errors`
---
-ALTER TABLE `errors`
-  MODIFY `error_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
@@ -262,7 +220,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
@@ -291,6 +249,12 @@ ALTER TABLE `bus_listing`
 --
 ALTER TABLE `client`
   ADD CONSTRAINT `client_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `logs`
+--
+ALTER TABLE `logs`
+  ADD CONSTRAINT `logs_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `payment`

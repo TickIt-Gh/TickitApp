@@ -41,6 +41,7 @@ class Database
         if (!$this->connect()) {
             return false;
         }
+        //echo("Error description: " . mysqli_error($this->conn));
         return ($this->result = mysqli_query($this->conn, $sql)) != false;
     }
 

@@ -32,47 +32,51 @@ class Admin{
   }
 
   public function getAdminID(){
-    return $adminID;
+    return $this->adminID;
+  }
+
+  public function setAdminID($newID){
+    $this->adminID = $newID;
   }
 
   public function getSession(){
-    return $session;
+    return $this->session;
   }
 
   public function setSession($newSession){
-    $session = $newSession;
+    $this->session = $newSession;
   }
 
   public function getPassword(){
-    return $password;
+    return $this->password;
   }
 
   public function setPassword($newPass){
-    $password = $newPass;
+    $this->password = $newPass;
   }
 
   public function getEmail(){
-    return $email;
+    return $this->email;
   }
 
   public function setEmail($newEmail){
-    $email = $newEmail;
+    $this->email = $newEmail;
   }
 
   public function getRole(){
-    return $role;
+    return $this->role;
   }
 
   public function setRole($newRole){
-    $role = $newRole;
+    $this->role = $newRole;
   }
 
   public function getCompany(){
-    return $company;
+    return $this->company;
   }
 
   public function setCompany($newCompany){
-    $company = $newCompany;
+    $this->company = $newCompany;
   }
 
   public function getListings(){
@@ -91,7 +95,7 @@ class Admin{
   }
 
   public function editListing($listingID){
-    $db = new Datbase;
+    $db = new Database;
     $sql = "SELECT listing_id, bus_number, available_seats, depature_time,
     departure_date, departure_point, destination_point, listing_status, price, managed_by
     FROM bus_listing WHERE listing_id = $listingID";
@@ -106,7 +110,7 @@ class Admin{
   }
 
   public function UpdateListing($listing){
-    $db = new Datbase;
+    $db = new Database;
     $sql = "UPDATE bus_listing SET listing_id = $listing->getListingId() ,
     bus_number = $listing->getBusNumber() , available_seats = $listing->getAvailableSeats(),
     depature_time = '$listing->getDepartureTime()', departure_date = '$listing->getDepartureDate()',
@@ -117,14 +121,32 @@ class Admin{
     return $db->query($sql);
   }
 
+  public function deleteListing($listingID){
+    $db = new Database;
+    $sql = "DELETE FROM bus_listing
+        WHERE listing_id = $listingID";
+
+    return $db->query($sql);
+  }
+
   public function addListing($listing){
-    $db = new Datbase;
+    $db = new Database;
+    $busNumber = $listing->getBusNumber();
+    $availableSeats = $listing->getAvailableSeats();
+    $departureTime = $listing->getDepartureTime();
+    $departureDate = $listing->getDepartureDate();
+    $departurePoint = $listing->getDeparturePoint();
+    $destination = $listing->getDestinationPoint();
+    $status = $listing->getListingStatus();
+    $price = $listing->getPrice();
+    $manager = $listing->getManagedBy();
+
     $sql = "INSERT INTO bus_listing (listing_id, bus_number, available_seats, depature_time,
     departure_date, departure_point, destination_point, listing_status, price, managed_by)
-    VALUES ($listing->getListingId(), $listing->getBusNumber(), $listing->getAvailableSeats(),
-    '$listing->getDepartureTime()', '$listing->getDepartureDate()', '$listing->getDeparturePoint()',
-    '$listing->getDestinationPoint()', '$listing->getListingStatus()',
-    $listing->getPrice(), $listing->getManagedBy()";
+    VALUES (NULL, '$busNumber', $availableSeats,
+    '$departureTime', '$departureDate', '$departurePoint',
+    '$destination', '$status',
+    $price, $manager)";
 
     return $db->query($sql);
 

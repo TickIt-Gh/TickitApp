@@ -51,6 +51,28 @@ class User
   }
   /**
   *This function allows the user to change their email address
+  *@return boolean(true/false)
   **/
+  public changeEmail($userid,$mail){
+  	// connect to the database
+  	/create an instance of the database class
+	 	 $conn = new Database();
+	 	if(!$conn->connect()) {
+	 	echo "cannot connect to database";
+
+	 	}
+	 	else{
+	 		$sql="UPDATE user SET email='$mail' WHERE userid= $userid";
+		// now query the database
+		$finalResult=$this->query($sql)
+		if($final){
+			echo " you have successfully changed your email";
+		}
+
+
+
+
+  }
+}
 
 }

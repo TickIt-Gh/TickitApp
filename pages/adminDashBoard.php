@@ -3,10 +3,10 @@ require_once('../controller/dashboardController.php');
 require_once('../setting/init.php');
 include_once REQUIRES . 'header.php';
 
-  echo '<title>Admin Dashboard</title>';
+echo '<title>Admin Dashboard</title>';
 
 
- require_once REQUIRES . 'nav_bar.php';
+require_once LAYOUT . 'admin_layout.php';
 
 
 echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
@@ -21,11 +21,11 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
 
         <!-- Table -->
         <table class="table" id="dashboard">';
-     $dashController = new dashController;
-     $admin = $dashController->adminSetup();
-     print($dashController->displaydashboard($admin));
+$dashController = new dashController;
+$admin = $dashController->adminSetup();
+print($dashController->displaydashboard($admin));
 
-      echo '</table>
+echo '</table>
             </div>
             </div>
             <div class="col-md-2">
@@ -85,5 +85,5 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->';
-  include_once REQUIRES . 'footer.php';
+include_once REQUIRES . 'footer.php';
 ?>

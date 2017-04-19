@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION['userID'])) {
+
+} else {
+    header('Location: ../public/login.php');
+}
 require_once('../controller/dashboardController.php');
 require_once('../setting/init.php');
 include_once REQUIRES . 'header.php';

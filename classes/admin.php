@@ -9,10 +9,12 @@
 //Require our database connection class.
 require_once("../database/Database.php");
 
+
 //Require bus listing class
 require_once("listing.php");
+require_once("User.php");
 
-class Admin{
+class Admin extends User{
   private $email;
 
   private $adminID;

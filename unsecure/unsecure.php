@@ -121,7 +121,7 @@ function registernewuser()
 	$pwdhash = password_hash($pw, PASSWORD_DEFAULT);
 
 	//create instance of database class
-	$reguser = new Database;
+	$reguser = new Database; 	 
 
 	$sql = "INSERT INTO user (email, password)
 	VALUES ('$email','$pwdhash') ";
@@ -132,7 +132,7 @@ function registernewuser()
 	if ($dbexec && $reguser->query("SELECT userID FROM user WHERE email = $email"))
 	{
 	$sql2 = "INSERT INTO client (userID,firstname, lastname, email, pwd, DOB, gender)
-	VALUES ('$ID','$fname','$lname', $dob, '$gender')";
+	VALUES ('?','$fname','$lname', $dob, '$gender')";
 
 	//execute querry
 	$dbexec = $reguser->query($sql2);

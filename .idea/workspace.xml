@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/Contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TickitApp.iml" afterPath="$PROJECT_DIR$/.idea/TickitApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Contact.php" afterPath="$PROJECT_DIR$/classes/Contact.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,13 +61,13 @@
       <file leaf-file-name="Contact.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+            <state relative-caret-position="986">
+              <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
               <folding>
-                <element signature="e#7#89#0#PHP" expanded="true" />
-                <marker date="1492654156245" expanded="true" signature="301:386" ph="INSERT INTO contact... " />
-                <marker date="1492654156245" expanded="true" signature="464:485" ph="SELECT * fro... contact" />
-                <marker date="1492654156245" expanded="true" signature="617:661" ph="SELECT * fro... contact" />
+                <element signature="e#7#160#0#PHP" expanded="true" />
+                <marker date="1492654530344" expanded="true" signature="624:709" ph="INSERT INTO contact... " />
+                <marker date="1492654530344" expanded="true" signature="934:955" ph="SELECT * fro... contact" />
+                <marker date="1492654530344" expanded="true" signature="1304:1354" ph="SELECT * fro... contact" />
               </folding>
             </state>
           </provider>
@@ -424,7 +422,7 @@
       <workItem from="1492251723791" duration="119000" />
       <workItem from="1492597977037" duration="1900000" />
       <workItem from="1492603738849" duration="2180000" />
-      <workItem from="1492652803735" duration="1356000" />
+      <workItem from="1492652803735" duration="1728000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -437,7 +435,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18411000" />
+    <option name="totallyTimeSpent" value="18783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -901,13 +899,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+        <state relative-caret-position="986">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
           <folding>
-            <element signature="e#7#89#0#PHP" expanded="true" />
-            <marker date="1492654156245" expanded="true" signature="301:386" ph="INSERT INTO contact... " />
-            <marker date="1492654156245" expanded="true" signature="464:485" ph="SELECT * fro... contact" />
-            <marker date="1492654156245" expanded="true" signature="617:661" ph="SELECT * fro... contact" />
+            <element signature="e#7#160#0#PHP" expanded="true" />
+            <marker date="1492654530344" expanded="true" signature="624:709" ph="INSERT INTO contact... " />
+            <marker date="1492654530344" expanded="true" signature="934:955" ph="SELECT * fro... contact" />
+            <marker date="1492654530344" expanded="true" signature="1304:1354" ph="SELECT * fro... contact" />
           </folding>
         </state>
       </provider>

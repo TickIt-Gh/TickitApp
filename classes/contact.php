@@ -1,9 +1,10 @@
 <?php
 
 /**
- * Contact class thank manages everything about contact us information
+ * contact class thank manages everything about contact us information
  * Created by PhpStorm.
  * User: razak
+ * @author Razak
  * Date: 4/20/2017
  * Time: 1:49 AM
  */
@@ -11,7 +12,7 @@
 include_once '../setting/init.php';
 include_once DATABASES . 'Database.php';
 
-class Contact extends Database
+class contact extends Database
 {
 
     /**
@@ -53,7 +54,7 @@ class Contact extends Database
  * TEST
  */
 /*
-$da = new Contact();
+$da = new contact();
 //$da->add_contact_us('Admin', 'admin@admin.com', 'Reporting an error in query');
 var_dump($da->get_all_message_of_a_user('admin'));
 */

@@ -31,6 +31,23 @@ class Database
     }
 
     /**
+     * this function executes a query and returns the primary key of the affected row
+     * @param $sql sql statement to execute
+     * @return bool return the primary key of the row inserted to
+     */
+    public function query_return_id($sql)
+    {
+        if (!$this->connect()) {
+            return false;
+        }
+        $result = mysqli_query($this->conn, $sql);
+        if (!$result) {
+            return false;
+        }
+        return $this->conn->insert_id;
+    }
+
+    /**
      * Query database
      * @param sql to execute
      * @return return true or false

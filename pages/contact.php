@@ -14,26 +14,26 @@ include_once REQUIRES . 'nav_bar.php';
         &nbsp
     </div>
     <div class="col-md-6">
-        <form class="form-signin" method="post" action="#">
-            <div>
-                <input type="text" id="name" class="form-control" placeholder="Your name" required autofocus
-                       name="name">
-            </div>
-            <br>
-            <div>
-                <input type="email" class="form-control" id="email" size="50" placeholder="Your email" required
-                       autofocus>
-            </div>
-            <br>
-            <div>
+
+
+        <div>
+            <input type="text" id="name" class="form-control" placeholder="Your name" required autofocus
+                   name="name">
+        </div>
+        <br>
+        <div>
+            <input type="email" class="form-control" id="email" size="50" placeholder="Your email" required
+                   autofocus>
+        </div>
+        <br>
+        <div>
                 <textarea rows="10" class="form-control" cols="50" id="comment"
                           placeholder="Your message here"></textarea>
-            </div>
-            <br>
-            <input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT"
-                   onclick="validate_contact_form()">
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT"
+               onclick="validate_contact_form()">
 
-        </form>
     </div>
 </div>
 

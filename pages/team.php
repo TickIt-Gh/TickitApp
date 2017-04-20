@@ -19,7 +19,7 @@ include_once REQUIRES . 'nav_bar.php';
                 <div class="panel-body">
                     <img class="img-responsive" src="../img/brenda.jpg" alt="brenda Mboya" width="250" height="236">
 
-                    <p>Brenda is a design enthusiast. She love front end</p>
+                    <p>Brenda is a design enthusiast.She like prototypinng and worked on the user class</p>
                 </div>
             </div>
         </div>

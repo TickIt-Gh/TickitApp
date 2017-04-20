@@ -1,32 +1,32 @@
-function addListing(){
-  var busNumber = document.getElementById("bus_number").value;
-  var departureTime = document.getElementById("departure_time").value;
-  var departureDate = document.getElementById("departure_date").value;
-  var availableSeats = document.getElementById("available_seats").value;
-  var departurePoint = document.getElementById("departure_point").value;
-  var destinationPoint = document.getElementById("destination_point").value;
-  var price = document.getElementById("listing_price").value;
-  var availability = document.getElementById("availability");
-  var availValue = availability.options[availability.selectedIndex].value;
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //Parse json from server into an array of js objects
-      document.getElementById("dashboard").innerHTML = this.responseText;
+function addListing() {
+    var busNumber = document.getElementById("bus_number").value;
+    var departureTime = document.getElementById("departure_time").value;
+    var departureDate = document.getElementById("departure_date").value;
+    var availableSeats = document.getElementById("available_seats").value;
+    var departurePoint = document.getElementById("departure_point").value;
+    var destinationPoint = document.getElementById("destination_point").value;
+    var price = document.getElementById("listing_price").value;
+    var availability = document.getElementById("availability");
+    var availValue = availability.options[availability.selectedIndex].value;
+    var xhttp = new ajaxRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            //Parse json from server into an array of js objects
+            document.getElementById("dashboard").innerHTML = this.responseText;
 
-    }
-  };
+        }
+    };
 
-  xhttp.open("GET", "../pages/adminDashboard.php?bus_number="+busNumber+
-  "&departure_time="+departureTime+"&departureDate="+departureDate+"&available_seats="+
-  availableSeats+"&departure_point="+departurePoint+"&destination_point="+destinationPoint+
-  "&listing_price="+price+"&listing_status="+availValue, true);
-  xhttp.send();
+    xhttp.open("GET", "../pages/adminDashboard.php?bus_number=" + busNumber +
+        "&departure_time=" + departureTime + "&departureDate=" + departureDate + "&available_seats=" +
+        availableSeats + "&departure_point=" + departurePoint + "&destination_point=" + destinationPoint +
+        "&listing_price=" + price + "&listing_status=" + availValue, true);
+    xhttp.send();
 }
 
-function onDeleteListing(){
-  var busNumber = document.getElementById("bus_number").value;
-  document.getElementById("listingID").addEventListener("click", deleteListing);
+function onDeleteListing() {
+    var busNumber = document.getElementById("bus_number").value;
+    document.getElementById("listingID").addEventListener("click", deleteListing);
 }
 
 function deleteListing() {
@@ -82,35 +82,32 @@ function editListing(){
 }
 
 /* Creates a XMLHttpRequest request object for recent and old browsers */
-  function ajaxRequest()
-  {
+function ajaxRequest() {
     try // Non IE Browser?
     {
-      // Yes
-      var request = new XMLHttpRequest()
-    }
-    catch(e1)
-    {
-      try // IE 6+?
-      {
         // Yes
-        request = new ActiveXObject("Msxml2.XMLHTTP")
-      }
-      catch(e2)
-      {
-        try // IE 5?
+        var request = new XMLHttpRequest()
+    }
+    catch (e1) {
+        try // IE 6+?
         {
-          // Yes
-          request = new ActiveXObject("Microsoft.XMLHTTP")
+            // Yes
+            request = new ActiveXObject("Msxml2.XMLHTTP")
         }
-        catch(e3) // There is no AJAX Support
-        {
-          request = false
+        catch (e2) {
+            try // IE 5?
+            {
+                // Yes
+                request = new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            catch (e3) // There is no AJAX Support
+            {
+                request = false
+            }
         }
-      }
     }
     return request
-  }
+}
 //function to validate the email address
 function validate_email(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -135,17 +132,16 @@ function tocken() {
 }
 
 
-
 //function to validate the name
-function validate_name(name){
-	return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test( name.value);
+function validate_name(name) {
+    return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test(name.value);
 
 }
 
 //function to validate the form for log in
-function validate_login(){
-	var email = document.getElementById('email');
-	var password = document.getElementById('password');
+function validate_login() {
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
 
     //check if the password and email is not empty
     if (email != null && password != null) {
@@ -222,17 +218,35 @@ function validate_contact_form() {
     if (validate_name(nam)) {
         if (validate_email(mail)) {
             if (message.value != "") {
-
                 //if all the details are valid, the details are sent
                 //notify the user that the details have been sent
-                alert("your message has been sent to the tickit it team.We will respond as soon as possible");
+                //alert("your message has been sent to the tickit it team.We will respond as soon as possible");
+                var xhttp;
+                if (window.XMLHttpRequest) {
+                    // code for modern browsers
+                    xhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert('We have received your message');
+                        nam.value = '';
+                        mail.value = '';
+                        message.value = '';
+                    }
+                };
+                xhttp.open('GET', '../controller/contact_us_controller.php?name=' + nam.value + '&email=' + mail.value + '&message=' + message.value, true);
+                xhttp.send();
             } else
                 alert('Enter your message');
         } else
             alert('Provide a value email');
     } else
         alert('Provide a valid name');
-
+    return false;
 }
 
 //function to validate the Buy form

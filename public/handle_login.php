@@ -68,7 +68,12 @@ function login()
         $result = $db->fetch();
         if ($result) {
             if (password_verify($_POST['password'], $result['password']) and $result['status'] === 'active') {
-                header('Location: ../pages/adminDashBoard.php');
+                session_start();
+                $_SESSION['userID'] = $result['userID'];
+                $_SESSION['is_admin'] = $result['is_admin'];
+                $_SESSION['email'] = $result['email'];
+                require_once SETTING . 'redirection.php';
+                //header('Location: ../pages/adminDashBoard.php');
             } else {
                 $error = 'Wrong login credentials';
             }

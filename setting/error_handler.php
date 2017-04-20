@@ -32,7 +32,6 @@ function handle_all_errors($error_type, $error_string, $error_file, $error_line)
     $error_line = (int)$error_line;
     $sql = "INSERT INTO errors (error_id, error_time, error_type, error_string, error_file, error_line) VALUES (NULL, now(), '$error_type', '$error_string', '$error_file', '$error_line')";
     $database->query($sql);
-
 }
 
 ?>

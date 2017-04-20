@@ -1,11 +1,14 @@
 
 <?php
 
+include_once '../setting/init.php';
+include_once DATABASES . 'Database.php';
+require_once 'User.php';
 
-/*Class for the client
+/**Class for the client
 * Extends the user class
 * @author Linda Bhebhe
-*/
+**/
 
 class Client extends User{
 
@@ -16,6 +19,7 @@ class Client extends User{
 	private $dateOfBirth;
 	private $gender;
 	private $telephone;
+	private $id;
 
 
    //methods
@@ -64,7 +68,31 @@ class Client extends User{
 		return $this->telephone;
 	}
 
+   
+
+    /* Method to insert  a new client 
+    *  Calls a method to insert a user 
+    *  The insert client query inserts 
+    */
+    public function insertClient($firstname, $lastname, $dateOfBirth, $gender, $telephone, $email, $password, $session, $status, $is_admin){
+    	$this->id=$this->add_user_returns_userID($email, $password, $session, $status, $is_admin);
+
+    	  return $this->query("INSERT INTO client (userID, firstName, lastName, DOB, gender, telephone) VALUES ('$this->id','$firstname','$lastname','$dateOfBirth', '$gender','$telephone')");
+
+    }
+
+
+
+
 
 }
+
+
+/**Testing
+$newclient = new Client;
+echo "testing";
+
+echo $newclient->insertClient('noe', 'bhebhe', '13/03/95','F', '0563224123','lee003@gmail.com', 'noe','on','active','yes');
+*/
 
 ?>

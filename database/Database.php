@@ -31,6 +31,23 @@ class Database
     }
 
     /**
+     * this function executes a query and returns the primary key of the affected row
+     * @param $sql sql statement to execute
+     * @return bool return the primary key of the row inserted to
+     */
+    public function query_return_id($sql)
+    {
+        if (!$this->connect()) {
+            return false;
+        }
+        $result = mysqli_query($this->conn, $sql);
+        if (!$result) {
+            return false;
+        }
+        return $this->conn->insert_id;
+    }
+
+    /**
      * Query database
      * @param sql to execute
      * @return return true or false
@@ -93,6 +110,33 @@ class Database
         } else {
             return mysqli_num_rows($this->result);
         }
+    }
+    /**
+    *This function prevents sql injection
+    *@return boolean
+    *@param $sql and an array of parameters
+     **/
+    public function  realEscape($mysql,...$myArray){
+        // connect to the databse
+        
+        if(!$this->connect()){
+            return false;
+        }
+            // create an array
+            $newArray=array();
+            //loop through the array in the parameter and store the values in the new array
+            foreach ($myArray as $arrayValues){
+                $newArray[]= mysqli_real_escape_string($this->dbConnection,$arrayValues);
+            }
+            //this is the sql to be submitted to the database
+            $sql=vsprintf($mysql,$newArray);
+            // return the results of quering the database with the new sql
+            return ($this->query($sql));
+
+
+        
+        
+
     }
 
 

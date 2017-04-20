@@ -171,17 +171,35 @@ function validate_contact_form() {
     if (validate_name(nam)) {
         if (validate_email(mail)) {
             if (message.value != "") {
-
                 //if all the details are valid, the details are sent
                 //notify the user that the details have been sent
-                alert("your message has been sent to the tickit it team.We will respond as soon as possible");
+                //alert("your message has been sent to the tickit it team.We will respond as soon as possible");
+                var xhttp;
+                if (window.XMLHttpRequest) {
+                    // code for modern browsers
+                    xhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert('We have received your message');
+                        nam.value = '';
+                        mail.value = '';
+                        message.value = '';
+                    }
+                };
+                xhttp.open('GET', '../controller/contact_us_controller.php?name=' + nam.value + '&email=' + mail.value + '&message=' + message.value, true);
+                xhttp.send();
             } else
                 alert('Enter your message');
         } else
             alert('Provide a value email');
     } else
         alert('Provide a valid name');
-
+    return false;
 }
 
 //function to validate the Buy form
@@ -207,10 +225,3 @@ function validate_buy_form() {
 
 }
 
-
-function contact_us() {
-    var nam = document.getElementById("name");
-    var mail = document.getElementById("email");
-    var message = document.getElementById("comment");
-
-}

@@ -25,22 +25,24 @@ function addListing() {
 }
 
 function onDeleteListing() {
-    var busNumber = document.getElementById("bus_number").value;
-    document.getElementById("listingID").addEventListener("click", deleteListing);
+    deleteListing();
+    return false;
 }
 
 function deleteListing() {
   var listingID = document.getElementById("listingID").value;
+  console.log(listingID);
   var xhttp = new ajaxRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       //Parse json from server into an array of js objects
+      document.getElementById("dashboard").innerHTML = "";
       document.getElementById("dashboard").innerHTML = this.responseText;
 
     }
   };
 
-  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
+  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID, true);
   xhttp.send();
 }
 

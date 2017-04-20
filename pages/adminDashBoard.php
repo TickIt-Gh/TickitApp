@@ -7,7 +7,8 @@ include_once REQUIRES . 'header.php';
 
 
  require_once REQUIRES . 'nav_bar.php';
-
+ $dashController = new dashController;
+ $admin = $dashController->adminSetup();
 
 echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
     <div class="col-md-2">
@@ -21,9 +22,8 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
 
         <!-- Table -->
         <table class="table" id="dashboard">';
-     $dashController = new dashController;
-     $admin = $dashController->adminSetup();
-     $dashController->displaydashboard($admin);
+
+        $dashController->displaydashboard($admin);
 
       echo '</table>
             </div>

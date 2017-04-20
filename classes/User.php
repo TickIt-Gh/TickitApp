@@ -3,7 +3,7 @@
 /**
  * This is the user class that contains the properties of the users of the app.
  *This class is extended by the admin and the client classes
- *@ Brenda Mboya
+ *@author Brenda Mboya
  */
 
 
@@ -23,9 +23,8 @@ class User extends Database
     // this user can change their password through this function
     public function changePass($userid, $pass)
     {
-        //create an instance of the database class
-        $conn = new Database();
-        if (!$conn->connect()) {
+        
+        if (!$this->connect()) {
             echo "cannot connect to database";
 
         } else {
@@ -58,9 +57,8 @@ class User extends Database
     public function changeEmail($userid, $mail)
     {
         // connect to the database
-        //create an instance of the database class
-        $conn = new Database();
-        if (!$conn->connect()) {
+        
+        if (!$this->connect()) {
             echo "cannot connect to database";
 
         } else {

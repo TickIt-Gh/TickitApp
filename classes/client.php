@@ -5,10 +5,10 @@ include_once '../setting/init.php';
 include_once DATABASES . 'Database.php';
 require_once 'User.php';
 
-/*Class for the client
+/**Class for the client
 * Extends the user class
 * @author Linda Bhebhe
-*/
+**/
 
 class Client extends User{
 

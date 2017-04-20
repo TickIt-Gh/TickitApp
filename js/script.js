@@ -44,6 +44,42 @@ function deleteListing() {
   xhttp.send();
 }
 
+function onEditListing(){
+  document.getElementById("listingID").addEventListener("click", editListing);
+}
+
+function editListing(){
+  var listingID = document.getElementById("listingID").value;
+  var busNumber = document.getElementById("bus_number").value;
+  var departureTime = document.getElementById("departure_time").value;
+  var departureDate = document.getElementById("departure_date").value;
+  var availableSeats = document.getElementById("available_seats").value;
+  var departurePoint = document.getElementById("departure_point").value;
+  var destinationPoint = document.getElementById("destination_point").value;
+  var price = document.getElementById("listing_price").value;
+  var availability = document.getElementById("availability");
+  var availValue = availability.options[availability.selectedIndex].value;
+  var xhttp = new ajaxRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //Parse json from server into an array of js objects
+      var listing = JSON.parse(this.responseText);
+      console.log(listing);
+      busNumber = listing.bus_number;
+      departureTime = listing.depature_time;
+      departureDate = listing.departure_date;
+      availableSeats = listing.available_seats;
+      departurePoint = listing.departure_point;
+      destinationPoint = listing.destination_point;
+      price = listing.listing_price;
+      availValue = listing.listing_price;
+
+    }
+  };
+
+  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
+  xhttp.send();
+}
 
 /* Creates a XMLHttpRequest request object for recent and old browsers */
   function ajaxRequest()

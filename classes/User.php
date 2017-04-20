@@ -11,7 +11,7 @@ include_once '../setting/init.php';
 //Require our database connection class.
 require_once DATABASES . 'Database.php';
 
-class User
+class User extends Database
 {
     // each user of the application have a userid,email,password and status
     //properties
@@ -73,4 +73,28 @@ class User
         }
     }
 
+    /**
+     * This function add a new user to the database and returns the primary key of the new column
+     * @param $email email of user
+     * @param $password password of user
+     * @param $session session[ 'on','off']
+     * @param $status status of user ['active','inactive']
+     * @param $is_admin type of user ['yes','no']
+     * @return bool primary key of new user added
+     */
+    public function add_user_returns_userID($email, $password, $session, $status, $is_admin)
+    {
+        $sql = "INSERT INTO user (email, password, session, status, is_admin) VALUES ( '$email', '$password', '$session', '$status', '$is_admin')";
+        //echo $sql;
+        return $this->query_return_id($sql);
+    }
+
 }
+
+/**
+ * TEST
+ */
+/*
+$us = new User();
+echo $us->add_user_returns_userID('test@test.com', 'passwordher', 'on', 'active', 'no');
+*/

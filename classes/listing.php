@@ -38,6 +38,10 @@ class Listing{
     return $this->listing_id;
   }
 
+  public function setListingId($id){
+    $this->listing_id = $id;
+  }
+
   public function getBusNumber(){
     return $this->bus_number;
   }
@@ -114,7 +118,7 @@ class Listing{
     $db = new Database;
     $sql = "SELECT listing_id, bus_number, available_seats, depature_time,
     departure_date, departure_point, destination_point, price
-    FROM bus_listing";
+    FROM bus_listing WHERE listing_status ='available'";
     $result = $db->query($sql);
 
     if(!$result){

@@ -32,14 +32,13 @@ function addListing() {
     xhttp.send();
 }
 
-function onDeleteListing() {
-    deleteListing();
+function onDeleteListing(elt) {
+    deleteListing(elt.id);
     return false;
 }
 
-function deleteListing() {
-  var listingID = document.getElementById("listingID").value;
-  console.log(listingID);
+function deleteListing(id) {
+  var listingID = Number(id);
   var xhttp = new ajaxRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {

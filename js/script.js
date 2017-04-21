@@ -32,13 +32,51 @@ function addListing() {
     xhttp.send();
 }
 
+function onUpdateListing(){
+  updateListing();
+  return false;
+}
+
+
+function updateListing(){
+  var busNumber = document.getElementById("bus_number").value;
+  var departureTime = document.getElementById("departure_time").value;
+  var departureDate = document.getElementById("departure_date").value;
+  var availableSeats = document.getElementById("available_seats").value;
+  var departurePoint = document.getElementById("departure_point").value;
+  var destinationPoint = document.getElementById("destination_point").value;
+  var price = document.getElementById("listing_price").value;
+  var availability = document.getElementById("availability");
+  var availValue = availability.options[availability.selectedIndex].value;
+  var btnValue = document.getElementById("btnUpdate").value;
+  var listingID = document.getElementById("listing_id").value;
+  console.log(listingID);
+  var xhttp = new ajaxRequest();
+  xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          //Parse json from server into an array of js objects
+          console.log(this.responseText);
+          document.getElementById("dashboard").innerHTML = "";
+          document.getElementById("dashboard").innerHTML = this.responseText;
+
+      }
+  };
+
+  xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&bus_number=" + busNumber +
+      "&departure_time=" + departureTime + "&departure_date=" + departureDate + "&available_seats=" +
+      availableSeats + "&departure_point=" + departurePoint + "&destination_point=" + destinationPoint +
+      "&listing_price=" + price + "&listing_status=" + availValue + "&update=" + btnValue, true);
+  xhttp.send();
+}
+
 function onDeleteListing(elt) {
-    deleteListing(elt.id);
+    deleteListing(elt);
     return false;
 }
 
-function deleteListing(id) {
-  var listingID = Number(id);
+function deleteListing(elt) {
+  var deleteValue = elt.value;
+  var listingID = Number(elt.id);
   var xhttp = new ajaxRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -49,44 +87,39 @@ function deleteListing(id) {
     }
   };
 
-  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID, true);
+  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID + "&delete=" + deleteValue, true);
   xhttp.send();
 }
 
-function onEditListing(){
-  document.getElementById("listingID").addEventListener("click", editListing);
+function onEditListing(elt){
+  editListing(elt);
 }
 
-function editListing(){
-  var listingID = document.getElementById("listingID").value;
-  var busNumber = document.getElementById("bus_number").value;
-  var departureTime = document.getElementById("departure_time").value;
-  var departureDate = document.getElementById("departure_date").value;
-  var availableSeats = document.getElementById("available_seats").value;
-  var departurePoint = document.getElementById("departure_point").value;
-  var destinationPoint = document.getElementById("destination_point").value;
-  var price = document.getElementById("listing_price").value;
-  var availability = document.getElementById("availability");
-  var availValue = availability.options[availability.selectedIndex].value;
+function editListing(elt){
+  var listingID = elt.id;
+  var editValue = elt.value;
   var xhttp = new ajaxRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       //Parse json from server into an array of js objects
+      console.log(this.responseText);
       var listing = JSON.parse(this.responseText);
+      listing = listing[0];
       console.log(listing);
-      busNumber = listing.bus_number;
-      departureTime = listing.depature_time;
-      departureDate = listing.departure_date;
-      availableSeats = listing.available_seats;
-      departurePoint = listing.departure_point;
-      destinationPoint = listing.destination_point;
-      price = listing.listing_price;
-      availValue = listing.listing_price;
+      document.getElementById("bus_number").value = listing.bus_number;
+      document.getElementById("departure_time").value = listing.depature_time;
+      document.getElementById("departure_date").value = listing.departure_date;
+      document.getElementById("available_seats").value = listing.available_seats;
+      document.getElementById("departure_point").value = listing.departure_point;
+      document.getElementById("destination_point").value = listing.destination_point;
+      document.getElementById("listing_price").value = Number(listing.price);
+      document.getElementById("availability").value = listing.listing_status;
+      document.getElementById("listing_id").value = listing.listing_id;
 
     }
   };
 
-  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
+  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID + "&edit=" + editValue, true);
   xhttp.send();
 }
 

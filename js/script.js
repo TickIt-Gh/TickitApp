@@ -1,5 +1,6 @@
 function onAddListing(){
   addListing();
+  $('#myModal').modal('hide');
   return false;
 }
 
@@ -34,6 +35,7 @@ function addListing() {
 
 function onUpdateListing(){
   updateListing();
+  $('#editModal').modal('hide');
   return false;
 }
 

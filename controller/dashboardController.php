@@ -51,11 +51,8 @@ class dashController{
           <td>'.$listing['price'].'</td>
           <td>'.$listing['listing_status'].'</td>
           <td>'.
-              '<form>
-                <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-                <button type="submit" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">Edit
+              ' <button type="submit" id="'.$listing['listing_id'].'"  onclick="onEditListing(this)" name="edit" value="Edit Listing" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">Edit
                 </button>
-              </form>
               <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -63,7 +60,7 @@ class dashController{
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Edit Listing</h4>
                   </div>
-                  <form method="get" onsubmit="updateListing();">
+                  <form method="get" onsubmit="return onUpdateListing();">
                     <div class="modal-body">
                         <div class="form-group">
                           <label for="bus_number">Bus Number</label>
@@ -101,7 +98,8 @@ class dashController{
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <input type="submit" name="edit" value="Edit Listing" class="btn btn-default btn-primary">
+                      <input type="hidden" name="listingID" id="listing_id">
+                      <input type="submit" name="update" value="Update Listing" id="btnUpdate" class="btn btn-default btn-primary">
                     </div>
                 </form>
                 </div><!-- /.modal-content -->
@@ -109,7 +107,7 @@ class dashController{
             </div><!-- /.modal -->
           </td>
           <td>'.
-          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete" id="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
+          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete Listing" id="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
           </td>
       </tr>';
     }
@@ -119,54 +117,7 @@ class dashController{
     require_once REQUIRES . 'footer.php';
   }
 
-  public function handlelistingEdit($admin){
-    if(isset($_GET['edit'])){
-      echo $admin->editListing($_GET['listingID']);
-    }
-  }
-
-  public function handlelistingDelete($admin){
-    if(isset($_GET['delete'])){
-      if($admin->deleteListing($_GET['listingID'])){
-        $this->displaydashboard();
-      }else{
-        echo "Ajax Failed";
-      }
-
-    }
-  }
-
-  public function handlelistingUpdate(){
-    if(isset($_GET['update'])){
-      updateListing($_GET['listingID']);
-    }
-  }
-
-  public function handlelistingAdds($admin){
-    if(isset($_GET['add'])){
-      $listing = new Listing;
-      $listing->setBusNumber($_GET['bus_number']);
-      $listing->setAvailableSeats((int) $_GET['available_seats']);
-      $listing->setDepartureTime($_GET['departure_time']);
-      $listing->setDepartureDate($_GET['departure_date']);
-      $listing->setDeparturePoint($_GET['departure_point']);
-      $listing->setDestinationPoint($_GET['destination_point']);
-      $listing->setDepartureDate($_GET['departure_date']);
-      $listing->setListingStatus($_GET['listing_status']);
-      $listing->setPrice((float) $_GET['listing_price']);
-      $listing->setManagedBy($admin->getAdminID());
-      $admin->addListing($listing);
-    }
-  }
-
-
 }
-
-  $dashController = new dashController;
-  $admin = $dashController->adminSetup();
-  $dashController->handlelistingEdit($admin);
-  $dashController->handlelistingUpdate();
-  //$dashController->handlelistingAdds($admin);
 
 
 

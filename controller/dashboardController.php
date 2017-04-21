@@ -109,10 +109,7 @@ class dashController{
             </div><!-- /.modal -->
           </td>
           <td>'.
-          '<form onsubmit="return onDeleteListing();">
-            <input type="hidden" id="listingID" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-            <input type="submit" name="delete" value="Delete" id="delete" class="btn btn-default btn-primary">
-          </form>
+          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete" id="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
           </td>
       </tr>';
     }

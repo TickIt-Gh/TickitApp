@@ -109,9 +109,9 @@ class dashController{
             </div><!-- /.modal -->
           </td>
           <td>'.
-          '<form>
+          '<form onsubmit="return onDeleteListing();">
             <input type="hidden" id="listingID" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-            <input type="submit" name="delete" value="Delete" class="btn btn-default btn-primary">
+            <input type="submit" name="delete" value="Delete" id="delete" class="btn btn-default btn-primary">
           </form>
           </td>
       </tr>';
@@ -130,7 +130,12 @@ class dashController{
 
   public function handlelistingDelete($admin){
     if(isset($_GET['delete'])){
-      $admin->deleteListing($_GET['listingID']);
+      if($admin->deleteListing($_GET['listingID'])){
+        $this->displaydashboard();
+      }else{
+        echo "Ajax Failed";
+      }
+
     }
   }
 
@@ -164,8 +169,7 @@ class dashController{
   $admin = $dashController->adminSetup();
   $dashController->handlelistingEdit($admin);
   $dashController->handlelistingUpdate();
-  $dashController->handlelistingDelete($admin);
-  $dashController->handlelistingAdds($admin);
+  //$dashController->handlelistingAdds($admin);
 
 
 

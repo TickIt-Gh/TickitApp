@@ -118,7 +118,7 @@ class Database
      **/
     public function  realEscape($mysql,...$myArray){
         // connect to the databse
-        
+
         if(!$this->connect()){
             return false;
         }
@@ -133,9 +133,6 @@ class Database
             // return the results of quering the database with the new sql
             return ($this->query($sql));
 
-
-        
-        
 
     }
 

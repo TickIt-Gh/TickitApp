@@ -1,26 +1,34 @@
+function onAddListing(){
+  addListing();
+  return false;
+}
+
 function addListing() {
-    var busNumber = document.getElementById("bus_number").value;
-    var departureTime = document.getElementById("departure_time").value;
-    var departureDate = document.getElementById("departure_date").value;
-    var availableSeats = document.getElementById("available_seats").value;
-    var departurePoint = document.getElementById("departure_point").value;
-    var destinationPoint = document.getElementById("destination_point").value;
-    var price = document.getElementById("listing_price").value;
-    var availability = document.getElementById("availability");
+    var busNumber = document.getElementById("bus_num").value;
+    var departureTime = document.getElementById("time").value;
+    var departureDate = document.getElementById("date").value;
+    var availableSeats = document.getElementById("seats").value;
+    var departurePoint = document.getElementById("departure").value;
+    var destinationPoint = document.getElementById("destination").value;
+    var price = document.getElementById("price").value;
+    var availability = document.getElementById("avail");
     var availValue = availability.options[availability.selectedIndex].value;
+    var btnValue = document.getElementById("btnAdd").value;
     var xhttp = new ajaxRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             //Parse json from server into an array of js objects
+            console.log(this.responseText);
+            document.getElementById("dashboard").innerHTML = "";
             document.getElementById("dashboard").innerHTML = this.responseText;
 
         }
     };
 
-    xhttp.open("GET", "../pages/adminDashboard.php?bus_number=" + busNumber +
-        "&departure_time=" + departureTime + "&departureDate=" + departureDate + "&available_seats=" +
+    xhttp.open("GET", "ajaxDashboard.php?bus_number=" + busNumber +
+        "&departure_time=" + departureTime + "&departure_date=" + departureDate + "&available_seats=" +
         availableSeats + "&departure_point=" + departurePoint + "&destination_point=" + destinationPoint +
-        "&listing_price=" + price + "&listing_status=" + availValue, true);
+        "&listing_price=" + price + "&listing_status=" + availValue + "&add=" + btnValue, true);
     xhttp.send();
 }
 

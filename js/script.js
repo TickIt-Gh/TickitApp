@@ -30,56 +30,9 @@ function onDeleteListing() {
 }
 
 function deleteListing() {
-  var listingID = document.getElementById("listingID").value;
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //Parse json from server into an array of js objects
-      document.getElementById("dashboard").innerHTML = this.responseText;
-
-    }
-  };
-
-  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
-  xhttp.send();
+    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
 }
 
-function onEditListing(){
-  document.getElementById("listingID").addEventListener("click", editListing);
-}
-
-function editListing(){
-  var listingID = document.getElementById("listingID").value;
-  var busNumber = document.getElementById("bus_number").value;
-  var departureTime = document.getElementById("departure_time").value;
-  var departureDate = document.getElementById("departure_date").value;
-  var availableSeats = document.getElementById("available_seats").value;
-  var departurePoint = document.getElementById("departure_point").value;
-  var destinationPoint = document.getElementById("destination_point").value;
-  var price = document.getElementById("listing_price").value;
-  var availability = document.getElementById("availability");
-  var availValue = availability.options[availability.selectedIndex].value;
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //Parse json from server into an array of js objects
-      var listing = JSON.parse(this.responseText);
-      console.log(listing);
-      busNumber = listing.bus_number;
-      departureTime = listing.depature_time;
-      departureDate = listing.departure_date;
-      availableSeats = listing.available_seats;
-      departurePoint = listing.departure_point;
-      destinationPoint = listing.destination_point;
-      price = listing.listing_price;
-      availValue = listing.listing_price;
-
-    }
-  };
-
-  xhttp.open("GET", "../pages/adminDashboard.php?listingID="+listingID, true);
-  xhttp.send();
-}
 
 /* Creates a XMLHttpRequest request object for recent and old browsers */
 function ajaxRequest() {
@@ -251,23 +204,10 @@ function validate_contact_form() {
 
 //function to validate the Buy form
 function validate_buy_form() {
-    var nam = document.getElementById("name");
-    var mail = document.getElementById("email");
-    var num = document.getElementById("tel");
-
-    if (validate_name(nam)) {
-        if (validate_email(mail)) {
-            if (validate_phone_num(num)) {
-
                 //if all the details are valid, the details are sent
                 //notify the user that the details have been sent
-                document.getElementById('pop').innerHTML = '<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
-                document.getElementById("tocken").innerHTML = tocken();
-            } else
-                alert('Enter a valid phone number');
-        } else
-            alert('Provide a valid email');
-    } else
-        alert('Provide a valid name');
+    document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
+    document.getElementById("tocken").innerHTML = tocken();
 
 }
+

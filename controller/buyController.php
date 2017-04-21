@@ -4,7 +4,7 @@
 * @author Job
 * @version 1
 */
-
+/**
 require_once('../database/Database.php');
 
 if (isset($_POST['buy'])) 

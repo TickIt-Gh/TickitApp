@@ -41,7 +41,7 @@ include_once REQUIRES . 'nav_bar.php';
             <br>
 
             <!-- Large modal -->
-            <button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_buy_form()"
+            <button type="submit" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_buy_form()"
                     data-toggle="modal" data-target=".bs-example-modal-lg">Buy
             </button>
 

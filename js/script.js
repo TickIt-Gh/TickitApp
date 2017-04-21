@@ -207,15 +207,23 @@ function validate_buy_form() {
     var nam = document.getElementById("name");
     var mail = document.getElementById("email");
     var num = document.getElementById("tel");
+    var getTocken = tocken();
 
     if (validate_name(nam)) {
         if (validate_email(mail)) {
             if (validate_phone_num(num)) {
 
+
+                
+
                 //if all the details are valid, the details are sent
                 //notify the user that the details have been sent
-                document.getElementById('pop').innerHTML = '<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
-                document.getElementById("tocken").innerHTML = tocken();
+                document.getElementById('pop').innerHTML = '<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
+                document.getElementById("tocken").innerHTML = getTocken;
+
+                $url = '../controller/buyController.php';
+
+                $.get($url, {tocken: getTocken});
             } else
                 alert('Enter a valid phone number');
         } else

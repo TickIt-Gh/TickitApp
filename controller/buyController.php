@@ -6,20 +6,39 @@
 */
 
 require_once('../database/Database.php');
+require_once('../classes/User.php');
 
 if (isset($_POST['buy'])) 
-	checkBalance();
+	sendEmail();
+
+$myUser = new User;
+$veruser = new Database;
+
+
+$User->userid = $_SESSION['userID'];
+
+$sql = "SELECT * FROM user WHERE (userID = '$User->userid')";
+$result=$veruser->query($sql)
+
+if ($result) {
+	$myUser->$email=$result['email'];
+
+$clientsql = "SELECT * FROM client WHERE (userID = '$User->userid')";
+$clientResult=$veruser->query($clientsql)
+
+if ($result) {
+	$fname=$result['firstName'];
 
 function sendEmail()
 {
-    $receiver = "somebody@example.com";
-    $subject = "My subject";
-    Message = "Hello world!";
+    $receiver = $myUser->$email;
+    $subject = "Thank you! your tocken";
+    Message = "Dear".$firstName."Thank you for Using TickIT. Here is your tocken: ".$_GET['tocken']." <br><br> safe journey<br>TickIT team";
     $heades = "From: sales@tickit.com" 
     mail($reciever,$subject,$tmessage,$header);
 }
 
 function checkBalance()
 {
-    $veruser = new Database;
+    
 }

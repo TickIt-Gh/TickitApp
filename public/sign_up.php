@@ -56,6 +56,12 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+        <!---get user's tel no.-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <input type="text" id="tell" class="form-control" placeholder="Email " required name="email">
+        </div>
+        <br>
 
         <!---get user's password-->
         <div class="input-group">

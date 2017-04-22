@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/Database.php" afterPath="$PROJECT_DIR$/database/Database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/handle_login.php" afterPath="$PROJECT_DIR$/public/handle_login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.php" afterPath="$PROJECT_DIR$/public/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setting/Test.php" afterPath="$PROJECT_DIR$/setting/Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setting/redirection.php" afterPath="$PROJECT_DIR$/setting/redirection.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,10 +24,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="handle_login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="handle_login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/handle_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="1326">
               <caret line="78" column="51" lean-forward="false" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="51" />
               <folding>
                 <marker date="1492859263467" expanded="true" signature="1422:1465" ph="SELECT * FRO... user" />
@@ -62,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+            <state relative-caret-position="153">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -144,10 +138,10 @@
         <option value="$PROJECT_DIR$/unit/database/database_info_unit.php" />
         <option value="$PROJECT_DIR$/database/Database.php" />
         <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/public/login.php" />
         <option value="$PROJECT_DIR$/public/handle_login.php" />
         <option value="$PROJECT_DIR$/setting/redirection.php" />
         <option value="$PROJECT_DIR$/setting/Test.php" />
+        <option value="$PROJECT_DIR$/public/login.php" />
       </list>
     </option>
   </component>
@@ -497,7 +491,7 @@
       <workItem from="1492603738849" duration="2180000" />
       <workItem from="1492652803735" duration="1798000" />
       <workItem from="1492683436036" duration="9865000" />
-      <workItem from="1492856527179" duration="3149000" />
+      <workItem from="1492856527179" duration="3343000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -510,12 +504,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31867000" />
+    <option name="totallyTimeSpent" value="32061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -919,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setting/Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -947,11 +934,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/handle_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="1326">
           <caret line="78" column="51" lean-forward="false" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="51" />
           <folding>
             <marker date="1492859263467" expanded="true" signature="1422:1465" ph="SELECT * FRO... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

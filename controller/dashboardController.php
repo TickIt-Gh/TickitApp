@@ -6,9 +6,8 @@
 //require admin class to display dashboard
 require_once("../classes/admin.php");
 
-  //set admin session for the dashboard
+  //start session to access admin id
   session_start();
-  $_SESSION['managed_by'] = 1;
 class dashController{
   public function displayDashboardPage(){
     displayHeader();
@@ -16,16 +15,20 @@ class dashController{
     displayFooter();
   }
 
+  //displays header for our dashboard
   public function displayHeader(){
     include_once REQUIRES . 'header.php';
   }
 
+  //create an admin object using a session id
   public function adminSetup(){
     $admin = new Admin;
-    $admin->setAdminID($_SESSION['managed_by']);
+    $admin->setAdminID($_SESSION['userID']);
     return $admin;
   }
 
+
+  //displays table for the dashboard
   public function displaydashboard($admin){
     $listings = $admin->getListings();
     echo '<tr>
@@ -113,6 +116,7 @@ class dashController{
     }
   }
 
+  //Displays footer for admin dashboard
   public function displayFooter(){
     require_once REQUIRES . 'footer.php';
   }

@@ -10,7 +10,7 @@ include_once REQUIRES . 'nav_bar.php';
 
 
 <div class="row" style="margin:50px; margin-bottom: 100px;">
-<?php include('../unsecure/unsecure.php'); ?>
+    <?php include('../unsecure/unsecure.php'); ?>
     <div class="col-md-4">
         &nbsp
     </div>
@@ -27,7 +27,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="first_name" class="form-control" placeholder="First Name" required autofocus
-                   name="firstname">
+            name="firstname">
         </div>
         <br>
 
@@ -36,7 +36,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
-                   name="lastname" value="">
+            name="lastname" value="">
         </div>
         <br>
 
@@ -57,22 +57,6 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
-<<<<<<< HEAD
-        <!---get user's tel no.-->
-        <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <input type="text" id="tell" class="form-control" placeholder="Email " required name="email">
-        </div>
-        <br>
-=======
-        <!--Get user's phone number-->
-        <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <input type="email" id="email" class="form-control" placeholder="+233503548654 " required name="tel">
-        </div>
-        <br>
-
->>>>>>> master
 
         <!---get user's password-->
         <div class="input-group">

@@ -4,7 +4,7 @@
 * @author Job
 * @version 1
 */
-
+/**
 require_once('../database/Database.php');
 require_once('../classes/User.php');
 

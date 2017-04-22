@@ -18,7 +18,7 @@ include_once REQUIRES . 'nav_bar.php';
 
     <!--Getting User Information-->
     <div class="col-md-6">
-        <form class="form-signin" method="POST" action="#">
+        <form class="form-signin" method="POST" action="">
 
             <h2 class="form-signin-heading text-center">Travel Details</h2>
 

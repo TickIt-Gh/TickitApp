@@ -10,6 +10,7 @@ include_once REQUIRES . 'nav_bar.php';
 
 
 <div class="row" style="margin:50px; margin-bottom: 100px;">
+<?php include('../unsecure/unsecure.php'); ?>
     <div class="col-md-4">
         &nbsp
     </div>
@@ -17,7 +18,7 @@ include_once REQUIRES . 'nav_bar.php';
     ">
 
     <!--The form for the sign_up values -->
-    <form class="form-signin" method="POST" action="#">
+    <form class="form-signin" action="" method="POST" >
         <h2 class="form-signin-heading" style="text-align: center;">Provide Details</h2>
         <br>
 
@@ -56,12 +57,22 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+<<<<<<< HEAD
         <!---get user's tel no.-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <input type="text" id="tell" class="form-control" placeholder="Email " required name="email">
         </div>
         <br>
+=======
+        <!--Get user's phone number-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <input type="email" id="email" class="form-control" placeholder="+233503548654 " required name="tel">
+        </div>
+        <br>
+
+>>>>>>> master
 
         <!---get user's password-->
         <div class="input-group">
@@ -81,7 +92,7 @@ include_once REQUIRES . 'nav_bar.php';
         <br>
 
         <!---call the function to validate the form data on submission-->
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_sign_up()">Sign Up</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"  name = "signup">Sign Up</button>
     </form>
 </div>
 <div class="col-md-4">

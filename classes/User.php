@@ -15,8 +15,8 @@ class User extends Database
 {
     // each user of the application have a userid,email,password and status
     //properties
-    public $userid;
-    public $email;
+    private $userid;
+    private $email;
     private $password;
     private $status;
 

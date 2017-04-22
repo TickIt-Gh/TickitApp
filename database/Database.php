@@ -132,12 +132,10 @@ class Database
             $sql=vsprintf($mysql,$newArray);
             // return the results of quering the database with the new sql
             return ($this->query($sql));
-
-
-        
+        }       
         
 
-    }
+    
 
 
 }

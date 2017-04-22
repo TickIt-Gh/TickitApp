@@ -139,7 +139,6 @@ function registernewuser()
 		$sql2 = "INSERT INTO client (userID,firstname, lastname, DOB, gender, telephone)
 		VALUES ($ID,'$fname','$lname', '$dob', '$gender','$tel')";
 
-		echo $sql2;
 		//execute querry
 		$dbexec = $reguser->query($sql2);
 		if($dbexec)

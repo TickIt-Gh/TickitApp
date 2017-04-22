@@ -111,29 +111,30 @@ class Database
             return mysqli_num_rows($this->result);
         }
     }
-    /**
-    *This function prevents sql injection
-    *@return boolean
-    *@param $sql and an array of parameters
-     **/
-    public function  realEscape($mysql,...$myArray){
-        // connect to the databse
 
-        if(!$this->connect()){
+
+    /**
+     * This function prevents sql injection
+     * @param $mysql sql statement
+     * @param array ...$myArray input to the sql statement
+     * @return bool|return true if query successful
+     */
+    public function realEscape($mysql, ...$myArray)
+    {
+        // connect to the databse
+        if (!$this->connect()) {
             return false;
         }
-            // create an array
-            $newArray=array();
-            //loop through the array in the parameter and store the values in the new array
-            foreach ($myArray as $arrayValues){
-                $newArray[]= mysqli_real_escape_string($this->dbConnection,$arrayValues);
-            }
-            //this is the sql to be submitted to the database
-            $sql=vsprintf($mysql,$newArray);
-            // return the results of quering the database with the new sql
-            return ($this->query($sql));
-
-
+        // create an array
+        $newArray = array();
+        //loop through the array in the parameter and store the values in the new array
+        foreach ($myArray as $arrayValues) {
+            $newArray[] = mysqli_real_escape_string($this->conn, $arrayValues);
+        }
+        //this is the sql to be submitted to the database
+        $sql = vsprintf($mysql, $newArray);
+        // return the results of quering the database with the new sql
+        return $this->query($sql);
     }
 
 

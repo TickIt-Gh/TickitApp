@@ -5,7 +5,7 @@ include_once REQUIRES . 'header.php';
 <title>Log In</title>
 
 <?php
-include_once REQUIRES . 'nav_bar.php';
+//include_once REQUIRES . 'nav_bar.php';
 require_once PUBLICS . 'handle_login.php';
 ?>
 
@@ -60,6 +60,7 @@ require_once PUBLICS . 'handle_login.php';
         <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_login()" name="login">Sign in
         </button>
     </form>
+
 </div>
 <div class="col-md-4">
     &nbsp

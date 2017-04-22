@@ -198,17 +198,13 @@ function validate_login() {
     if (email != null && password != null) {
         //validate the email
         if (validate_email(email)) {
-
-
             //if all is valid , the user successfully logs in
-
-
+            //hangout to server to handle login
         } else {
             //prompt user to enter a valid email
             alert('Please enter a valid email');
         }
     } else {
-
         //prompt user to enter the password and email
         alert('Provide an email and password')
     }

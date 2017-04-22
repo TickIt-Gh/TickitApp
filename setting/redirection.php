@@ -8,6 +8,8 @@
 
 if (isset($_SESSION)) { //check if session is set
     if (isset($_SESSION['is_admin'])) {
+        //echo 'Here' . '<br>';
+        //echo $_SESSION['is_admin'];
         redirect_user($_SESSION['is_admin']);
     } else {
         header('Location: ../public/login.php');
@@ -22,9 +24,9 @@ if (isset($_SESSION)) { //check if session is set
  */
 function redirect_user($user_type)
 {
-    if ($user_type === 'yes') {
+    if (strcasecmp($user_type, 'yes') == 0) {
         header('Location: ../pages/adminDashBoard.php');
-    } elseif ($user_type === 'no') {
+    } elseif (strcasecmp($user_type, 'no') == 0) {
         header('Location: ../pages/standardUserBoard.php');
     } else {
         header('Location: ../public/login.php');

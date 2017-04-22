@@ -58,15 +58,20 @@ function login()
         /*
          *Check user credentials
          */
-        $email = format_data($_POST['email']);
 
+
+        $email = format_data($_POST['email']);
         require_once DATABASES . 'Database.php';
         $db = new Database();
         $sql = "SELECT * FROM user WHERE (email = '$email')";
         $db->query($sql);
         $result = $db->fetch();
+
+
         if ($result) {
+
             if (password_verify($_POST['password'], $result['password']) and $result['status'] === 'active') {
+
                 session_start();
                 $_SESSION['userID'] = $result['userID'];
                 $_SESSION['is_admin'] = $result['is_admin'];
@@ -76,9 +81,11 @@ function login()
             } else {
                 $error = 'Wrong login credentials';
             }
+
         } else {
             $error = 'Wrong login credentials';
         }
+
     }
 }
 

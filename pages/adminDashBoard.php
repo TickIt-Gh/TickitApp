@@ -1,14 +1,22 @@
 <?php
-require_once('../controller/dashboardController.php');
+session_start();
+if (isset($_SESSION['userID'])) {
+
+} else {
+    header('Location: ../public/login.php');
+}
+
 require_once('../setting/init.php');
+require_once('../controller/dashboardController.php');
+
 include_once REQUIRES . 'header.php';
 
-  echo '<title>Admin Dashboard</title>';
+echo '<title>Admin Dashboard</title>';
 
 
- require_once REQUIRES . 'nav_bar.php';
- $dashController = new dashController;
- $admin = $dashController->adminSetup();
+require_once LAYOUT . 'admin_layout.php';
+$dashController = new dashController;
+$admin = $dashController->adminSetup();
 
 echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
     <div class="col-md-2">
@@ -23,9 +31,9 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
         <!-- Table -->
         <table class="table" id="dashboard">';
 
-        $dashController->displaydashboard($admin);
+$dashController->displaydashboard($admin);
 
-      echo '</table>
+echo '</table>
             </div>
             </div>
             <div class="col-md-2">
@@ -85,5 +93,5 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
               </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
           </div><!-- /.modal -->';
-  include_once REQUIRES . 'footer.php';
+include_once REQUIRES . 'footer.php';
 ?>

@@ -9,6 +9,9 @@ session_start();
 
 if (isset($_SESSION['userID'])) {
 
+
+header('Location: ../pages/itinerary.php');
+
 } else {
     header('Location: ../public/login.php');
 }

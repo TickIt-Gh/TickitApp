@@ -8,7 +8,7 @@
 require_once('../database/Database.php');
 require_once('../classes/User.php');
 require_once('../classes/listing.php');
-require_once('bus_listingController');
+require_once('bus_listingController.php');
 
 
 if (isset($_POST['buy'])) 
@@ -56,11 +56,10 @@ function reduceBalance()
 	{
 		$row = $veruser->fetch();
 		$AvSeats=$row['available_seats'];
-		$AvSeats =$AvSeats-1;
-		$updateSql = "UPDATE bus_listings SET available_seats = $AvSeats WHERE listing_id = $row['listing_id']";
+		$AvSeats =$AvSeats-1;		
 		header("Location: ../pages/itinerary.php");
 	}
 	else
-		echo "Could not reduce";;
+		echo "Could not reduce";
 
 }

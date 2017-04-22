@@ -17,6 +17,7 @@ include_once REQUIRES . 'nav_bar.php';
 
 
         <div>
+        &emsp;
             <input type="text" id="name" class="form-control" placeholder="Your name" required autofocus
                    name="name">
         </div>

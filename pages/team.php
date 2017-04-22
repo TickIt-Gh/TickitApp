@@ -19,7 +19,7 @@ include_once REQUIRES . 'nav_bar.php';
                 <div class="panel-body">
                     <img class="img-responsive" src="../img/brenda.jpg" alt="brenda Mboya" width="250" height="236">
 
-                    <p>Brenda is a design enthusiast.She likes prototypinng.She worked on the user class,the contact and team pages</p>
+                    <p>Design & prototyping enthusiast.She worked on the user class,the contact and team pages</p>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@ include_once REQUIRES . 'nav_bar.php';
                 <div class="panel-body">
                     <img class="img-responsive" src="../img/bhebhe.jpg" alt="brenda Mboya" width="250" height="236">
 
-                    <p>Database implementer.She worked on the log in and the sign up page </p>
+                    <p>Database implementer.She worked on the log in and sign up pages.She also validated the contact page </p>
                 </div>
             </div>
         </div>

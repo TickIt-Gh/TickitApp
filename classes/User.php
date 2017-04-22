@@ -16,7 +16,9 @@ class User extends Database
     // each user of the application have a userid,email,password and status
     //properties
     private $userid;
+
     private $email;
+
     private $password;
     private $status;
 
@@ -49,7 +51,15 @@ class User extends Database
     {
         return $this->email;
     }
+    /**
+     *This function gets the status of the user
+     * @return  status
+     **/
 
+    public function getStaus()
+    {
+        return $this->status;
+    }
     /**
      *This function allows the user to change their email address
      * @return boolean(true/false)

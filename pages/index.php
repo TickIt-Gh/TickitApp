@@ -22,7 +22,7 @@ require_once REQUIRES . 'nav_bar.php';
                     <p align="justify"> Welcome to TickUP Official Web Application.
                         Book a ticket with us or create a account</p>
                     <p>
-                        <a class='btn btn-primary' href="buy.php">Buy Now!</a>
+                        <a class='btn btn-primary' href="../public/login.php">Buy Now!</a>
                         <a class='btn btn-success' href="../public/sign_up.php">Sign Up</a>
                     </p>
                 </div>

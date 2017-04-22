@@ -1,7 +1,7 @@
-function onAddListing(){
-  addListing();
-  $('#myModal').modal('hide');
-  return false;
+function onAddListing() {
+    addListing();
+    $('#myModal').modal('hide');
+    return false;
 }
 
 function addListing() {
@@ -33,42 +33,42 @@ function addListing() {
     xhttp.send();
 }
 
-function onUpdateListing(){
-  updateListing();
-  $('#editModal').modal('hide');
-  return false;
+function onUpdateListing() {
+    updateListing();
+    $('#editModal').modal('hide');
+    return false;
 }
 
 
-function updateListing(){
-  var busNumber = document.getElementById("bus_number").value;
-  var departureTime = document.getElementById("departure_time").value;
-  var departureDate = document.getElementById("departure_date").value;
-  var availableSeats = document.getElementById("available_seats").value;
-  var departurePoint = document.getElementById("departure_point").value;
-  var destinationPoint = document.getElementById("destination_point").value;
-  var price = document.getElementById("listing_price").value;
-  var availability = document.getElementById("availability");
-  var availValue = availability.options[availability.selectedIndex].value;
-  var btnValue = document.getElementById("btnUpdate").value;
-  var listingID = document.getElementById("listing_id").value;
-  console.log(listingID);
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-          //Parse json from server into an array of js objects
-          console.log(this.responseText);
-          document.getElementById("dashboard").innerHTML = "";
-          document.getElementById("dashboard").innerHTML = this.responseText;
+function updateListing() {
+    var busNumber = document.getElementById("bus_number").value;
+    var departureTime = document.getElementById("departure_time").value;
+    var departureDate = document.getElementById("departure_date").value;
+    var availableSeats = document.getElementById("available_seats").value;
+    var departurePoint = document.getElementById("departure_point").value;
+    var destinationPoint = document.getElementById("destination_point").value;
+    var price = document.getElementById("listing_price").value;
+    var availability = document.getElementById("availability");
+    var availValue = availability.options[availability.selectedIndex].value;
+    var btnValue = document.getElementById("btnUpdate").value;
+    var listingID = document.getElementById("listing_id").value;
+    console.log(listingID);
+    var xhttp = new ajaxRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            //Parse json from server into an array of js objects
+            console.log(this.responseText);
+            document.getElementById("dashboard").innerHTML = "";
+            document.getElementById("dashboard").innerHTML = this.responseText;
 
-      }
-  };
+        }
+    };
 
-  xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&bus_number=" + busNumber +
-      "&departure_time=" + departureTime + "&departure_date=" + departureDate + "&available_seats=" +
-      availableSeats + "&departure_point=" + departurePoint + "&destination_point=" + destinationPoint +
-      "&listing_price=" + price + "&listing_status=" + availValue + "&update=" + btnValue, true);
-  xhttp.send();
+    xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&bus_number=" + busNumber +
+        "&departure_time=" + departureTime + "&departure_date=" + departureDate + "&available_seats=" +
+        availableSeats + "&departure_point=" + departurePoint + "&destination_point=" + destinationPoint +
+        "&listing_price=" + price + "&listing_status=" + availValue + "&update=" + btnValue, true);
+    xhttp.send();
 }
 
 function onDeleteListing(elt) {
@@ -76,54 +76,61 @@ function onDeleteListing(elt) {
     return false;
 }
 
+
+function deleteListing() {
+    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+
+
 function deleteListing(elt) {
-  var deleteValue = elt.value;
-  var listingID = Number(elt.id);
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //Parse json from server into an array of js objects
-      document.getElementById("dashboard").innerHTML = "";
-      document.getElementById("dashboard").innerHTML = this.responseText;
+    var deleteValue = elt.value;
+    var listingID = Number(elt.id);
+    var xhttp = new ajaxRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            //Parse json from server into an array of js objects
+            document.getElementById("dashboard").innerHTML = "";
+            document.getElementById("dashboard").innerHTML = this.responseText;
 
-    }
-  };
+        }
+    };
 
-  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID + "&delete=" + deleteValue, true);
-  xhttp.send();
+    xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&delete=" + deleteValue, true);
+    xhttp.send();
 }
 
-function onEditListing(elt){
-  editListing(elt);
+function onEditListing(elt) {
+    editListing(elt);
 }
 
-function editListing(elt){
-  var listingID = elt.id;
-  var editValue = elt.value;
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //Parse json from server into an array of js objects
-      console.log(this.responseText);
-      var listing = JSON.parse(this.responseText);
-      listing = listing[0];
-      console.log(listing);
-      document.getElementById("bus_number").value = listing.bus_number;
-      document.getElementById("departure_time").value = listing.depature_time;
-      document.getElementById("departure_date").value = listing.departure_date;
-      document.getElementById("available_seats").value = listing.available_seats;
-      document.getElementById("departure_point").value = listing.departure_point;
-      document.getElementById("destination_point").value = listing.destination_point;
-      document.getElementById("listing_price").value = Number(listing.price);
-      document.getElementById("availability").value = listing.listing_status;
-      document.getElementById("listing_id").value = listing.listing_id;
+function editListing(elt) {
+    var listingID = elt.id;
+    var editValue = elt.value;
+    var xhttp = new ajaxRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            //Parse json from server into an array of js objects
+            console.log(this.responseText);
+            var listing = JSON.parse(this.responseText);
+            listing = listing[0];
+            console.log(listing);
+            document.getElementById("bus_number").value = listing.bus_number;
+            document.getElementById("departure_time").value = listing.depature_time;
+            document.getElementById("departure_date").value = listing.departure_date;
+            document.getElementById("available_seats").value = listing.available_seats;
+            document.getElementById("departure_point").value = listing.departure_point;
+            document.getElementById("destination_point").value = listing.destination_point;
+            document.getElementById("listing_price").value = Number(listing.price);
+            document.getElementById("availability").value = listing.listing_status;
+            document.getElementById("listing_id").value = listing.listing_id;
 
-    }
-  };
+        }
+    };
 
-  xhttp.open("GET", "ajaxDashboard.php?listingID="+listingID + "&edit=" + editValue, true);
-  xhttp.send();
+    xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&edit=" + editValue, true);
+    xhttp.send();
 }
+
 
 /* Creates a XMLHttpRequest request object for recent and old browsers */
 function ajaxRequest() {
@@ -191,17 +198,13 @@ function validate_login() {
     if (email != null && password != null) {
         //validate the email
         if (validate_email(email)) {
-
-
             //if all is valid , the user successfully logs in
-
-
+            //hangout to server to handle login
         } else {
             //prompt user to enter a valid email
             alert('Please enter a valid email');
         }
     } else {
-
         //prompt user to enter the password and email
         alert('Provide an email and password')
     }
@@ -295,23 +298,10 @@ function validate_contact_form() {
 
 //function to validate the Buy form
 function validate_buy_form() {
-    var nam = document.getElementById("name");
-    var mail = document.getElementById("email");
-    var num = document.getElementById("tel");
-
-    if (validate_name(nam)) {
-        if (validate_email(mail)) {
-            if (validate_phone_num(num)) {
-
-                //if all the details are valid, the details are sent
-                //notify the user that the details have been sent
-                document.getElementById('pop').innerHTML = '<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
-                document.getElementById("tocken").innerHTML = tocken();
-            } else
-                alert('Enter a valid phone number');
-        } else
-            alert('Provide a valid email');
-    } else
-        alert('Provide a valid name');
+    //if all the details are valid, the details are sent
+    //notify the user that the details have been sent
+    document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
+    document.getElementById("tocken").innerHTML = tocken();
 
 }
+

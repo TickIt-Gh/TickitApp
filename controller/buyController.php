@@ -10,11 +10,14 @@ require_once('../classes/User.php');
 require_once('../classes/listing.php');
 require_once('bus_listingController.php');
 
+
+session_start();
+
 if (!isset($_SESSION))
 	header('Location: ../public/login.php');
 
-// if (isset($_GET['buy'])) 
-// 	reduceBalance();
+if (isset($_POST['buy']))
+	reduceBalance();
 if (isset($_GET['listingID'])) 
 	reduceBalanceAjax();
 
@@ -55,7 +58,7 @@ function reduceBalance()
 	$veruser = new Database;
 	$id = $_POST['listingID'];
 	$seatsSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
-	$seatsResults = $veruser->fetch_json($seatsSql);
+	$seatsResults = $veruser->query($seatsSql);
 
 	if ($seatsResults)
 	{
@@ -67,8 +70,10 @@ function reduceBalance()
 		$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
 		$updateResult = $veruser->query($updateSql);
 
-		if ($updateResult)
+		if ($updateResult){
+			makePayments();
 			header("Location: ../pages/itinerary.php");
+		}
 		else
 			echo "Not updated";
 	}
@@ -95,4 +100,24 @@ function reduceBalanceAjax()
 		$updateResult = $veruser->query($updateSql);
 
 }
+}
 
+function makePayments()
+{
+	$veruser = new Database;
+	$listingId = $_POST['listingID'];
+	$userID = $_SESSION['userID'];
+	$today = date("Y-m-d H:i:s");
+
+	$paymentSql = "INSERT INTO payment (listing_id,user_id,date) values ($listingId,$userID,'$today')";
+
+	$paymentResults = $veruser->query($paymentSql);
+
+	if ($paymentResults)
+		return true;
+	else
+	{
+		echo "Could not be inserted";
+		return false;
+	}
+}

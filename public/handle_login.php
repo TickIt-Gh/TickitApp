@@ -53,7 +53,6 @@ function validate_login()
  */
 function login()
 {
-
     global $error;
     if (validate_login()) {
         /*

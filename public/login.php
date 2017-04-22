@@ -60,6 +60,7 @@ require_once PUBLICS . 'handle_login.php';
         <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validate_login()" name="login">Sign in
         </button>
     </form>
+
 </div>
 <div class="col-md-4">
     &nbsp

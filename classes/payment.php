@@ -2,7 +2,7 @@
 <?php
 
 /*Payment class
-* @author Linda Bhebhe 
+* @author Linda Bhebhe & Job M
 */
 class Payment{
 

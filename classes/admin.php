@@ -9,10 +9,12 @@
 //Require our database connection class.
 require_once("../database/Database.php");
 
+
 //Require bus listing class
 require_once("listing.php");
+require_once("User.php");
 
-class Admin{
+class Admin extends User{
   private $email;
 
   private $adminID;
@@ -111,12 +113,22 @@ class Admin{
 
   public function UpdateListing($listing){
     $db = new Database;
-    $sql = "UPDATE bus_listing SET listing_id = $listing->getListingId() ,
-    bus_number = $listing->getBusNumber() , available_seats = $listing->getAvailableSeats(),
-    depature_time = '$listing->getDepartureTime()', departure_date = '$listing->getDepartureDate()',
-    departure_point = '$listing->getDeparturePoint()' , destination_point = '$listing->getDestinationPoint()',
-    listing_status = '$listing->getListingStatus()', price = $listing->getPrice(), managed_by = $listing->getManagedBy()
-    WHERE listing_id = $listing->getListingId()";
+    $listingID = $listing->getListingId();
+    $busNumber = $listing->getBusNumber();
+    $availableSeats = $listing->getAvailableSeats();
+    $departureTime = $listing->getDepartureTime();
+    $departureDate = $listing->getDepartureDate();
+    $departurePoint = $listing->getDeparturePoint();
+    $destination = $listing->getDestinationPoint();
+    $status = $listing->getListingStatus();
+    $price = $listing->getPrice();
+    $manager = $listing->getManagedBy();
+    $sql = "UPDATE bus_listing SET listing_id = $listingID,
+    bus_number = '$busNumber' , available_seats = $availableSeats,
+    depature_time = '$departureTime', departure_date = '$departureDate ',
+    departure_point = '$departurePoint' , destination_point = '$destination',
+    listing_status = '$status', price = $price, managed_by = $manager
+    WHERE listing_id = $listingID";
 
     return $db->query($sql);
   }

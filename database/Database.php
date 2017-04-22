@@ -111,17 +111,21 @@ class Database
             return mysqli_num_rows($this->result);
         }
     }
+
+
     /**
-    *This function prevents sql injection
-    *@return boolean
-    *@param $sql and an array of parameters
-     **/
-    public function  realEscape($mysql,...$myArray){
+     * This function prevents sql injection
+     * @param $mysql sql statement
+     * @param array ...$myArray input to the sql statement
+     * @return bool|return true if query successful
+     */
+    public function realEscape($mysql, ...$myArray)
+    {
         // connect to the databse
-        
-        if(!$this->connect()){
+        if (!$this->connect()) {
             return false;
         }
+
             // create an array
             $newArray=array();
             //loop through the array in the parameter and store the values in the new array
@@ -135,7 +139,7 @@ class Database
         }       
         
 
-    
+
 
 
 }

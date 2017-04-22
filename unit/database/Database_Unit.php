@@ -10,7 +10,7 @@
 include_once '../setting/init.php';
 include_once DATABASES . 'database_info.php';
 
-class Database
+class Database_Unit
 {
 
     public $conn; //connection to database

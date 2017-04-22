@@ -1,6 +1,9 @@
 
 <?php
 
+include_once '../setting/init.php';
+include_once DATABASES . 'Database.php';
+require_once 'User.php';
 
 /**Class for the client
 * Extends the user class
@@ -16,6 +19,7 @@ class Client extends User{
 	private $dateOfBirth;
 	private $gender;
 	private $telephone;
+	private $id;
 
 
    //methods
@@ -64,7 +68,41 @@ class Client extends User{
 		return $this->telephone;
 	}
 
+   
+
+    /* Method to insert  a new client 
+    *  Calls a method to insert a user 
+    *  The insert client query inserts 
+    * @param firstname the firstname of the client
+    * @param lastname the lastname of the client
+    * @param dateOfBirth the data of birth of the client
+    * @param geneder the gender of the client
+    * @param telephone the phone number of client
+    * @param email the email of the client 
+    * @param password the user password
+    * @param session indicating if the sessin is on or off
+    * @param status indicating if the user is active or not 
+    * @param is_admin indication if the user is an admin or normal user
+    */
+    public function insertClient($firstname, $lastname, $dateOfBirth, $gender, $telephone, $email, $password, $session, $status, $is_admin){
+    	$this->id=$this->add_user_returns_userID($email, $password, $session, $status, $is_admin);
+
+    	  return $this->query("INSERT INTO client (userID, firstName, lastName, DOB, gender, telephone) VALUES ('$this->id','$firstname','$lastname','$dateOfBirth', '$gender','$telephone')");
+
+    }
+
+
+
+
 
 }
+
+
+/**Testing
+$newclient = new Client;
+echo "testing";
+
+echo $newclient->insertClient('noe', 'bhebhe', '13/03/95','F', '0563224123','lee003@gmail.com', 'noe','on','active','yes');
+*/
 
 ?>

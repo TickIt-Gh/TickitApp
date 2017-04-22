@@ -5,6 +5,10 @@
 * bus listing.
 *
 **/
+
+//Require our database connection class.
+require_once("../database/Database.php");
+
 class Listing{
   private $listing_id;
 
@@ -32,6 +36,10 @@ class Listing{
 
   public function getListingId(){
     return $this->listing_id;
+  }
+
+  public function setListingId($id){
+    $this->listing_id = $id;
   }
 
   public function getBusNumber(){
@@ -106,6 +114,20 @@ class Listing{
     $this->price = $newPrice;
   }
 
+  public function getListings(){
+    $db = new Database;
+    $sql = "SELECT listing_id, bus_number, available_seats, depature_time,
+    departure_date, departure_point, destination_point, price
+    FROM bus_listing WHERE listing_status ='available'";
+    $result = $db->query($sql);
+
+    if(!$result){
+      print("Could not get records from the database.");
+      exit;
+    }
+    $records = $db->fetchAll();
+    return $records;
+  }
 
 }
 

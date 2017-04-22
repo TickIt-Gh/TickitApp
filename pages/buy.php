@@ -18,7 +18,7 @@ include_once REQUIRES . 'nav_bar.php';
 
     <!--Getting User Information-->
     <div class="col-md-6">
-        <form class="form-signin" method="POST" action="#">
+        <form class="form-signin" method="POST" action="">
 
             <h2 class="form-signin-heading text-center">Travel Details</h2>
 
@@ -41,7 +41,8 @@ include_once REQUIRES . 'nav_bar.php';
             <br>
 
             <!-- Large modal -->
-            <button type="button" class="btn btn-primary center-block btn-lg btn-block" onclick="validate_buy_form()"
+            <button type="submit" name="buy" class="btn btn-primary center-block btn-lg btn-block"
+                    onclick="validate_buy_form()"
                     data-toggle="modal" data-target=".bs-example-modal-lg">Buy
             </button>
 

@@ -5,8 +5,8 @@
 *@version one
 */
 require_once('../database/Database.php');
-
-if (isset($_POST['register'])) 
+//echo "I am proud";
+if (isset($_POST['signup'])) 
 	validregister();
 
 /*
@@ -55,7 +55,7 @@ function validregister()
         $errorMessages[] ="The password shouldn't be empty";
 
     else 
-		if (!(preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/', $_POST['password'])) || (strlen($_POST['password'])) < 6)
+		if (!(preg_match('/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/', $_POST['password'])) || (strlen($_POST['password'])) < 6)
 				$errorMessages[]="Make sure you have Caps, Lowercase, numbers and a symbol in you password";
    	
 
@@ -66,7 +66,7 @@ function validregister()
     
     //user name exits
     if (empty($errorMessages))
-    	checkusername($_POST['email']);
+    	checkemail($_POST['email']);
     
     else
     	printerrors($errorMessages);
@@ -93,7 +93,7 @@ function checkemail($email)
 	//Database object
 	$obj = new Database;
 	//write sql
-	$sqlemail = "SELECT * from admin where email =  '$email'";
+	$sqlemail = "SELECT * from user where email =  '$email'";
 	//execute querry
 	$user = $obj->query($sqlemail);
 
@@ -117,30 +117,36 @@ function registernewuser()
 	$pw = $_REQUEST['password'];
 	$dob = $_REQUEST['date_of_birth'];
 	$gender = $_REQUEST['gender'];
+	$tel = $_REQUEST['tel'];
 
 	$pwdhash = password_hash($pw, PASSWORD_DEFAULT);
 
 	//create instance of database class
-	$reguser = new Database;
+	$reguser = new Database; 	 
 
 	$sql = "INSERT INTO user (email, password)
 	VALUES ('$email','$pwdhash') ";
 
 	$dbexec = $reguser->query($sql);
-	$ID = $reguser->query("SELECT userID FROM user WHERE email = $email");
+	$IDsql = $reguser->query("SELECT userID FROM user WHERE email = '$email'");
 
-	if ($dbexec && $reguser->query("SELECT userID FROM user WHERE email = $email"))
+
+	if ($dbexec && $IDsql)
 	{
-	$sql2 = "INSERT INTO client (userID,firstname, lastname, email, pwd, DOB, gender)
-	VALUES ('$ID','$fname','$lname', $dob, '$gender')";
+		$row = $reguser->fetch();
+			$ID=$row['userID'];
+			
+		$sql2 = "INSERT INTO client (userID,firstname, lastname, DOB, gender, telephone)
+		VALUES ($ID,'$fname','$lname', '$dob', '$gender','$tel')";
 
-	//execute querry
-	$dbexec = $reguser->query($sql2);
-
-	if($dbexec)
-		header("Location: ../public/login.php");
+		//execute querry
+		$dbexec = $reguser->query($sql2);
+		if($dbexec)
+			header("Location: ../public/login.php");
+		else
+			echo "User could not be registered";
+	}
 	else
-		echo "User could not be registered";
-}
+		echo "Not second querry";
 
 }

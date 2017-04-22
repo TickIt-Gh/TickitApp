@@ -5,6 +5,7 @@
 **/
 //Require the listing class
 require_once("../classes/listing.php");
+require_once("buyController.php");
 
 class busListingController{
   public function displayListingPage(){
@@ -65,9 +66,9 @@ class busListingController{
           <td>'.$listing['destination_point'].'</td>
           <td>'.$listing['price'].'</td>
           <td>'.
-              '<form>
+              '<form method = "post" action ="">
                 <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-                <button name = "buy" type="button" onclick="validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
+                <button name = "buy" type="submit" onclick="reduceSeats($listing["listing_id"]) && validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
                 </button>
 
                 

@@ -8,14 +8,18 @@
 require_once('../database/Database.php');
 require_once('../classes/User.php');
 require_once('../classes/listing.php');
-require_once('bus_listingController');
+require_once('bus_listingController.php');
 
+if (!isset($_SESSION))
+	header('Location: ../public/login.php');
 
-if (isset($_POST['buy'])) 
-	reduceBalance();
+// if (isset($_GET['buy'])) 
+// 	reduceBalance();
+if (isset($_GET['listingID'])) 
+	reduceBalanceAjax();
 
 // $myUser = new User;
-// $veruser = new Database;
+ //$veruser = new Database;
 
 
 // $User->userid = $_SESSION['userID'];
@@ -48,19 +52,47 @@ function checkBalance()
 
 function reduceBalance()
 {
-	//$seatsSql = "SELECT * FROM bus_listings WHERE listing_id = $_POST['buy']";
-
-	$seatsResults = $veruser->query("SELECT * FROM bus_listings");
+	$veruser = new Database;
+	$id = $_POST['listingID'];
+	$seatsSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
+	$seatsResults = $veruser->fetch_json($seatsSql);
 
 	if ($seatsResults)
 	{
 		$row = $veruser->fetch();
 		$AvSeats=$row['available_seats'];
+
 		$AvSeats =$AvSeats-1;
-		$updateSql = "UPDATE bus_listings SET available_seats = $AvSeats WHERE listing_id = $row['listing_id']";
-		header("Location: ../pages/itinerary.php");
+		$updateID = $row['listing_id'];
+		$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
+		$updateResult = $veruser->query($updateSql);
+
+		if ($updateResult)
+			header("Location: ../pages/itinerary.php");
+		else
+			echo "Not updated";
 	}
 	else
-		echo "Could not reduce";;
+		echo "Could not reduce";
 
 }
+
+function reduceBalanceAjax()
+{
+	$veruser = new Database;
+	$id = $_POST['listingID'];
+	$seatsSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
+	$seatsResults = $veruser->query($seatsSql);
+
+	if ($seatsResults)
+	{
+		$row = $veruser->fetch();
+		$AvSeats=$row['available_seats'];
+
+		$AvSeats =$AvSeats-1;
+		$updateID = $row['listing_id'];
+		$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
+		$updateResult = $veruser->query($updateSql);
+
+}
+

@@ -56,26 +56,25 @@ function validregister()
 
     //Validating Email
     if (!isset($_POST['email']) || $_POST['email'] === '')
-        $errorMessages[] = "Your email field shouldn't be empty";
+        $email_error = "Your email field shouldn't be empty";
 
     else
         if (!preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/', $_POST['email']))
-            $errorMessages[] = "Your email is not right";
+            $email_error = "Your email is not right";
 
     //Validating the password
     if (!isset($_POST['password']) || $_POST['password'] === '')
-        $errorMessages[] = "The password shouldn't be empty";
+        $password_error = "The password shouldn't be empty";
 
     else
         if (!(preg_match('/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/', $_POST['password'])) || (strlen($_POST['password'])) < 6)
-            $errorMessages[] = "Make sure you have Caps, Lowercase, numbers and a symbol in you password";
+            $password_error = "Make sure you have Caps, Lowercase, numbers and a symbol in you password";
 
 
     //Validating gender
     if (!isset($_POST['gender']) || $_POST['gender'] === '' || $_POST['gender'] == 'gender')
-        $errorMessages[] = "Please select atleast one gender";
-
-
+        $gender_error = "Please select atleast one gender";
+    
     //user name exits
     if (empty($errorMessages))
         checkemail($_POST['email']);

@@ -22,12 +22,19 @@ class User extends Database
     private $password;
     private $status;
 
-    // this user can change their password through this function
+    /**
+    *this function helps the user to change their password
+    *@param $userid,$pass
+    *@return boolean(true/false)
+    **/
     public function changePass($userid, $pass)
     {
         
+        
         if (!$this->connect()) {
+           
             echo "cannot connect to database";
+            return false;
 
         } else {
 
@@ -38,7 +45,9 @@ class User extends Database
             // now query the database
             $finalResult = $this->query($sql);
             if ($finalResult) {
+
                 echo " you have successfully changed your password";
+                return true;
             }
         }
     }
@@ -62,6 +71,7 @@ class User extends Database
     }
     /**
      *This function allows the user to change their email address
+     *@param $userid and $email
      * @return boolean(true/false)
      **/
     public function changeEmail($userid, $mail)
@@ -99,10 +109,3 @@ class User extends Database
 
 }
 
-/**
- * TEST
- */
-/*
-$us = new User();
-echo $us->add_user_returns_userID('test@test.com', 'passwordher', 'on', 'active', 'no');
-*/

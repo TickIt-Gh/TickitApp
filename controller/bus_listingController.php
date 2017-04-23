@@ -11,7 +11,9 @@ session_start();
 class busListingController
 {
 
-
+    /**
+     * Display the bus listing page
+     */
     public function displayListingPage()
     {
         $busListings = new Listing;
@@ -20,6 +22,9 @@ class busListingController
         $this->displayFooter();
     }
 
+    /**
+     * Display header of bus listing
+     */
     public function displayHeader()
     {
         include_once REQUIRES . 'header.php';
@@ -39,6 +44,10 @@ class busListingController
         require_once REQUIRES . 'footer.php';
     }
 
+    /**
+     * This display a formatted table of all bus listing
+     * @param $listing listing id
+     */
     public function displayBusListing($listing)
     {
         $sessionStatus = 1;

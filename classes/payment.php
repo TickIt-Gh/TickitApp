@@ -59,7 +59,7 @@ class Payment
     }
 
     /**
-     * insert a new payment 
+     * insert a new payment
      */
     public function insertPayment()
     {

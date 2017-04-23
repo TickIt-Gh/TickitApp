@@ -41,7 +41,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
-                   name="lastname" value="<?php echo $fname; ?>">
+                   name="lastname" value="<?php echo $lname; ?>">
             <small>
                 <span id="error"> <?php echo $lname_error  ; ?> </span>
             </small>
@@ -54,7 +54,7 @@ include_once REQUIRES . 'nav_bar.php';
             <label>
                 <small>Date of Birth</small>
             </label>
-            <input type="date" name="date_of_birth" class="form-control" id="date_of_birth" value="<?php echo $fname; ?>"><br>
+            <input type="date" name="date_of_birth" class="form-control" id="date_of_birth" value="<?php echo $dob; ?>"><br>
 
             <small>
                 <span id="error"> <?php echo $date_error  ; ?> </span>
@@ -65,7 +65,7 @@ include_once REQUIRES . 'nav_bar.php';
         <!---get user's email-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <input type="email" id="email" class="form-control" placeholder="Email " required name="email" value="<?php echo $fname; ?>">
+            <input type="email" id="email" class="form-control" placeholder="Email " required name="email" value="<?php echo $email; ?>">
             <small>
                 <span id="error"> <?php echo $email_error  ; ?> </span>
             </small>
@@ -74,7 +74,7 @@ include_once REQUIRES . 'nav_bar.php';
         <!--Get user's phone number-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-            <input type="text" id="phone" class="form-control" placeholder="+233503548654 " required name="tel" value="<?php echo $fname; ?>">
+            <input type="text" id="phone" class="form-control" placeholder="+233503548654 " required name="tel" value="<?php echo $tel; ?>">
             <small>
                 <span id="error"> <?php echo $phone_error  ; ?> </span>
             </small>
@@ -91,12 +91,29 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+        <fieldset>
+            <label>Select Gender : </label>
+            <input type="radio" name="gender" value="M" <?php if ($gender === "M") {
+                echo ' checked';
+            } ?> id="gender"> Male
+            <input type="radio" name="gender" value="F" <?php if ($gender === "F") {
+                echo ' checked';
+            } ?> id="gender"> Female<br>
+            <small>
+                <span id="error"> <?php echo $gender_error; ?> </span>
+            </small>
+        </fieldset>
+
 
         <!---get user's gender-->
         <select class="form-control" id="gender" name="gender">
             <option value="gender">Gender</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
+            <option value="M" <?php if ($gender === "M") {
+                echo 'selected';
+            } ?> id="gen">Male</option>
+            <option value="F" <?php if ($gender === "F") {
+                echo 'selected';
+            } ?> id="gen">Female</option>
         </select>
         <small>
             <span id="error"> <?php echo $gender_error  ; ?> </span>

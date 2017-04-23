@@ -10,14 +10,12 @@ include_once REQUIRES . 'nav_bar.php';
 
 
 <div class="row" style="margin:50px; margin-bottom: 100px;">
-    <div class="col-md-4">
+    <div class="col-md-3">
         &nbsp
     </div>
     <div class="col-md-6">
-
-
         <div>
-        &emsp;
+            &emsp;
             <input type="text" id="name" class="form-control" placeholder="Your name" required autofocus
                    name="name">
         </div>
@@ -35,6 +33,10 @@ include_once REQUIRES . 'nav_bar.php';
         <input type="submit" class="btn btn-primary btn-block" name="submit" value="SUBMIT"
                onclick="validate_contact_form()">
 
+    </div>
+
+    <div class="col-md-3">
+        &nbsp
     </div>
 </div>
 

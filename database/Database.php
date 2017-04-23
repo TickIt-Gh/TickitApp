@@ -118,6 +118,7 @@ class Database
      * @param $mysql sql statement
      * @param array ...$myArray input to the sql statement
      * @return bool|return true if query successful
+     *@uthor Brenda Mboya
      */
     public function realEscape($mysql, ...$myArray)
     {

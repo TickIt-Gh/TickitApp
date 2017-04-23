@@ -24,10 +24,10 @@ class User extends Database
 
     /**
     *this function helps the user to change their password
-    *@param $userid,$pass
+    *@param $user_email,$pass
     *@return boolean(true/false)
     **/
-    public function changePass($userid, $pass)
+    public function changePass($user_email, $pass)
     {
         
         
@@ -41,7 +41,7 @@ class User extends Database
             // hash the password
             $hashPass = password_hash($pass, PASSWORD_DEFAULT);
             // sql
-            $sql = "UPDATE user SET password='$hashPass' WHERE userid= $userid";
+            $sql = "UPDATE user SET password='$hashPass' WHERE email= $user_email";
             // now query the database
             $finalResult = $this->query($sql);
             if ($finalResult) {

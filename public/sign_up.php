@@ -91,19 +91,23 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-female"></i></span>
+            <select class="form-control" id="gender" name="gender">
+                <option value="gender">Gender</option>
+                <option value="M" <?php if ($gender === "M") {
+                    echo 'selected';
+                } ?> id="gen">Male</option>
+                <option value="F" <?php if ($gender === "F") {
+                    echo 'selected';
+                } ?> id="gen">Female</option>
+            </select>
+            <small>
+                <span id="error"> <?php echo $gender_error  ; ?> </span>
+            </small>
+        </div>
         <!---get user's gender-->
-        <select class="form-control" id="gender" name="gender">
-            <option value="gender">Gender</option>
-            <option value="M" <?php if ($gender === "M") {
-                echo 'selected';
-            } ?> id="gen">Male</option>
-            <option value="F" <?php if ($gender === "F") {
-                echo 'selected';
-            } ?> id="gen">Female</option>
-        </select>
-        <small>
-            <span id="error"> <?php echo $gender_error  ; ?> </span>
-        </small>
+
         <br>
 
         <!---call the function to validate the form data on submission-->

@@ -6,8 +6,12 @@
 //Require the listing class
 require_once("../classes/listing.php");
 require_once("buyController.php");
+session_start();
 
 class busListingController{
+
+
+
   public function displayListingPage(){
     $busListings = new Listing;
     $this->displayHeader();
@@ -33,6 +37,10 @@ class busListingController{
   }
 
   public function displayBusListing($listing){
+    $sessionStatus = 1;
+  if (!isset($_SESSION['email']))
+    $sessionStatus = 0;
+
     $listings = $listing->getListings();
     echo '<div class="row dashboard" style="margin:50px; margin-bottom: 100px;">
         <div class="col-md-2">
@@ -68,6 +76,7 @@ class busListingController{
           <td>'.
               '<form method = "post" action ="">
                 <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
+                <input type="hidden" name="session" id="mysession" value = "'.$sessionStatus.'"  class="btn btn-default btn-primary">
                 <button name = "buy" type="submit" onclick="validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
                 </button>
 

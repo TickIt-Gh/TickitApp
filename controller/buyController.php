@@ -4,11 +4,6 @@
 * @author Job
 * @version 1
 */
-session_start();
-
-if (!isset($_SESSION))
-	header('Location: ../public/login.php');
-
 
 require_once('../database/Database.php');
 require_once('../classes/User.php');
@@ -16,18 +11,19 @@ require_once('../classes/listing.php');
 require_once('bus_listingController.php');
 require('../PHPMailer_5.2.0/class.PHPMailer.php');
 
-
-if (isset($_POST['buy']))
+if (isset($_POST['buy']) )
 	reduceBalance();
 
-function checkBalance()
-{
-    
-}
 
 function reduceBalance()
 {
+	$sessionStatus = 1;
+  if (!isset($_SESSION['email']))
+    $sessionStatus = 0;
 
+   if ($sessionStatus==0)
+		header('Location: ../public/login.php');
+	else{
 	$veruser = new Database;
 	$id = $_POST['listingID'];
 	$seatsSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
@@ -41,9 +37,11 @@ function reduceBalance()
 		$updateID = $row['listing_id'];
 		if ($AvSeats==0)
 		{
-			$deleteSql = "DELETE from bus_listing WHERE listing_id = $updateID";
+			$deleteSql = "UPDATE bus_listing SET listing_status = 'unavailable' WHERE listing_id = $updateID";
 			$deleteResult = $veruser->query($deleteSql);
-			header("Location: ../pages/itinerary.php");
+			makePayments();
+			reduceAmount();
+			header("Location: ../pages/standardUserBoard.php");
 		}
 
 
@@ -54,12 +52,12 @@ function reduceBalance()
 
 			makePayments();
 			reduceAmount();
-			header("Location: ../pages/itinerary.php");
+			header("Location: ../pages/standardUserBoard.php");
 		}
 	}
 	else
 		echo "Could not reduce";
-
+}
 }
 
 

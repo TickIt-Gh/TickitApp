@@ -74,7 +74,7 @@ function login()
 
                 session_start();
                 $_SESSION['userID'] = $result['userID'];
-                $_SESSION['is_admin'] = $result['is_admin'];
+                $_SESSION['is_admin'] =$result['is_admin'];
                 $_SESSION['email'] = $result['email'];
                 require_once SETTING . 'redirection.php';
                 //header('Location: ../pages/adminDashBoard.php');

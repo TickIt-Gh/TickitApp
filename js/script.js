@@ -103,6 +103,7 @@ function onEditListing(elt) {
     editListing(elt);
 }
 
+
 function editListing(elt) {
     var listingID = elt.id;
     var editValue = elt.value;
@@ -130,6 +131,7 @@ function editListing(elt) {
     xhttp.open("GET", "ajaxDashboard.php?listingID=" + listingID + "&edit=" + editValue, true);
     xhttp.send();
 }
+
 
 
 /* Creates a XMLHttpRequest request object for recent and old browsers */
@@ -300,8 +302,22 @@ function validate_contact_form() {
 function validate_buy_form() {
     //if all the details are valid, the details are sent
     //notify the user that the details have been sent
-    document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email and phone number</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button> </div> </div> </div>';
+    document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email</em></h5><br> <form method = "POST"><button type="submit" name = "buy" class="btn btn-default center-block" data-dismiss="modal">Close</button></form> </div> </div> </div>';
     document.getElementById("tocken").innerHTML = tocken();
 
+}
+
+function reduceSeats(listingID){
+  var availableSeats = document.getElementById("available_seats").value;
+  var xhttp = new ajaxRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        updateListing();
+
+    }
+  };
+
+  xhttp.open("GET", "buyController.php?listingID="+listingID + "&availableSeats=" + availableSeats, true);
+  xhttp.send();
 }
 

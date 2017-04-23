@@ -41,7 +41,7 @@ function validregister()
     //Array to take in errors
     //$errorMessages = [];
     global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error, $is_ok;
-    global $fname, $lname, $email ,dob ,$gender, $tel;
+    global $fname, $lname, $email ,$dob ,$gender, $tel;
 
 
     //Validating first name

@@ -54,9 +54,8 @@ class dashController{
           <td>'.$listing['price'].'</td>
           <td>'.$listing['listing_status'].'</td>
           <td>'.
-              ' <button type="submit" id="'.$listing['listing_id'].'"  onclick="onEditListing(this)" name="edit" value="Edit Listing" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">Edit
-                </button>
-              <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+              '<input style="margin-left: 0px" type="submit" id="'.$listing['listing_id'].'"  onclick="onEditListing(this)" name="edit" value="Edit" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">
+              <div display="inline-block" class="modal fade" id="editModal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -110,7 +109,7 @@ class dashController{
             </div><!-- /.modal -->
           </td>
           <td>'.
-          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete Listing" id="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
+          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete" id="'.$listing['listing_id'].'" class="btn btn-default btn-danger">
           </td>
       </tr>';
     }

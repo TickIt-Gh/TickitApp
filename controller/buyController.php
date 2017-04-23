@@ -3,11 +3,11 @@
 /**
 * @author Job MWwesigwa
 * @version 1
-* This file makes sure after buying, the necesary checks and reductions are made 
+* This file makes sure after buying, the necesary checks and reductions are made
 */
 
 /**
-*Including the required classes 
+*Including the required classes
 */
 require_once('../database/Database.php');
 require_once('../classes/User.php');
@@ -57,7 +57,7 @@ if (isset($_POST['buy']) )
 */
 function reduceBalance()
 {
-	//1 when logged in, 0 not logged in 
+	//1 when logged in, 0 not logged in
 	$sessionStatus = 1;
   	if (!isset($_SESSION['email']))
     	$sessionStatus = 0;
@@ -90,16 +90,19 @@ function reduceBalance()
 				$updateSql = "UPDATE bus_listing SET listing_status = 'unavailable' WHERE listing_id = $updateID";
 			}
 
-			//update number of seats 
+			//update number of seats
 			else{
 				$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
-			}	
+			}
 			$updateResult = $veruser->query($updateSql);
 
 			//populate the payment table and reduce the amount in the user's account  using function
 			if ($updateResult){
 
 				reduceAmount();
+        if(isset($_GET['token'])){
+          makePayments($_GET['token']);
+        }
 				makePayments();
 
 				//reloading the page
@@ -115,7 +118,7 @@ function reduceBalance()
 * methode populates the payment table by geting attribute values from other tables
 */
 
-function makePayments()
+function makePayments($token)
 {
 	//db object
 	$veruser = new Database;
@@ -125,6 +128,20 @@ function makePayments()
 	$userID = $_SESSION['userID'];
 	$today = date("Y-m-d H:i:s");
 
+  //Get User data
+  $selectUser = "SELECT email, balance FROM user WHERE userid = $userID";
+  $userResults = $veruser->query($selectUser);
+  if($userResults){
+    $userRow = $veruser->fetch();
+    $email = $userRow['email'];
+    $balance = $userRow['balance'];
+    $message = "Hello,\n";
+    $message .= "The tocken for your ticket is $token \n";
+    $message .= "Enjoy your journey and see you next time\n\n\n"
+    $message .= "Team Tickit \n";
+
+    sendEmail($email, $message);
+  }
 	//getting the price
 	$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $listingId";
 		$priceResults = $veruser->query($priceSql);
@@ -152,7 +169,7 @@ function makePayments()
 /**
 * Responsible for monetary transaction
 * if user has insurficient balance, they are redirected to the listing page and alerted by a pop up
-* reduces the account balance 
+* reduces the account balance
 */
 function reduceAmount()
 {
@@ -173,19 +190,13 @@ function reduceAmount()
 		//getting the price of the listing
 		$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
 		$priceResults = $veruser->query($priceSql);
-<<<<<<< HEAD
 
-
-
-=======
-		
->>>>>>> 6059ce331a1a494778ca5af50010f898f206753a
 		if ($priceResults)
 		{
 			$priceRow = $veruser->fetch();
 			$price = $priceRow['price'];
 
-			//Reducing account balance 
+			//Reducing account balance
 			if ($price > $balance){
 				echo "alert('You do not have enough money on your account, press okay to add more money.')";
 				header("Location: ../stripeSettings");

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unsecure/unsecure.php" afterPath="$PROJECT_DIR$/unsecure/unsecure.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,14 +71,14 @@
       <file leaf-file-name="unsecure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="-959">
+              <caret line="78" column="63" lean-forward="false" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
               <folding>
                 <element signature="e#7#49#0#PHP" expanded="true" />
-                <marker date="1492944689547" expanded="true" signature="2824:2866" ph="SELECT * fro... user" />
-                <marker date="1492944689547" expanded="true" signature="3584:3647" ph="INSERT INTO user... " />
-                <marker date="1492944689547" expanded="true" signature="3719:3765" ph="SELECT userI... user" />
-                <marker date="1492944689547" expanded="true" signature="3882:4010" ph="INSERT INTO client... " />
+                <marker date="1492945732910" expanded="true" signature="2957:2999" ph="SELECT * fro... user" />
+                <marker date="1492945732910" expanded="true" signature="3733:3796" ph="INSERT INTO user... " />
+                <marker date="1492945732910" expanded="true" signature="3868:3914" ph="SELECT userI... user" />
+                <marker date="1492945732910" expanded="true" signature="4031:4159" ph="INSERT INTO client... " />
               </folding>
             </state>
           </provider>
@@ -504,7 +505,7 @@
       <workItem from="1492865858152" duration="23000" />
       <workItem from="1492906750819" duration="1530000" />
       <workItem from="1492946441916" duration="863000" />
-      <workItem from="1492944474481" duration="214000" />
+      <workItem from="1492944474481" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -517,7 +518,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36168000" />
+    <option name="totallyTimeSpent" value="37237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -918,14 +919,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="-959">
+          <caret line="78" column="63" lean-forward="false" selection-start-line="78" selection-start-column="63" selection-end-line="78" selection-end-column="63" />
           <folding>
             <element signature="e#7#49#0#PHP" expanded="true" />
-            <marker date="1492944689547" expanded="true" signature="2824:2866" ph="SELECT * fro... user" />
-            <marker date="1492944689547" expanded="true" signature="3584:3647" ph="INSERT INTO user... " />
-            <marker date="1492944689547" expanded="true" signature="3719:3765" ph="SELECT userI... user" />
-            <marker date="1492944689547" expanded="true" signature="3882:4010" ph="INSERT INTO client... " />
+            <marker date="1492945732910" expanded="true" signature="2957:2999" ph="SELECT * fro... user" />
+            <marker date="1492945732910" expanded="true" signature="3733:3796" ph="INSERT INTO user... " />
+            <marker date="1492945732910" expanded="true" signature="3868:3914" ph="SELECT userI... user" />
+            <marker date="1492945732910" expanded="true" signature="4031:4159" ph="INSERT INTO client... " />
           </folding>
         </state>
       </provider>

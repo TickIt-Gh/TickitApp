@@ -29,7 +29,7 @@ function validregister()
 {
     //Array to take in errors
     $errorMessages = [];
-    global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error, $user_exists_error;
+    global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error;
 
     //Validating first name
     if (!isset($_POST['firstname']) || $_POST['firstname'] === '')
@@ -74,7 +74,10 @@ function validregister()
     //Validating gender
     if (!isset($_POST['gender']) || $_POST['gender'] === '' || $_POST['gender'] == 'gender')
         $gender_error = "Please select atleast one gender";
-    
+
+    if (!isset($_POST['tel']) || $_POST['tel'] === ''){
+        $phone_error = 'Please provide a correct phone number';
+    }
     //user name exits
     if (empty($errorMessages))
         checkemail($_POST['email']);
@@ -102,6 +105,7 @@ function printerrors($errors)
 function checkemail($email)
 {
     //Database object
+    global $user_exists_error;
     $obj = new Database;
     //write sql
     $sqlemail = "SELECT * from user where email =  '$email'";
@@ -112,7 +116,7 @@ function checkemail($email)
     if ($user && empty($obj->fetch()))
         registernewuser();
     else {
-        echo "We already have a user with this email";
+        $user_exists_error = "We already have a user with this email";
         exit;
     }
 }

@@ -1,8 +1,9 @@
 <?php
 
-/*
+/**
 *@author Job Mwesigwa 
 *@version one
+*dile for validating user inputs
 */
 include_once '../setting/init.php';
 include_once CONTROLLER . 'functions.php';
@@ -123,7 +124,7 @@ function validregister()
 
 }
 
-/*
+/**
  *@param an array of errors
  *prints errors in the error array
  */
@@ -135,10 +136,12 @@ function printerrors($errors)
     exit;
 }
 
-/*
- *@param email to be checked 
- *Checks if email is in the database
-/*/
+
+/**
+ * Checks if email is in the database
+ * @param $email email to be checked
+ * @return bool true if email not in database
+ */
 function checkemail($email)
 {
     //Database object
@@ -159,8 +162,15 @@ function checkemail($email)
     }
 }
 
-/*
- *Fuction inserts registered user into the database
+/**
+ *Function inserts registered user into the database
+ *@param $fname the first 
+ *@param $lname the last name
+ *@param $email the user email
+ *@param $pwdhash the user pasword
+ *@param $dob the user date of birth
+ *@param $gender the user gender
+ *@param $tel the user tel number
  */
 function registernewuser($fname, $lname, $email, $pwdhash, $dob, $gender, $tel)
 {
@@ -168,12 +178,16 @@ function registernewuser($fname, $lname, $email, $pwdhash, $dob, $gender, $tel)
     //create instance of database class
     $reguser = new Database;
 
+    //inserting user into user table
     $sql = "INSERT INTO user (email, password) VALUES ('$email','$pwdhash') ";
 
     $dbexec = $reguser->query($sql);
+
+    //geting user ID
     $IDsql = $reguser->query("SELECT userID FROM user WHERE email = '$email'");
 
 
+    //Inserting Client details
     if ($dbexec && $IDsql) {
         $row = $reguser->fetch();
         $ID = $row['userID'];

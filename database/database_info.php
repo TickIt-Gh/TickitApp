@@ -6,9 +6,12 @@
  * Time: 8:39 PM
  */
 
-define('SERVER', 'mysql3.gear.host');
-define('USERNAME', 'teamtickit');
-define('PASSWORD', 'Password12#');
-define('DATABASE', 'tti2018');
+/**
+ * Info of database
+ */
+define('SERVER', 'mysql3.gear.host'); //database server
+define('USERNAME', 'teamtickit'); //database username
+define('PASSWORD', 'Password12#'); //database password
+define('DATABASE', 'tti2018'); //database name
 
 ?>

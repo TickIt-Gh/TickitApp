@@ -30,7 +30,7 @@ class Client extends User{
 	}
 
 
-    /*Method to get the firstname
+    /**Method to get the firstname
     *@return firstname the name of the client
     */
 	public function getFirstname(){

@@ -56,5 +56,5 @@ class contact extends Database
 /*
 $da = new contact();
 //$da->add_contact_us('Admin', 'admin@admin.com', 'Reporting an error in query');
-var_dump($da->get_all_message_of_a_user('admin'));
+var_dump($da->get_all_contacts());
 */

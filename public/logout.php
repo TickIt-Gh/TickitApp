@@ -7,6 +7,9 @@
  *
  */
 
+/**
+ * This function logs user out by destroying session and seting cookies
+ */
  function logout(){
        // unset any session variables
        $_SESSION = array();

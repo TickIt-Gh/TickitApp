@@ -64,7 +64,7 @@ class busListingController
         <div class="col-md-12">
         <!--div class="panel panel-default"-->
             <!-- Default panel contents -->
-            
+
 
             <!-- Table -->
             <table class="table">
@@ -92,7 +92,7 @@ class busListingController
                 <input type="hidden" name="session" id="mysession" value = "' . $sessionStatus . '"  class="btn btn-default btn-primary">
                 <button name = "buy" type="submit" onclick="validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
                 </button>
-                
+
               </form>
           </td>
       </tr>';

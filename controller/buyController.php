@@ -3,21 +3,69 @@
 /**
 * @author Job MWwesigwa
 * @version 1
-* This file makes sure after buying, the necesary checks and reductions are made 
+* This file makes sure after buying, the necesary checks and reductions are made
 */
 
 /**
-*Including the required classes 
+*Including the required classes
 */
 require_once('../database/Database.php');
 require_once('../classes/User.php');
 require_once('../classes/listing.php');
 require_once('bus_listingController.php');
-require('../PHPMailer_5.2.0/class.PHPMailer.php');
+require("../PHPMailer/PHPMailerAutoload.php");
 
 //If the buyer button is cliked
 if (isset($_POST['buy']) )
 	reduceBalance();
+
+/**
+* @param $email to which you want to send message
+* @param $message to be send to user.
+**/
+function sendEmail($email, $message){
+  //Initialize the email object
+  $mail = new PHPMailer;
+  $mail->IsSMTP(); // enable SMTP
+  $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+  $mail->SMTPAuth = true; // authentication enabled
+  $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
+  $mail->Host = "smtp.gmail.com";
+  $mail->Port = 587; // or 465
+  $mail->IsHTML(true);
+  $mail->Username = "tickit.booking@gmail.com";
+  $mail->Password = "razak2018";
+  $mail->SetFrom("tickit.booking@gmail.com");
+  $mail->Subject = "Tickit Booking Info";
+  $mail->Body = $message;
+  $mail->AddAddress($email);
+
+   if(!$mail->Send()) {
+      echo "Mailer Error: " . $mail->ErrorInfo;
+   } else {
+      echo "Message has been sent";
+   }
+}
+
+/**
+
+*Provides the tockenGenarator
+*/
+function tockenGenarator()
+{
+	//sample space
+    $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    $randstring = '';
+		$charactersLength = strlen($characters);
+
+		//creating the string tocken
+    for ($i = 0;  $i <7; $i++) {
+        $randstring .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randstring;
+}
+
+
 
 /**
 *Method makes all checks of the seats
@@ -25,7 +73,7 @@ if (isset($_POST['buy']) )
 */
 function reduceBalance()
 {
-	//1 when logged in, 0 not logged in 
+	//1 when logged in, 0 not logged in
 	$sessionStatus = 1;
   	if (!isset($_SESSION['email']))
     	$sessionStatus = 0;
@@ -58,17 +106,16 @@ function reduceBalance()
 				$updateSql = "UPDATE bus_listing SET listing_status = 'unavailable' WHERE listing_id = $updateID";
 			}
 
-			//update number of seats 
+			//update number of seats
 			else{
 				$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
-			}	
+			}
 			$updateResult = $veruser->query($updateSql);
-
 			//populate the payment table and reduce the amount in the user's account  using function
 			if ($updateResult){
 
 				reduceAmount();
-				makePayments();
+          makePayments(tockenGenarator);
 
 				//reloading the page
 				header("Location: ../pages/standardUserBoard.php");
@@ -79,11 +126,13 @@ function reduceBalance()
 	}
 }
 
+
+
 /**
 * methode populates the payment table by geting attribute values from other tables
 */
 
-function makePayments()
+function makePayments($token)
 {
 	//db object
 	$veruser = new Database;
@@ -93,10 +142,24 @@ function makePayments()
 	$userID = $_SESSION['userID'];
 	$today = date("Y-m-d H:i:s");
 
+  //Get User data
+  $selectUser = "SELECT email, balance FROM user WHERE userid = $userID";
+  $userResults = $veruser->query($selectUser);
+  if($userResults){
+    $userRow = $veruser->fetch();
+    $email = $userRow['email'];
+    $balance = $userRow['balance'];
+    $message = "Hello,\n";
+    $message .= "The tocken for your ticket is $token \n";
+    $message .= "Enjoy your journey and see you next time\n\n\n";
+    $message .= "Team Tickit \n";
+
+    sendEmail($email, $message);
+  }
 	//getting the price
 	$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $listingId";
 		$priceResults = $veruser->query($priceSql);
-		
+
 		if ($priceResults)
 		{
 			$priceRow = $veruser->fetch();
@@ -120,7 +183,7 @@ function makePayments()
 /**
 * Responsible for monetary transaction
 * if user has insurficient balance, they are redirected to the listing page and alerted by a pop up
-* reduces the account balance 
+* reduces the account balance
 */
 function reduceAmount()
 {
@@ -141,17 +204,17 @@ function reduceAmount()
 		//getting the price of the listing
 		$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
 		$priceResults = $veruser->query($priceSql);
-		
+
 		if ($priceResults)
 		{
 			$priceRow = $veruser->fetch();
 			$price = $priceRow['price'];
 
-			//Reducing account balance 
+			//Reducing account balance
 			if ($price > $balance){
 				echo "alert('You do not have enough money on your account, press okay to add more money.')";
 				header("Location: ../stripeSettings");
-			}	
+			}
 
 			$balance= $balance-$price;
 
@@ -170,4 +233,3 @@ function reduceAmount()
 	}
 
 }
-

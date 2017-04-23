@@ -134,8 +134,8 @@ function editListing(elt) {
 
 
 
-/* 
-*Creates a XMLHttpRequest request object for recent and old browsers 
+/*
+*Creates a XMLHttpRequest request object for recent and old browsers
 */
 function ajaxRequest() {
     try // Non IE Browser?
@@ -380,7 +380,11 @@ function validate_buy_form() {
         document.getElementById("tocken").innerHTML = mytocken;
 
         //sending tocken to server side
-       window.location.href = "../controller/buyController.php?tocken=" + mytocken; 
+      //  window.location.href = "../controller/buyController.php?tocken=" + mytocken;
+      //  window.location.href = "../controller/buyController.php?name=" + 'buy';
+       //var xhttp = new ajaxRequest();
+       //xhttp.open("GET", "ajaxDashboard.php?tocken=" + mytocken, true);
+       //xhttp.send();
     }
 
     //user not logged in
@@ -389,4 +393,3 @@ function validate_buy_form() {
         window.location="../public/login.php";
     }
 }
-

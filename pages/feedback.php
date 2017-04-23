@@ -19,7 +19,7 @@ include_once CLASSES . 'contact.php';
 
 echo '<br><br>';
 $cont = new contact();
-echo '<br><div class="container"><table class="table table-striped">
+echo '<br><br><div class="container"><table class="table table-striped">
   <thead>
     <tr>
       <th>#</th>
@@ -38,6 +38,7 @@ echo '</tbody>
 
 
 <?php
+echo '<br><br><br>';
 include_once REQUIRES . 'footer.php';
 ?>
 

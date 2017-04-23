@@ -14,6 +14,7 @@ $phone_error = '';
 $password_error = '';
 $gender_error = '';
 $user_exists_error = '';
+$is_ok = true;
 
 
 require_once('../database/Database.php');
@@ -29,61 +30,77 @@ function validregister()
 {
     //Array to take in errors
     $errorMessages = [];
-    global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error;
+    global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error, $is_ok;
 
     //Validating first name
-    if (!isset($_POST['firstname']) || $_POST['firstname'] === '')
+    if (!isset($_POST['firstname']) || $_POST['firstname'] === '') {
         $fname_error = "The fist name shouldn't be empty";
-
-    else
-        if (!preg_match('/^[A-Za-z]*$/', $_POST['firstname']))
+        $is_ok = false;
+    } else
+        if (!preg_match('/^[A-Za-z]*$/', $_POST['firstname'])) {
             $fname_error = "DO not include any symbol in the first name";
+            $is_ok = false;
+        }
 
 
     //Validating Last name
-    if (!isset($_POST['lastname']) || $_POST['lastname'] === '')
+    if (!isset($_POST['lastname']) || $_POST['lastname'] === '') {
         $lname_error = "The last name shouldn't be empty";
-
-    else
-        if (!preg_match('/^[A-Za-z]*$/', $_POST['lastname']))
+        $is_ok = false;
+    } else
+        if (!preg_match('/^[A-Za-z]*$/', $_POST['lastname'])) {
             $lname_error = "DO not include any symbol in the last name";
+            $is_ok = false;
+        }
 
 
     //Validating date
-    if (!isset($_POST['date_of_birth']) || $_POST['date_of_birth'] === '')
+    if (!isset($_POST['date_of_birth']) || $_POST['date_of_birth'] === '') {
         $date_error = "Please select date";
+        $is_ok = false;
+    }
 
 
     //Validating Email
-    if (!isset($_POST['email']) || $_POST['email'] === '')
+    if (!isset($_POST['email']) || $_POST['email'] === '') {
+
+
         $email_error = "Your email field shouldn't be empty";
-
-    else
-        if (!preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/', $_POST['email']))
+        $is_ok = false;
+    } else
+        if (!preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/', $_POST['email'])) {
             $email_error = "Your email is not right";
-
+            $is_ok = false;
+        }
     //Validating the password
-    if (!isset($_POST['password']) || $_POST['password'] === '')
+    if (!isset($_POST['password']) || $_POST['password'] === '') {
         $password_error = "The password shouldn't be empty";
-
-    else
-        if (!(preg_match('/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/', $_POST['password'])) || (strlen($_POST['password'])) < 6)
+        $is_ok = false;
+    } else
+        if (!(preg_match('/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/', $_POST['password'])) || (strlen($_POST['password'])) < 6) {
             $password_error = "Make sure you have Caps, Lowercase, numbers and a symbol in you password";
-
+            $is_ok = false;
+        }
 
     //Validating gender
-    if (!isset($_POST['gender']) || $_POST['gender'] === '' || $_POST['gender'] == 'gender')
+    if (!isset($_POST['gender']) || $_POST['gender'] === '' || $_POST['gender'] == 'gender') {
         $gender_error = "Please select atleast one gender";
-
-    if (!isset($_POST['tel']) || $_POST['tel'] === ''){
-        $phone_error = 'Please provide a correct phone number';
+        $is_ok = false;
     }
+
+    if (!isset($_POST['tel']) || $_POST['tel'] === '') {
+        $phone_error = 'Please provide a correct phone number';
+        $is_ok = false;
+    }
+
     //user name exits
-    if (empty($errorMessages))
+    if ($is_ok) {
         checkemail($_POST['email']);
 
-    else
+    } else {
         printerrors($errorMessages);
+    }
+
 }
 
 /*

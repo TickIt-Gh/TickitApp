@@ -16,6 +16,10 @@
                         class="icon-bar"></span><span class="icon-bar"></span></button>
         </div>
         <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+                <li><a href="">Test</a></li>
+                <li><a href="">Test</a></li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../public/logout.php"><span class="fa fa-sign-out"></span> Logout</a></li>
             </ul>

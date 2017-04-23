@@ -22,8 +22,8 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
     <div class="col-md-2">
         &nbsp
     </div>
-    <div class="col-md-8"
-    ">
+    <!--<div class="col-md-8"
+    ">-->
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">Bus Listing</div>
@@ -34,13 +34,13 @@ echo '<div class="row dashboard" style="margin:50px; margin-bottom: 10px;">
 $dashController->displaydashboard($admin);
 
 echo '</table>
-            </div>
+            <!--</div>-->
             </div>
             <div class="col-md-2">
                 &nbsp
             </div>
             </div>
-            <button type="button" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#myModal">Add Listing
+            <button type="button" class="btn btn-default add-btn btn-success" data-toggle="modal" data-target="#myModal">Add Listing
             </button>
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">

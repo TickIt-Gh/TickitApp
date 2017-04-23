@@ -98,11 +98,11 @@ class busListingController
       </tr>';
         }
         echo '</table></div></div>';
-        /*
+
         echo '<div id="pop">
 
             </div>';
-        */
+
     }
 
 

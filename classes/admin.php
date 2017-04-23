@@ -6,6 +6,7 @@
  *
  **/
 
+require_once '../setting/init.php';
 //Require our database connection class.
 require_once("../database/Database.php");
 

@@ -7,6 +7,7 @@
 **/
 
 //Require our database connection class.
+require_once '../setting/init.php';
 require_once("../database/Database.php");
 
 class Listing{

@@ -6,7 +6,6 @@
  * Time: 11:13 PM
  */
 
-
 /**
  * This defines how errors should be handled in all pages
  */

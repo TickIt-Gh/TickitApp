@@ -1,5 +1,6 @@
 <?php
-  require_once('./config.php');
+require_once '../setting/init.php';
+require_once('./config.php');
 
   $token  = $_POST['stripeToken'];
 

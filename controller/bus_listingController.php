@@ -4,6 +4,8 @@
  *
  **/
 //Require the listing class
+require_once '../setting/init.php';
+
 require_once("../classes/listing.php");
 require_once("buyController.php");
 session_start();

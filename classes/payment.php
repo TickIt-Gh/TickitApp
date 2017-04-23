@@ -4,6 +4,8 @@
 * @author Linda Bhebhe & Job M
 */
 
+require_once '../setting/init.php';
+
 class Payment
 {
 

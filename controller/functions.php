@@ -7,6 +7,8 @@
  */
 
 
+require_once '../setting/init.php';
+
 /**
  * @param $marked_string unformatted string
  * @return mixed clean string

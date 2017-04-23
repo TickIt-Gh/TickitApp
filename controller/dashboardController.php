@@ -4,6 +4,8 @@
  *
  **/
 //require admin class to display dashboard
+
+require_once '../setting/init.php';
 require_once("../classes/admin.php");
 
 //start session to access admin id

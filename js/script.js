@@ -134,7 +134,9 @@ function editListing(elt) {
 
 
 
-/* Creates a XMLHttpRequest request object for recent and old browsers */
+/* 
+*Creates a XMLHttpRequest request object for recent and old browsers 
+*/
 function ajaxRequest() {
     try // Non IE Browser?
     {
@@ -161,21 +163,32 @@ function ajaxRequest() {
     }
     return request
 }
-//function to validate the email address
+
+/*
+*function to validate the email address
+*/
 function validate_email(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email.value);
 }
 
-//function to validate the password
+/*
+*function to validate the password
+*/
 function validate_password(password) {
     var re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
     return re.test(password.value);
 }
 
-//Function to provide a tocken number
+/**
+*@author Job
+*Function creates a 5 character string with upercase, lower case abd number
+*This returns this string which is used as the ticket tocken
+*/
 function tocken() {
+    //String to store tocken
     var text = "";
+    //sample space of the tocken
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     for (var i = 0; i < 5; i++)
@@ -185,13 +198,17 @@ function tocken() {
 }
 
 
-//function to validate the name
+/*
+*function to validate the name
+*/
 function validate_name(name) {
     return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test(name.value);
 
 }
 
-//function to validate the form for log in
+/*
+*function to validate the form for log in
+*/
 function validate_login() {
     var email = document.getElementById('email');
     var password = document.getElementById('password');
@@ -215,7 +232,11 @@ function validate_login() {
 }
 
 
-//function to validate the form for sign up
+/*
+*@author Job
+* Function validates the sign Up form
+*Pops alerts when one input is emput or invalid
+*/
 
 function validate_sign_up() {
 
@@ -254,7 +275,9 @@ function validate_sign_up() {
 }
 
 
-//function to validate the contact form
+/*
+*function to validate the contact form
+*/
 function validate_contact_form() {
 
     //get the values from the contact us form for validation
@@ -298,33 +321,27 @@ function validate_contact_form() {
     return false;
 }
 
-//function to validate the Buy form
+/*
+*@author Job
+* Once the buy button is pressed, it pops a modal whith the buying tocken
+*if user is not signed in, S/he is redirected to the login page
+*/
 function validate_buy_form() {
-    //if all the details are valid, the details are sent
-    //notify the user that the details have been sent
+
+    //getting session details
     var session = document.getElementById("mysession").value;
+
+    //1 is when the user is logged in, display modal
     if (session == 1)
     {
         document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button></div> </div> </div>';
         document.getElementById("tocken").innerHTML = tocken();
     }
+
+    //user not logged in
     else{
         alert('You are not loged in.');
         window.location="../public/login.php";
     }
-}
-
-function reduceSeats(listingID){
-  var availableSeats = document.getElementById("available_seats").value;
-  var xhttp = new ajaxRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        updateListing();
-
-    }
-  };
-
-  xhttp.open("GET", "buyController.php?listingID="+listingID + "&availableSeats=" + availableSeats, true);
-  xhttp.send();
 }
 

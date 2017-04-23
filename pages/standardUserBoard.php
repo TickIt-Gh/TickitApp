@@ -9,9 +9,9 @@ session_start();
 
 if (isset($_SESSION['userID'])) {
 require_once '../setting/init.php';
-  require_once('../controller/buyController.php');
+  //require_once('../controller/buyController.php');
   require_once('../controller/bus_listingController.php');  
-  require_once LAYOUT . 'admin_layout.php';
+ // require_once LAYOUT . 'admin_layout.php';
 
   //Sets up the bus listing controller
   $listingBoard = new busListingController;

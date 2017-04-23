@@ -9,7 +9,39 @@ require_once('../database/Database.php');
 require_once('../classes/User.php');
 require_once('../classes/listing.php');
 require_once('bus_listingController.php');
-require('../PHPMailer_5.2.0/class.PHPMailer.php');
+require("../PHPMailer/PHPMailerAutoload.php");
+
+
+
+/**
+* @param $email to which you want to send message
+* @param $message to be send to user.
+**/
+function sendEmail($email, $message){
+  //Initialize the email object
+  $mail = new PHPMailer;
+  $mail->IsSMTP(); // enable SMTP
+  $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+  $mail->SMTPAuth = true; // authentication enabled
+  $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
+  $mail->Host = "smtp.gmail.com";
+  $mail->Port = 587; // or 465
+  $mail->IsHTML(true);
+  $mail->Username = "tickit.booking@gmail.com";
+  $mail->Password = "razak2018";
+  $mail->SetFrom("tickit.booking@gmail.com");
+  $mail->Subject = "Tickit Booking Info";
+  $mail->Body = $message;
+  $mail->AddAddress($email);
+
+   if(!$mail->Send()) {
+      echo "Mailer Error: " . $mail->ErrorInfo;
+   } else {
+      echo "Message has been sent";
+   }
+}
+
+
 
 if (isset($_POST['buy']) )
 	reduceBalance();
@@ -70,7 +102,7 @@ function makePayments()
 
 	$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $listingId";
 		$priceResults = $veruser->query($priceSql);
-		
+
 		if ($priceResults)
 		{
 			$priceRow = $veruser->fetch();
@@ -106,7 +138,7 @@ function reduceAmount()
 
 		$priceSql = "SELECT * FROM bus_listing WHERE listing_id = $id";
 		$priceResults = $veruser->query($priceSql);
-		
+
 
 
 		if ($priceResults)
@@ -117,7 +149,7 @@ function reduceAmount()
 			if ($price > $balance){
 				echo "alert('You do not have enough money on your account, press okay to add more money.')";
 				header("Location: ../stripeSettings");
-			}	
+			}
 
 			$balance= $balance-$price;
 
@@ -135,4 +167,3 @@ function reduceAmount()
 	}
 
 }
-

@@ -33,10 +33,17 @@ class Admin extends User{
 
   }
 
+  /**
+  * It gets the id of an administrator
+  * @return administrator's id
+  **/
   public function getAdminID(){
     return $this->adminID;
   }
 
+  /**
+  * @ administrator's id
+  **/
   public function setAdminID($newID){
     $this->adminID = $newID;
   }

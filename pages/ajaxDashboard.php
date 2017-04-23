@@ -2,6 +2,7 @@
 
 require_once '../setting/init.php';
 require_once('../controller/dashboardController.php');
+//require_once('../controller/buyController.php');
 
 $dashController = new dashController;
 $admin = $dashController->adminSetup();
@@ -15,6 +16,11 @@ if (isset($_GET['listingID']) && $_GET['listingID'] && isset($_GET['delete'])) {
     }
 
 }
+
+
+//Send user email on buy and handle
+//if (isset($_GET['tocken']) )
+	//reduceBalance();
 
 //adding a new listing via ajax
 if (isset($_GET['bus_number']) && isset($_GET['available_seats']) && isset($_GET['departure_time'])

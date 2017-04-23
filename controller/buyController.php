@@ -15,7 +15,9 @@ require_once('../classes/listing.php');
 require_once('bus_listingController.php');
 require("../PHPMailer/PHPMailerAutoload.php");
 
-
+//If the buyer button is cliked
+if (isset($_POST['buy']) )
+	reduceBalance();
 
 /**
 * @param $email to which you want to send message
@@ -45,11 +47,25 @@ function sendEmail($email, $message){
    }
 }
 
+/**
+
+*Provides the tockenGenarator
+*/
+function tockenGenarator()
+{
+	//sample space
+    $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    $randstring = '';
+		$charactersLength = strlen($characters);
+
+		//creating the string tocken
+    for ($i = 0;  $i <7; $i++) {
+        $randstring .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randstring;
+}
 
 
-//If the buyer button is cliked
-if (isset($_POST['buy']) )
-	reduceBalance();
 
 /**
 *Method makes all checks of the seats
@@ -95,15 +111,11 @@ function reduceBalance()
 				$updateSql = "UPDATE bus_listing SET available_seats = $AvSeats WHERE listing_id = $updateID";
 			}
 			$updateResult = $veruser->query($updateSql);
-
 			//populate the payment table and reduce the amount in the user's account  using function
 			if ($updateResult){
 
 				reduceAmount();
-        if(isset($_GET['token'])){
-          makePayments($_GET['token']);
-        }
-				makePayments();
+          makePayments(tockenGenarator);
 
 				//reloading the page
 				header("Location: ../pages/standardUserBoard.php");
@@ -113,6 +125,8 @@ function reduceBalance()
 			echo "Could not reduce";
 	}
 }
+
+
 
 /**
 * methode populates the payment table by geting attribute values from other tables
@@ -137,7 +151,7 @@ function makePayments($token)
     $balance = $userRow['balance'];
     $message = "Hello,\n";
     $message .= "The tocken for your ticket is $token \n";
-    $message .= "Enjoy your journey and see you next time\n\n\n"
+    $message .= "Enjoy your journey and see you next time\n\n\n";
     $message .= "Team Tickit \n";
 
     sendEmail($email, $message);

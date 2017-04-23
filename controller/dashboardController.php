@@ -1,37 +1,43 @@
 <?php
 /**
-*@author VladimirFomene
-*
-**/
+ * @author VladimirFomene
+ *
+ **/
 //require admin class to display dashboard
 require_once("../classes/admin.php");
 
-  //start session to access admin id
-  session_start();
-class dashController{
-  public function displayDashboardPage(){
-    displayHeader();
-    displaydashboard();
-    displayFooter();
-  }
+//start session to access admin id
+session_start();
 
-  //displays header for our dashboard
-  public function displayHeader(){
-    include_once REQUIRES . 'header.php';
-  }
+class dashController
+{
+    public function displayDashboardPage()
+    {
+        //displayHeader();
+        displaydashboard();
+        //displayFooter();
+    }
 
-  //create an admin object using a session id
-  public function adminSetup(){
-    $admin = new Admin;
-    $admin->setAdminID($_SESSION['userID']);
-    return $admin;
-  }
+    //displays header for our dashboard
+    public function displayHeader()
+    {
+        include_once REQUIRES . 'header.php';
+    }
+
+    //create an admin object using a session id
+    public function adminSetup()
+    {
+        $admin = new Admin;
+        $admin->setAdminID($_SESSION['userID']);
+        return $admin;
+    }
 
 
-  //displays table for the dashboard
-  public function displaydashboard($admin){
-    $listings = $admin->getListings();
-    echo '<tr>
+    //displays table for the dashboard
+    public function displaydashboard($admin)
+    {
+        $listings = $admin->getListings();
+        echo '<tr>
         <th>Bus Number</th>
         <th>Departure Time</th>
         <th>Departure Date</th>
@@ -43,18 +49,18 @@ class dashController{
         <th>Edit</th>
         <th>Delete</th>
     </tr>';
-    foreach($listings as $listing){
-      echo '<tr>
-          <td>'.$listing['bus_number'].'</td>
-          <td>'.$listing['depature_time'].'</td>
-          <td>'.$listing['departure_date'].'</td>
-          <td>'.$listing['available_seats'].'</td>
-          <td>'.$listing['departure_point'].'</td>
-          <td>'.$listing['destination_point'].'</td>
-          <td>'.$listing['price'].'</td>
-          <td>'.$listing['listing_status'].'</td>
-          <td>'.
-              '<input style="margin-left: 0px" type="submit" id="'.$listing['listing_id'].'"  onclick="onEditListing(this)" name="edit" value="Edit" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">
+        foreach ($listings as $listing) {
+            echo '<tr>
+          <td>' . $listing['bus_number'] . '</td>
+          <td>' . $listing['depature_time'] . '</td>
+          <td>' . $listing['departure_date'] . '</td>
+          <td>' . $listing['available_seats'] . '</td>
+          <td>' . $listing['departure_point'] . '</td>
+          <td>' . $listing['destination_point'] . '</td>
+          <td>' . $listing['price'] . '</td>
+          <td>' . $listing['listing_status'] . '</td>
+          <td>' .
+                '<input style="margin-left: 0px" type="submit" id="' . $listing['listing_id'] . '"  onclick="onEditListing(this)" name="edit" value="Edit" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">
               <div display="inline-block" class="modal fade" id="editModal" tabindex="-1" role="dialog">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -108,24 +114,20 @@ class dashController{
               </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
           </td>
-          <td>'.
-          '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete" id="'.$listing['listing_id'].'" class="btn btn-default btn-danger">
+          <td>' .
+                '<input type="submit" onclick="onDeleteListing(this)" name="delete" value="Delete" id="' . $listing['listing_id'] . '" class="btn btn-default btn-danger">
           </td>
       </tr>';
+        }
     }
-  }
 
-  //Displays footer for admin dashboard
-  public function displayFooter(){
-    require_once REQUIRES . 'footer.php';
-  }
+    //Displays footer for admin dashboard
+    public function displayFooter()
+    {
+        require_once REQUIRES . 'footer.php';
+    }
 
 }
-
-
-
-
-
 
 
 ?>

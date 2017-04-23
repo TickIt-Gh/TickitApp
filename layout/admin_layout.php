@@ -17,14 +17,13 @@
         </div>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-                <li><a href="">Test</a></li>
-                <li><a href="">Test</a></li>
+                <li><a href="../pages/history.php">History</a></li>
+                <li><a href="../pages/feedback.php">Feedback</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../public/logout.php"><span class="fa fa-sign-out"></span> Logout</a></li>
             </ul>
         </div>
-
     </div>
 </nav>
 

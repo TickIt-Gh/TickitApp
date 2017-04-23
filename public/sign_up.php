@@ -59,7 +59,7 @@ include_once REQUIRES . 'nav_bar.php';
         <!--Get user's phone number-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-            <input type="email" id="email" class="form-control" placeholder="+233503548654 " required name="tel">
+            <input type="text" id="phone" class="form-control" placeholder="+233503548654 " required name="tel">
         </div>
         <br>
 

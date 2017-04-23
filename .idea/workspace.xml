@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sign_up.php" afterPath="$PROJECT_DIR$/public/sign_up.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unsecure/unsecure.php" afterPath="$PROJECT_DIR$/unsecure/unsecure.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="112" column="6" lean-forward="true" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
+            <state relative-caret-position="-1350">
+              <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -78,16 +77,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unsecure.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="unsecure.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="367">
+              <caret line="187" column="14" lean-forward="true" selection-start-line="187" selection-start-column="14" selection-end-line="187" selection-end-column="14" />
               <folding>
-                <marker date="1492955836509" expanded="true" signature="4017:4059" ph="SELECT * fro... user" />
-                <marker date="1492955836509" expanded="true" signature="4607:4670" ph="INSERT INTO user... " />
-                <marker date="1492955836509" expanded="true" signature="4742:4788" ph="SELECT userI... user" />
-                <marker date="1492955836509" expanded="true" signature="4905:5033" ph="INSERT INTO client... " />
+                <marker date="1492959908010" expanded="true" signature="4017:4059" ph="SELECT * fro... user" />
+                <marker date="1492959908010" expanded="true" signature="4607:4670" ph="INSERT INTO user... " />
+                <marker date="1492959908010" expanded="true" signature="4742:4788" ph="SELECT userI... user" />
+                <marker date="1492959908010" expanded="true" signature="4905:5033" ph="INSERT INTO client... " />
               </folding>
             </state>
           </provider>
@@ -157,8 +156,8 @@
         <option value="$PROJECT_DIR$/pages/standardUserBoard.php" />
         <option value="$PROJECT_DIR$/pages/buy.php" />
         <option value="$PROJECT_DIR$/pages/itinerary.php" />
-        <option value="$PROJECT_DIR$/unsecure/unsecure.php" />
         <option value="$PROJECT_DIR$/public/sign_up.php" />
+        <option value="$PROJECT_DIR$/unsecure/unsecure.php" />
       </list>
     </option>
   </component>
@@ -483,7 +482,7 @@
       <workItem from="1492865858152" duration="23000" />
       <workItem from="1492906750819" duration="1530000" />
       <workItem from="1492946441916" duration="863000" />
-      <workItem from="1492944474481" duration="10618000" />
+      <workItem from="1492944474481" duration="11401000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -496,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46572000" />
+    <option name="totallyTimeSpent" value="47355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -874,14 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-551">
-          <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/handle_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -910,24 +901,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
+    <entry file="file://$PROJECT_DIR$/public/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <marker date="1492955836509" expanded="true" signature="4017:4059" ph="SELECT * fro... user" />
-            <marker date="1492955836509" expanded="true" signature="4607:4670" ph="INSERT INTO user... " />
-            <marker date="1492955836509" expanded="true" signature="4742:4788" ph="SELECT userI... user" />
-            <marker date="1492955836509" expanded="true" signature="4905:5033" ph="INSERT INTO client... " />
-          </folding>
+        <state relative-caret-position="-1350">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/sign_up.php">
+    <entry file="file://$PROJECT_DIR$/controller/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="112" column="6" lean-forward="true" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
+        <state relative-caret-position="-551">
+          <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="187" column="14" lean-forward="true" selection-start-line="187" selection-start-column="14" selection-end-line="187" selection-end-column="14" />
+          <folding>
+            <marker date="1492959908010" expanded="true" signature="4017:4059" ph="SELECT * fro... user" />
+            <marker date="1492959908010" expanded="true" signature="4607:4670" ph="INSERT INTO user... " />
+            <marker date="1492959908010" expanded="true" signature="4742:4788" ph="SELECT userI... user" />
+            <marker date="1492959908010" expanded="true" signature="4905:5033" ph="INSERT INTO client... " />
+          </folding>
         </state>
       </provider>
     </entry>

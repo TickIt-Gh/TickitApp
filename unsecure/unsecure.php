@@ -41,7 +41,7 @@ function validregister()
     //Array to take in errors
     //$errorMessages = [];
     global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error, $is_ok;
-    global $fname, $lname, $email ,$dob ,$gender, $tel;
+    global $fname, $lname, $email, $dob, $gender, $tel;
 
 
     //Validating first name
@@ -182,9 +182,10 @@ function registernewuser($fname, $lname, $email, $pwdhash, $dob, $gender, $tel)
 
         //execute querry
         $dbexec = $reguser->query($sql2);
-        if ($dbexec)
+        if ($dbexec) {
+            //$user_exists_error = "Account created successfully";
             header("Location: ../public/login.php");
-        else
+        } else
             $user_exists_error = "User could not be registered";
     } else
         $user_exists_error = "Not second querry";

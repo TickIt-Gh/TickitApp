@@ -1,4 +1,11 @@
+
+
 <?php
+
+/*
+@ Job
+* Tried using the Stripe payment API but didn't work
+*/
 require_once('../vendor/autoload.php');
 $stripe = array(
  "secret_key"      => "sk_test_2qcjpq5Pi1rldGhhyboOF20R",

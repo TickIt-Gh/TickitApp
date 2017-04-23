@@ -18,7 +18,7 @@ include_once REQUIRES . 'nav_bar.php';
     ">
 
     <!--The form for the sign_up values -->
-    <form class="form-signin" action="" method="POST" >
+    <form class="form-signin" action="" method="POST">
         <h2 class="form-signin-heading" style="text-align: center;">Provide Details</h2>
         <br>
 
@@ -27,7 +27,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="first_name" class="form-control" placeholder="First Name" required autofocus
-            name="firstname">
+                   name="firstname">
         </div>
         <br>
 
@@ -36,7 +36,7 @@ include_once REQUIRES . 'nav_bar.php';
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
             <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
-            name="lastname" value="">
+                   name="lastname" value="">
         </div>
         <br>
 
@@ -58,7 +58,7 @@ include_once REQUIRES . 'nav_bar.php';
         <br>
         <!--Get user's phone number-->
         <div class="input-group">
-            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
             <input type="email" id="email" class="form-control" placeholder="+233503548654 " required name="tel">
         </div>
         <br>
@@ -81,7 +81,7 @@ include_once REQUIRES . 'nav_bar.php';
         <br>
 
         <!---call the function to validate the form data on submission-->
-        <button class="btn btn-lg btn-primary btn-block" type="submit"  name = "signup">Sign Up</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="signup">Sign Up</button>
     </form>
 </div>
 <div class="col-md-4">

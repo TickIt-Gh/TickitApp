@@ -1,4 +1,10 @@
 <?php
+/**
+*@author Job Mwesigwa
+* Signup page
+**/
+
+//including required classes
 require_once '../setting/init.php';
 include_once REQUIRES . 'header.php';
 ?>
@@ -91,6 +97,7 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
+        <!--gET USER'S gender-->
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-female"></i></span>
             <select class="form-control" id="gender" name="gender">

@@ -19,7 +19,7 @@ require('../PHPMailer_5.2.0/class.PHPMailer.php');
 if (isset($_POST['buy']) )
 	reduceBalance();
 
-/*
+/**
 *Method makes all checks of the seats
 *and the session variables
 */
@@ -79,7 +79,7 @@ function reduceBalance()
 	}
 }
 
-/*
+/**
 * methode populates the payment table by geting attribute values from other tables
 */
 
@@ -117,7 +117,7 @@ function makePayments()
 	}
 }
 
-/*
+/**
 * Responsible for monetary transaction
 * if user has insurficient balance, they are redirected to the listing page and alerted by a pop up
 * reduces the account balance 

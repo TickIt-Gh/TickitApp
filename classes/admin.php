@@ -8,7 +8,7 @@
 
 require_once '../setting/init.php';
 //Require our database connection class.
-require_once("../database/Database.php");
+require_once DATABASES.'Database.php';
 
 
 //Require bus listing class

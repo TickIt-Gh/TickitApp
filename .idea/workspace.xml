@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/admin.php" afterPath="$PROJECT_DIR$/classes/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/listing.php" afterPath="$PROJECT_DIR$/classes/listing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/payment.php" afterPath="$PROJECT_DIR$/classes/payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/bus_listingController.php" afterPath="$PROJECT_DIR$/controller/bus_listingController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/dashboardController.php" afterPath="$PROJECT_DIR$/controller/dashboardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/functions.php" afterPath="$PROJECT_DIR$/controller/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/ajaxDashboard.php" afterPath="$PROJECT_DIR$/pages/ajaxDashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/standardUserBoard.php" afterPath="$PROJECT_DIR$/pages/standardUserBoard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setting/error_handler.php" afterPath="$PROJECT_DIR$/setting/error_handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setting/redirection.php" afterPath="$PROJECT_DIR$/setting/redirection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stripeSettings/charge.php" afterPath="$PROJECT_DIR$/stripeSettings/charge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stripeSettings/config.php" afterPath="$PROJECT_DIR$/stripeSettings/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,16 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sign_up.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/sign_up.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/require/footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unsecure.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unsecure.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unsecure/unsecure.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2244">
@@ -91,6 +70,22 @@
             <state relative-caret-position="34">
               <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classes/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding>
+                <marker date="1492981258901" expanded="true" signature="2718:2891" ph="SELECT listi... bus_listing" />
+                <marker date="1492981258901" expanded="true" signature="3364:3557" ph="SELECT listi... bus_listing" />
+                <marker date="1492981258901" expanded="true" signature="4499:4859" ph="UPDATE bus_l... " />
+                <marker date="1492981258901" expanded="true" signature="5126:5177" ph="DELETE FROM " />
+                <marker date="1492981258901" expanded="true" signature="5895:6227" ph="INSERT INTO bus_listing... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,7 +185,6 @@
         <option value="$PROJECT_DIR$/public/logout.php" />
         <option value="$PROJECT_DIR$/setting/init.php" />
         <option value="$PROJECT_DIR$/unsecure/unsecure.php" />
-        <option value="$PROJECT_DIR$/classes/admin.php" />
         <option value="$PROJECT_DIR$/classes/listing.php" />
         <option value="$PROJECT_DIR$/classes/payment.php" />
         <option value="$PROJECT_DIR$/controller/bus_listingController.php" />
@@ -202,6 +196,7 @@
         <option value="$PROJECT_DIR$/setting/redirection.php" />
         <option value="$PROJECT_DIR$/stripeSettings/charge.php" />
         <option value="$PROJECT_DIR$/stripeSettings/config.php" />
+        <option value="$PROJECT_DIR$/classes/admin.php" />
       </list>
     </option>
   </component>
@@ -538,7 +533,7 @@
       <workItem from="1492906750819" duration="1530000" />
       <workItem from="1492946441916" duration="863000" />
       <workItem from="1492944474481" duration="14175000" />
-      <workItem from="1492973820274" duration="7300000" />
+      <workItem from="1492973820274" duration="7442000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -551,7 +546,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57429000" />
+    <option name="totallyTimeSpent" value="57571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="745" extended-state="0" />
@@ -700,20 +695,6 @@
         <state relative-caret-position="323">
           <caret line="19" column="89" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="89" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <marker date="1492980939641" expanded="true" signature="2721:2894" ph="SELECT listi... bus_listing" />
-            <marker date="1492980939641" expanded="true" signature="3367:3560" ph="SELECT listi... bus_listing" />
-            <marker date="1492980939641" expanded="true" signature="4502:4862" ph="UPDATE bus_l... " />
-            <marker date="1492980939641" expanded="true" signature="5129:5180" ph="DELETE FROM " />
-            <marker date="1492980939641" expanded="true" signature="5898:6230" ph="INSERT INTO bus_listing... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1093,6 +1074,20 @@
             <marker date="1492980840379" expanded="true" signature="4964:5027" ph="INSERT INTO user... " />
             <marker date="1492980840379" expanded="true" signature="5121:5167" ph="SELECT userI... user" />
             <marker date="1492980840379" expanded="true" signature="5315:5443" ph="INSERT INTO client... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <marker date="1492981258901" expanded="true" signature="2718:2891" ph="SELECT listi... bus_listing" />
+            <marker date="1492981258901" expanded="true" signature="3364:3557" ph="SELECT listi... bus_listing" />
+            <marker date="1492981258901" expanded="true" signature="4499:4859" ph="UPDATE bus_l... " />
+            <marker date="1492981258901" expanded="true" signature="5126:5177" ph="DELETE FROM " />
+            <marker date="1492981258901" expanded="true" signature="5895:6227" ph="INSERT INTO bus_listing... " />
           </folding>
         </state>
       </provider>

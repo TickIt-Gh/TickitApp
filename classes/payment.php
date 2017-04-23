@@ -4,6 +4,8 @@
 * @author Linda Bhebhe & Job M
 */
 
+require_once '../setting/init.php';
+
 class Payment
 {
 
@@ -59,7 +61,7 @@ class Payment
     }
 
     /**
-     * insert a new payment 
+     * insert a new payment
      */
     public function insertPayment()
     {

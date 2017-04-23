@@ -6,6 +6,10 @@
  * Time: 12:13 PM
  */
 
+require_once '../setting/init.php';
+/**
+ * Redirect user to their respective layouts
+ */
 if (isset($_SESSION)) { //check if session is set
     if (isset($_SESSION['is_admin'])) {
         //echo 'Here' . '<br>';

@@ -136,10 +136,12 @@ function printerrors($errors)
     exit;
 }
 
+
 /**
- *@param email to be checked 
- *Checks if email is in the database
-*/
+ * Checks if email is in the database
+ * @param $email email to be checked
+ * @return bool true if email not in database
+ */
 function checkemail($email)
 {
     //Database object
@@ -161,7 +163,7 @@ function checkemail($email)
 }
 
 /**
- *Fuction inserts registered user into the database
+ *Function inserts registered user into the database
  *@param $fname the first 
  *@param $lname the last name
  *@param $email the user email

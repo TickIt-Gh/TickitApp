@@ -4,6 +4,8 @@
  *
  **/
 //require admin class to display dashboard
+
+require_once '../setting/init.php';
 require_once("../classes/admin.php");
 
 //start session to access admin id
@@ -18,13 +20,18 @@ class dashController
         //displayFooter();
     }
 
-    //displays header for our dashboard
+    /**
+     * displays header for our dashboard
+     */
     public function displayHeader()
     {
         include_once REQUIRES . 'header.php';
     }
 
-    //create an admin object using a session id
+    /**
+     * create an admin object using a session id
+     *
+     */
     public function adminSetup()
     {
         $admin = new Admin;
@@ -33,7 +40,10 @@ class dashController
     }
 
 
-    //displays table for the dashboard
+    /**
+     * displays table for the dashboard
+     * @param $admin admin id
+     */
     public function displaydashboard($admin)
     {
         $listings = $admin->getListings();
@@ -121,7 +131,9 @@ class dashController
         }
     }
 
-    //Displays footer for admin dashboard
+    /**
+     * Displays footer for admin dashboard
+     */
     public function displayFooter()
     {
         require_once REQUIRES . 'footer.php';

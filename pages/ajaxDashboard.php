@@ -1,5 +1,6 @@
 <?php
 
+require_once '../setting/init.php';
 require_once('../controller/dashboardController.php');
 
 $dashController = new dashController;

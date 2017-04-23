@@ -18,7 +18,7 @@ include_once REQUIRES . 'nav_bar.php';
     ">
 
     <!--The form for the sign_up values -->
-    <form class="form-signin" action="" method="POST">
+    <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <h2 class="form-signin-heading" style="text-align: center;">Provide Details</h2>
         <br>
         <small>
@@ -31,7 +31,7 @@ include_once REQUIRES . 'nav_bar.php';
             <input type="username" id="first_name" class="form-control" placeholder="First Name" required autofocus
                    name="firstname">
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $fname_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -43,7 +43,7 @@ include_once REQUIRES . 'nav_bar.php';
             <input type="username" id="last_name" class="form-control" placeholder="Last Name" required autofocus
                    name="lastname" value="">
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $lname_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -57,7 +57,7 @@ include_once REQUIRES . 'nav_bar.php';
             <input type="date" name="date_of_birth" class="form-control" id="date_of_birth"><br>
 
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $date_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -67,7 +67,7 @@ include_once REQUIRES . 'nav_bar.php';
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <input type="email" id="email" class="form-control" placeholder="Email " required name="email">
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $email_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -76,7 +76,7 @@ include_once REQUIRES . 'nav_bar.php';
             <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
             <input type="text" id="phone" class="form-control" placeholder="+233503548654 " required name="tel">
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $phone_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -86,7 +86,7 @@ include_once REQUIRES . 'nav_bar.php';
             <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
             <input id='password' class="form-control" type="password" placeholder="Password" name="password">
             <small>
-                <span id="error"> <?php echo $user_exists_error ; ?> </span>
+                <span id="error"> <?php echo $password_error  ; ?> </span>
             </small>
         </div>
         <br>
@@ -99,7 +99,7 @@ include_once REQUIRES . 'nav_bar.php';
             <option value="F">Female</option>
         </select>
         <small>
-            <span id="error"> <?php echo $user_exists_error ; ?> </span>
+            <span id="error"> <?php echo $gender_error  ; ?> </span>
         </small>
         <br>
 

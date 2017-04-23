@@ -230,6 +230,47 @@ function validate_login() {
 
 
 }
+/**
+*This function validates the form that allows the user to change their password
+*@author Brenda Mboya
+**/
+function validate_passChange() {
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+    var Newpassword = document.getElementById('Newpassword');
+
+    //check if the password and email is not empty
+    if (email != null && password != null&& Newpassword != null) {
+        //validate the email
+        if (validate_email(email)) {
+            if (validate_password(password)) {
+                if(password.value==Newpassword.value){
+                    
+                }
+                else{
+                    alert('your passwords do not match');
+                }
+
+            }
+            else{
+              //prompt user to enter a valid password
+            alert('Please enter a valid password');  
+            }
+
+            
+        } else {
+            //prompt user to enter a valid email
+            alert('Please enter a valid email');
+        }
+    } else {
+        //prompt user to enter the password and email
+        alert('Provide an email and password')
+    }
+
+
+}
+
+
 
 
 /*

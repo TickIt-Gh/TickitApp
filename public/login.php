@@ -51,7 +51,7 @@ require_once PUBLICS . 'handle_login.php';
 
             <!--link for password recovery-->
             <label style="padding-left: 70%">
-                <a href="">forgot password?</a>
+                <a href="ChangePass.php">forgot password?</a>
             </label>
 
         </div>

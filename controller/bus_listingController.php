@@ -68,7 +68,7 @@ class busListingController{
           <td>'.
               '<form method = "post" action ="">
                 <input type="hidden" name="listingID" value="'.$listing['listing_id'].'" class="btn btn-default btn-primary">
-                <button type="button" onclick="validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
+                <button type="button" name = "buy" onclick="validate_buy_form()" class="btn btn-default add-btn btn-primary" data-toggle="modal" data-target="#editModal">BUY
                 </button>
 
                 

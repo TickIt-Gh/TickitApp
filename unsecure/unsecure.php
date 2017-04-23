@@ -29,7 +29,7 @@ if (isset($_POST['signup']))
 function validregister()
 {
     //Array to take in errors
-    $errorMessages = [];
+    //$errorMessages = [];
     global $fname_error, $lname_error, $date_error, $email_error, $phone_error, $password_error, $gender_error, $is_ok;
 
     //Validating first name
@@ -63,8 +63,6 @@ function validregister()
 
     //Validating Email
     if (!isset($_POST['email']) || $_POST['email'] === '') {
-
-
         $email_error = "Your email field shouldn't be empty";
         $is_ok = false;
     } else
@@ -97,8 +95,6 @@ function validregister()
     if ($is_ok) {
         checkemail($_POST['email']);
 
-    } else {
-        printerrors($errorMessages);
     }
 
 }

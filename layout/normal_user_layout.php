@@ -14,7 +14,9 @@
             <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggle collapsed"><span
                         class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
                         class="icon-bar"></span><span class="icon-bar"></span></button>
+
         </div>
+
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../public/logout.php"><span class="fa fa-sign-out"></span> Logout</a></li>

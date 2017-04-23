@@ -115,7 +115,7 @@ function reduceAmount()
 			$price = $priceRow['price'];
 
 			if ($price > $balance){
-				echo "alert('YOu do not have enough money on your account, press okay to add more money.')";
+				echo "alert('You do not have enough money on your account, press okay to add more money.')";
 				header("Location: ../stripeSettings");
 			}	
 

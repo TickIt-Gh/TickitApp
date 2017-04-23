@@ -91,20 +91,6 @@ include_once REQUIRES . 'nav_bar.php';
         </div>
         <br>
 
-        <fieldset>
-            <label>Select Gender : </label>
-            <input type="radio" name="gender" value="M" <?php if ($gender === "M") {
-                echo ' checked';
-            } ?> id="gender"> Male
-            <input type="radio" name="gender" value="F" <?php if ($gender === "F") {
-                echo ' checked';
-            } ?> id="gender"> Female<br>
-            <small>
-                <span id="error"> <?php echo $gender_error; ?> </span>
-            </small>
-        </fieldset>
-
-
         <!---get user's gender-->
         <select class="form-control" id="gender" name="gender">
             <option value="gender">Gender</option>

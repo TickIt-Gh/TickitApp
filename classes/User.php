@@ -27,7 +27,7 @@ class User extends Database
     *@param $user_email,$pass
     *@return boolean(true/false)
     **/
-    public function changePass($user_email, $pass)
+    public function changePass($user_email,$pass)
     {
         
         
@@ -37,6 +37,8 @@ class User extends Database
             return false;
 
         } else {
+            echo $user_email;
+            echo  $pass;
 
             // hash the password
             $hashPass = password_hash($pass, PASSWORD_DEFAULT);

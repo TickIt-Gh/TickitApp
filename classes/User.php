@@ -49,6 +49,7 @@ class User extends Database
             if ($finalResult) {
 
                 echo " you have successfully changed your password";
+                header('location:../public/login.php');
                 return true;
             }
 

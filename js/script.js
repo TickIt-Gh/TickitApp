@@ -236,8 +236,8 @@ function validate_login() {
 **/
 function validate_passChange() {
     var email = document.getElementById('email');
-    var password = document.getElementById('password');
-    var Newpassword = document.getElementById('Newpassword');
+    var password = document.getElementById('pass');
+    var Newpassword = document.getElementById('newPass');
 
     //check if the password and email is not empty
     if (email != null && password != null&& Newpassword != null) {

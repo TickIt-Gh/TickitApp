@@ -133,10 +133,9 @@ function editListing(elt) {
 }
 
 
-
 /*
-*Creates a XMLHttpRequest request object for recent and old browsers
-*/
+ *Creates a XMLHttpRequest request object for recent and old browsers
+ */
 function ajaxRequest() {
     try // Non IE Browser?
     {
@@ -165,26 +164,26 @@ function ajaxRequest() {
 }
 
 /*
-*function to validate the email address
-*/
+ *function to validate the email address
+ */
 function validate_email(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email.value);
 }
 
 /*
-*function to validate the password
-*/
+ *function to validate the password
+ */
 function validate_password(password) {
     var re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
     return re.test(password.value);
 }
 
 /**
-*@author Job
-*Function creates a 5 character string with upercase, lower case abd number
-*This returns this string which is used as the ticket tocken
-*/
+ *@author Job
+ *Function creates a 5 character string with upercase, lower case abd number
+ *This returns this string which is used as the ticket tocken
+ */
 function tocken() {
     //String to store tocken
     var text = "";
@@ -199,16 +198,16 @@ function tocken() {
 
 
 /*
-*function to validate the name
-*/
+ *function to validate the name
+ */
 function validate_name(name) {
     return /^[A-Za-z\s-]+$/.test(name.value) || /^[a-zA-Z ]+$/.test(name.value);
 
 }
 
 /*
-*function to validate the form for log in
-*/
+ *function to validate the form for log in
+ */
 function validate_login() {
     var email = document.getElementById('email');
     var password = document.getElementById('password');
@@ -231,33 +230,33 @@ function validate_login() {
 
 }
 /**
-*This function validates the form that allows the user to change their password
-*@author Brenda Mboya
-**/
+ *This function validates the form that allows the user to change their password
+ *@author Brenda Mboya
+ **/
 function validate_passChange() {
     var email = document.getElementById('email');
-    var password = document.getElementById('pass');
-    var Newpassword = document.getElementById('newPass');
+    var password = document.getElementById('password');
+    var Newpassword = document.getElementById('Newpassword');
 
     //check if the password and email is not empty
-    if (email != null && password != null&& Newpassword != null) {
+    if (email != null && password != null && Newpassword != null) {
         //validate the email
         if (validate_email(email)) {
             if (validate_password(password)) {
-                if(password.value==Newpassword.value){
-                    
+                if (password.value == Newpassword.value) {
+
                 }
-                else{
+                else {
                     alert('your passwords do not match');
                 }
 
             }
-            else{
-              //prompt user to enter a valid password
-            alert('Please enter a valid password');  
+            else {
+                //prompt user to enter a valid password
+                alert('Please enter a valid password');
             }
 
-            
+
         } else {
             //prompt user to enter a valid email
             alert('Please enter a valid email');
@@ -271,13 +270,11 @@ function validate_passChange() {
 }
 
 
-
-
 /*
-*@author Job
-* Function validates the sign Up form
-*Pops alerts when one input is emput or invalid
-*/
+ *@author Job
+ * Function validates the sign Up form
+ *Pops alerts when one input is emput or invalid
+ */
 
 function validate_sign_up() {
 
@@ -317,8 +314,8 @@ function validate_sign_up() {
 
 
 /*
-*function to validate the contact form
-*/
+ *function to validate the contact form
+ */
 function validate_contact_form() {
 
     //get the values from the contact us form for validation
@@ -363,33 +360,32 @@ function validate_contact_form() {
 }
 
 /*
-*@author Job
-* Once the buy button is pressed, it pops a modal whith the buying tocken
-*if user is not signed in, S/he is redirected to the login page
-*/
+ *@author Job
+ * Once the buy button is pressed, it pops a modal whith the buying tocken
+ *if user is not signed in, S/he is redirected to the login page
+ */
 function validate_buy_form() {
 
     //getting session details
     var session = document.getElementById("mysession").value;
 
     //1 is when the user is logged in, display modal
-    if (session == 1)
-    {
+    if (session == 1) {
         document.getElementById('pop').innerHTML = '<div id="editModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><h1 class="text-center">Thank You For Using <br> <br> TickIT</h1><h3 class="text-center"><em>Your Tocken is <strong id="tocken"></strong></em></h3><br> <h5 class="text-center"><em>It has been sent to your email</em></h5><br> <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button></div> </div> </div>';
-        var mytocken= tocken();
+        var mytocken = tocken();
         document.getElementById("tocken").innerHTML = mytocken;
 
         //sending tocken to server side
-      //  window.location.href = "../controller/buyController.php?tocken=" + mytocken;
-      //  window.location.href = "../controller/buyController.php?name=" + 'buy';
-       //var xhttp = new ajaxRequest();
-       //xhttp.open("GET", "ajaxDashboard.php?tocken=" + mytocken, true);
-       //xhttp.send();
+        //  window.location.href = "../controller/buyController.php?tocken=" + mytocken;
+        //  window.location.href = "../controller/buyController.php?name=" + 'buy';
+        //var xhttp = new ajaxRequest();
+        //xhttp.open("GET", "ajaxDashboard.php?tocken=" + mytocken, true);
+        //xhttp.send();
     }
 
     //user not logged in
-    else{
+    else {
         alert('You are not loged in.');
-        window.location="../public/login.php";
+        window.location = "../public/login.php";
     }
 }

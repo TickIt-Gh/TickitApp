@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/buyController.php" afterPath="$PROJECT_DIR$/controller/buyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,14 +37,36 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
+            <state relative-caret-position="780">
               <caret line="66" column="6" lean-forward="true" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#label#1;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangePass.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/ChangePass.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buyController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1990">
+              <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/buyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1139">
@@ -92,6 +115,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>validate_passChange</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -117,7 +145,6 @@
         <option value="$PROJECT_DIR$/controller/contact_us_controller.php" />
         <option value="$PROJECT_DIR$/unit/database/Database_Unit.php" />
         <option value="$PROJECT_DIR$/unit/database/database_info_unit.php" />
-        <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/public/handle_login.php" />
         <option value="$PROJECT_DIR$/pages/buy.php" />
         <option value="$PROJECT_DIR$/pages/itinerary.php" />
@@ -151,6 +178,7 @@
         <option value="$PROJECT_DIR$/setting/Test.php" />
         <option value="$PROJECT_DIR$/public/login.php" />
         <option value="$PROJECT_DIR$/controller/buyController.php" />
+        <option value="$PROJECT_DIR$/js/script.js" />
       </list>
     </option>
   </component>
@@ -224,6 +252,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TickitApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TickitApp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -378,7 +420,7 @@
       <workItem from="1492946441916" duration="863000" />
       <workItem from="1492944474481" duration="14175000" />
       <workItem from="1492973820274" duration="11192000" />
-      <workItem from="1493128346501" duration="813000" />
+      <workItem from="1493128346501" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -391,7 +433,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62134000" />
+    <option name="totallyTimeSpent" value="63467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -458,7 +500,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/main.js" />
     <entry file="file://$PROJECT_DIR$/controller/register_controller.php" />
     <entry file="file://$PROJECT_DIR$/classes/payment" />
     <entry file="file://$PROJECT_DIR$/unit/database/database_info_unit.php" />
@@ -476,6 +517,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,6 +670,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -635,6 +678,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,6 +686,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -723,13 +768,6 @@
     <entry file="file://$PROJECT_DIR$/stripeSettings/charge.php" />
     <entry file="file://$PROJECT_DIR$/stripeSettings/config.php" />
     <entry file="file://$PROJECT_DIR$/stripeSettings/index.php" />
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="390" column="9" lean-forward="false" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/bus_listingController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
@@ -760,6 +798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,14 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="66" column="6" lean-forward="true" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/buyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -841,6 +872,32 @@
             <marker date="1493129073220" expanded="true" signature="5513:5558" ph="SELECT * FRO... bus_listing" />
             <marker date="1493129073220" expanded="true" signature="6094:6144" ph="UPDATE user " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="66" column="6" lean-forward="true" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#label#1;n#div#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ChangePass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1990">
+          <caret line="246" column="0" lean-forward="true" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,5 +18,4 @@ define('REQUIRES', ROOT . 'require/');
 //error logger
 require_once 'error_handler.php';
 
-
 ?>

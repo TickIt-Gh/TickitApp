@@ -48,7 +48,7 @@ require_once PUBLICS . 'handle_login.php';
             <label>
                 <input type="checkbox" value="remember_me"> Remember me
             </label>
-            
+
             <!--
            Brenda work on this
            -->

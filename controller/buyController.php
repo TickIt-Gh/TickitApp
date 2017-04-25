@@ -59,7 +59,7 @@ function tockenGenarator()
     $charactersLength = strlen($characters);
 
     //creating the string tocken
-    for ($i = 0; $i < 7; $i++) {
+    for ($i = 0; $i < 5; $i++) {
         $randstring .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randstring;

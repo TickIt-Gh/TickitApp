@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="782c8367-09c6-40ca-a5c8-9b09492cec54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/buyController.php" afterPath="$PROJECT_DIR$/controller/buyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.php" afterPath="$PROJECT_DIR$/public/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,18 +46,18 @@
       <file leaf-file-name="buyController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/buyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="112" column="48" lean-forward="true" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
+            <state relative-caret-position="1139">
+              <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
               <folding>
-                <marker date="1493128807769" expanded="true" signature="2247:2292" ph="SELECT * FRO... bus_listing" />
-                <marker date="1493128807769" expanded="true" signature="2732:2805" ph="UPDATE bus_l... " />
-                <marker date="1493128807769" expanded="true" signature="2905:2974" ph="UPDATE bus_l... " />
-                <marker date="1493128807769" expanded="true" signature="3810:3857" ph="SELECT email... user" />
-                <marker date="1493128807769" expanded="true" signature="4341:4386" ph="SELECT * FRO... bus_listing" />
-                <marker date="1493128807769" expanded="true" signature="4607:4704" ph="INSERT INTO payment... " />
-                <marker date="1493128807769" expanded="true" signature="5263:5297" ph="SELECT * FRO... user" />
-                <marker date="1493128807769" expanded="true" signature="5513:5558" ph="SELECT * FRO... bus_listing" />
-                <marker date="1493128807769" expanded="true" signature="6094:6144" ph="UPDATE user " />
+                <marker date="1493129073220" expanded="true" signature="2247:2292" ph="SELECT * FRO... bus_listing" />
+                <marker date="1493129073220" expanded="true" signature="2732:2805" ph="UPDATE bus_l... " />
+                <marker date="1493129073220" expanded="true" signature="2905:2974" ph="UPDATE bus_l... " />
+                <marker date="1493129073220" expanded="true" signature="3810:3857" ph="SELECT email... user" />
+                <marker date="1493129073220" expanded="true" signature="4341:4386" ph="SELECT * FRO... bus_listing" />
+                <marker date="1493129073220" expanded="true" signature="4607:4704" ph="INSERT INTO payment... " />
+                <marker date="1493129073220" expanded="true" signature="5263:5297" ph="SELECT * FRO... user" />
+                <marker date="1493129073220" expanded="true" signature="5513:5558" ph="SELECT * FRO... bus_listing" />
+                <marker date="1493129073220" expanded="true" signature="6094:6144" ph="UPDATE user " />
               </folding>
             </state>
           </provider>
@@ -379,7 +378,7 @@
       <workItem from="1492946441916" duration="863000" />
       <workItem from="1492944474481" duration="14175000" />
       <workItem from="1492973820274" duration="11192000" />
-      <workItem from="1493128346501" duration="463000" />
+      <workItem from="1493128346501" duration="813000" />
     </task>
     <task id="LOCAL-00001" summary="Database.php updates">
       <created>1491947390102</created>
@@ -392,7 +391,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61784000" />
+    <option name="totallyTimeSpent" value="62134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -829,18 +828,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/buyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="112" column="48" lean-forward="true" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
+        <state relative-caret-position="1139">
+          <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
           <folding>
-            <marker date="1493128807769" expanded="true" signature="2247:2292" ph="SELECT * FRO... bus_listing" />
-            <marker date="1493128807769" expanded="true" signature="2732:2805" ph="UPDATE bus_l... " />
-            <marker date="1493128807769" expanded="true" signature="2905:2974" ph="UPDATE bus_l... " />
-            <marker date="1493128807769" expanded="true" signature="3810:3857" ph="SELECT email... user" />
-            <marker date="1493128807769" expanded="true" signature="4341:4386" ph="SELECT * FRO... bus_listing" />
-            <marker date="1493128807769" expanded="true" signature="4607:4704" ph="INSERT INTO payment... " />
-            <marker date="1493128807769" expanded="true" signature="5263:5297" ph="SELECT * FRO... user" />
-            <marker date="1493128807769" expanded="true" signature="5513:5558" ph="SELECT * FRO... bus_listing" />
-            <marker date="1493128807769" expanded="true" signature="6094:6144" ph="UPDATE user " />
+            <marker date="1493129073220" expanded="true" signature="2247:2292" ph="SELECT * FRO... bus_listing" />
+            <marker date="1493129073220" expanded="true" signature="2732:2805" ph="UPDATE bus_l... " />
+            <marker date="1493129073220" expanded="true" signature="2905:2974" ph="UPDATE bus_l... " />
+            <marker date="1493129073220" expanded="true" signature="3810:3857" ph="SELECT email... user" />
+            <marker date="1493129073220" expanded="true" signature="4341:4386" ph="SELECT * FRO... bus_listing" />
+            <marker date="1493129073220" expanded="true" signature="4607:4704" ph="INSERT INTO payment... " />
+            <marker date="1493129073220" expanded="true" signature="5263:5297" ph="SELECT * FRO... user" />
+            <marker date="1493129073220" expanded="true" signature="5513:5558" ph="SELECT * FRO... bus_listing" />
+            <marker date="1493129073220" expanded="true" signature="6094:6144" ph="UPDATE user " />
           </folding>
         </state>
       </provider>

@@ -19,8 +19,8 @@ require_once REQUIRES . 'nav_bar.php';
                 </div>
                 <div class='col-md-6 col-md-pull-3 get-it'>
                     <h1>TickIT App</h1>
-                    <p align="justify"> Welcome to TickUP Official Web Application.
-                        Book a ticket with us or create a account</p>
+                    <p align="justify"> Welcome to TickIT
+                        create a account and book tickets at the comfort of your home</p>
                     <p>
                         <a class='btn btn-primary' href="../public/login.php"><span class="fa fa-ticket"></span> Buy Now!</a>
                         <a class='btn btn-success' href="../public/sign_up.php"><span class="fa fa-user-plus"></span> Sign Up</a>

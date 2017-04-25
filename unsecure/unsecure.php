@@ -179,7 +179,7 @@ function registernewuser($fname, $lname, $email, $pwdhash, $dob, $gender, $tel)
     $reguser = new Database;
 
     //inserting user into user table
-    $sql = "INSERT INTO user (email, password) VALUES ('$email','$pwdhash') ";
+    $sql = "INSERT INTO user (email, password,balance) VALUES ('$email','$pwdhash',5000) ";
 
     $dbexec = $reguser->query($sql);
 

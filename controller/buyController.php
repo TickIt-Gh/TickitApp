@@ -28,7 +28,7 @@ function sendEmail($email, $message)
     //Initialize the email object
     $mail = new PHPMailer;
     $mail->IsSMTP(); // enable SMTP
-    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+    //$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
     $mail->SMTPAuth = true; // authentication enabled
     $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
     $mail->Host = "smtp.gmail.com";
@@ -136,16 +136,21 @@ function makePayments($token)
     $today = date("Y-m-d H:i:s");
 
     //Get User data
-    $selectUser = "SELECT email, balance FROM user WHERE userid = $userID";
+    $selectUser = "SELECT email, balance FROM user WHERE userID = $userID";
     $userResults = $veruser->query($selectUser);
     if ($userResults) {
         $userRow = $veruser->fetch();
         $email = $userRow['email'];
         $balance = $userRow['balance'];
-        $message = "Hello,\n";
-        $message .= "The tocken for your ticket is $token \n";
-        $message .= "Enjoy your journey and see you next time\n\n\n";
-        $message .= "Team Tickit \n";
+        $name = $userRow['firstName'];
+        $message = "Hello, $name";
+        $message .= "<br><br>";
+        $message .= "The token for your ticket is ". "<b>". $token . "</b>";
+        $message .= " and your balance is GHC $balance";
+        $message .= "<br><br>";
+        $message .= "Enjoy your journey and see you next time";
+        $message .= "<br>";
+        $message .= "Team TickIt ";
 
         sendEmail($email, $message);
     }

@@ -15,7 +15,8 @@ define('DATABASES', ROOT . 'database/');
 define('CONTROLLER', ROOT . 'controller/');
 define('REQUIRES', ROOT . 'require/');
 
-//require_once 'error_handler.php';
+//error logger
+require_once 'error_handler.php';
 
 
 ?>
